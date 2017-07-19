@@ -1,0 +1,9 @@
+function g = gradientLLEq18(X,W,params,d)
+
+aux = zeros(params.K);
+for j = 1:params.J
+    
+end
+
+
+g = -W{d}

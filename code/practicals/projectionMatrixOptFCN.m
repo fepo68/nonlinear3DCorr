@@ -16,32 +16,15 @@ gammaVal = params.gamma;
 J = params.J;
 K = params.K;
 
-auxNj = 0;
-
-for j = 1:J
-    Nj = Ndot_j(S,j,params);
-    for i = 1:Nj-1
-    auxNj = log(i)+auxNj;
-    end
-end
-auxN = 0;
-for n = 0:params.N-1
-    auxN = auxN + log(gammaVal+n);
-end
-    
-
-auxSpart = J*log(gammaVal)+auxNj-auxN;
-
-auxXpart = - params.auxSumD*log(2*pi)+((K*J)/2)*log(params.r)+params.a*log(params.b)...
-    -params.ap*log(params.bp)+(gammaln(params.ap))-(gammaln(params.a));
-
-auxdetCj  = 0;
-
-for j = 1:J
-    auxdetCj = auxdetCj +0.5*log(det(inv(params.invCj(:,:,j))));
-end
-
-f = auxSpart+auxXpart+auxdetCj;
+W = params.W;
+W{d} = Wd;
+%% Second factor parameters depicted in (4)
+[ap,bp,mu_j,invCj] = equation4IWata(X,S,W,params);
+params.ap = ap;
+params.bp = bp;
+params.mu_j = mu_j;
+params.invCj = invCj;
+f = log_likelihoodEq4(params);
 % First derivative computed in matrix form for log p(X,S|W,a,b,r,gamma)
 % with respect to Wd
 

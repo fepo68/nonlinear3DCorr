@@ -12,7 +12,7 @@ r = 1;
 gammaVal = 1;
 % K = 3;
 
-optiW = false;
+optiW = true;
 
 N = 0;
 auxN = 0;
@@ -263,10 +263,32 @@ for t = 1:T
     for d = 1:D
         if optiW == true
             %  update Wd using a numerical optimization method using (18)
-            x0 = W{d}(:);
-            out = ncg(@(x) projectionMatrixOptFCN(x,params,X,S,d),x0,'RelFuncTol',1e-16,'StopTol',1e-8,...
-                'MaxFuncEvals',500,'Display','final');
-            W{d} =reshape(out.X,params.Md(d),params.K);
+            x0 = W{d}(:)';
+            %             params.X = X;
+            %             params.S = S;
+            %             params.d = d;
+            %             params.W = W;
+            %             paramsT=params;
+            %             out = ncg(@(x)projectionMatrixOptFCN(x,params,X,S,d),x0,'RelFuncTol',1e-16,'StopTol',1e-8,...
+            %                 'MaxFuncEvals',500,'Display','final');
+%             fun = @(x)prjectionWOptim(x,params,W,X,S,d); 
+
+            fun = @(x)likelihood_WGradOff(x,params,W,X,S,d); % Without Gradients
+            
+            fun_g = @(x)gradientLLEq18(x,X,W,S,params,d); % Using Gradients
+            mydeal = @(varargin)varargin{1:nargout};
+            
+            opt = optimset('GradObj','on'); % This is how to specify options for fminunc
+            opt = optimset(opt,'TolX',1e-3);
+            opt = optimset(opt,'LargeScale','off');
+            opt = optimset(opt,'Display','iter');
+            
+%             [w_opt,fval,exitflag,output,grad] = fminunc(fun,x0,opt);
+            w_opt = fminunc(@(ww)mydeal(fun(ww),fun_g(ww)),x0,opt);
+            
+%             fprintf('Gradient: %f\n',norm(grad));
+            W{d} =reshape(w_opt',params.Md(d),params.K);
+            %             W{d} =reshape(out.X,params.Md(d),params.K);
         else
             %   update Wd using a exact equation (19)
             W{d} = MstepJointLLexact(X,S,params,d);
@@ -283,7 +305,7 @@ for t = 1:T
     
     
     
-    ll(t) = log_likelihoodEq4(params);
+    ll(t) = log_likelihoodEq4(S,params);
     fprintf('Log-Likelihood: %f\n',ll(t));
 end
 

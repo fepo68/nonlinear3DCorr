@@ -16,10 +16,8 @@ Mirkin = AR;
 Hubert =AR;
 ja = 1;
 Clusters = {};
-for i = 1:5
+for i = 1:1
     load synth3exp1D2 % synth3
-%     load synth5exp1D2 %synth5
-%     load synth10exp1D2 %synth10
     % load dataToyIwatamodel31Ene162D40Ndj5J5K % synth5
     % load dataToyIwatamodel31Ene162D40Ndj5J10K % synth10
     
@@ -44,7 +42,7 @@ for i = 1:5
     
     %% Linear model
     [X,S,W,params] = lvmInferCorrespondenceLin(T,D,K,alphaW,X);
-%     %% Nonlinear model
+    %% Nonlinear model
 %     [X,S,W,params] = lvmInferCorrespondenceNonLin(T,D,K,alphaW,X);
     
     %% Metrics
