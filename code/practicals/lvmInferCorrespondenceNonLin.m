@@ -13,6 +13,11 @@ r = 1;
 gammaVal = 1;
 % K = 3;
 
+%% Kernel Parameters
+params.kernType = 'rbf';
+params.variance = 0.1;
+params.inversewith = 1/(0.1)^2;
+
 optiW = false;
 
 N = 0;
@@ -114,7 +119,7 @@ for t = 1:T
             %% Inference part I
             % Compute de model parameters by excluding the x_dn object
             [params.ap_no_dn,params.bp_no_dn,params.mu_j_no_dn,params.invCj_no_dn] = ...
-                equation13IWata_excluding_dn(X,S,W,params,d,n);
+                equation13IWata_excluding_dnNonLinear(X,S,W,params,d,n);
             
             % Remove the old cluster ssignement for x_dn and update
             % the parameters accordingly of the cluster it got removed from
@@ -158,7 +163,7 @@ for t = 1:T
             probEq14_log = NaN*zeros(1,numOfClasses+1);
             for j = 1:params.J
                 [ap_sdn_j,bp_sdn_j,mu_j_sdn_j,invCj_sdn_j] = ...
-                    equation13IWata_sdn_j(X,S,W,params,d,n,j);
+                    equation13IWata_sdn_jNonLinear(X,S,W,params,d,n,j);
                 % Calculate p(s_dn=j ...) eq 14 for an existing cluster
                 Nj_dn = Ndot_j_dn(S,d,n,j,params);
                 prob_s_dn = Nj_dn/(N-1+params.gamma);
@@ -183,7 +188,7 @@ for t = 1:T
             % Now calculate the prior and likelihood for a new cluster
             xdn = X{d}(n,:);
             %             probNew = probEq13NewCluster(params,W,X,d,n); %
-            [probNew,apNew,bpNew, mu_jNew, invCjNew] = probEq13NewClusterCDG(params,W,X,d,n);
+            [probNew,apNew,bpNew, mu_jNew, invCjNew] = probEq13NewClusterCDGNonLinear(params,W,X,d,n);
             
             % Eq 14 - iwata
             prob(end) = ((params.gamma)/(params.N-1+params.gamma))*probNew; % Eq 2 iwata
@@ -207,7 +212,7 @@ for t = 1:T
                 params.invCj(:,:,params.J) = invCjNew;
                 %                 S = params.S;
                 %                 [ap,bp,mu_j,invCj] = equation4IWata(X,S,W,params);
-                [bp] = equation4IWataUpdateNewCluster(X,S,W,params);
+                [bp] = equation4IWataUpdateNewClusterNonLinear(X,S,W,params);
                 %                 params.ap = ap;
                 params.bp = bp;
                 %                 params.mu_j = mu_j;
@@ -249,7 +254,7 @@ for t = 1:T
                     params.mu_j(:,iRem) = [];
                     params.invCj_no_dn(:,:,iRem) = [];
                     params.mu_j_no_dn(:,iRem) = [];
-                    [bp] = equation4IWataUpdateNewCluster(X,S,W,params);
+                    [bp] = equation4IWataUpdateNewClusterNonLinear(X,S,W,params);
                     %             params.ap = [];
                     %              params.bp =[];
                 end
@@ -275,7 +280,7 @@ for t = 1:T
     end
     
     %% Second factor parameters depicted in (4)
-    [ap,bp,mu_j,invCj] = equation4IWata(X,S,W,params);
+    [ap,bp,mu_j,invCj] = equation4IWataNonLinear(X,S,W,params);
     params.ap = ap;
     params.bp = bp;
     params.mu_j = mu_j;

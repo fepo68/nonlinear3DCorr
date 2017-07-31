@@ -1,5 +1,5 @@
 %% Likelihood optimization equation 4 Iwatta
-function [f] = likelihood_WGradOff(x,params,W,X,S,d)
+function [f,g] = likelihood_WGradOff(w,params,W,X,S,d)
 % Data setup
 % [m,n] = size(Data.Wd);
 % S = params.S;
@@ -7,12 +7,12 @@ function [f] = likelihood_WGradOff(x,params,W,X,S,d)
 % d = params.d;
 Saux = S{d};
 Xd = X{d};
-Wd = reshape(x',params.Md(d),params.K);
+Wd = reshape(w',params.Md(d),params.K);
 W{d} = Wd;
 k =rank(Wd);
 
 
-% Function Value 
+% Function Value
 gammaVal = params.gamma;
 J = params.J;
 K = params.K;
@@ -20,11 +20,13 @@ K = params.K;
 auxNj = 0;
 
 
-%% Second factor parameters depicted in (4)
+% Second factor parameters depicted in (4)
 [ap,bp,mu_j,invCj] = equation4IWata(X,S,W,params);
 params.ap = ap;
 params.bp = bp;
 params.mu_j = mu_j;
 params.invCj = invCj;
-f = log_likelihoodEq4(S,params);
-% g = gradientLLEq18(x,X,W,S,params,d);
+f = -log_likelihoodEq4(S,params); % objetive function (ll)
+% if nargout > 1 % gradient required
+g = gradientLLEq18(w,X,W,S,params,d);
+% end

@@ -16,7 +16,7 @@ Mirkin = AR;
 Hubert =AR;
 ja = 1;
 Clusters = {};
-for i = 1:1
+for i = 1:5
     load synth3exp1D2 % synth3
     % load dataToyIwatamodel31Ene162D40Ndj5J5K % synth5
     % load dataToyIwatamodel31Ene162D40Ndj5J10K % synth10
@@ -24,13 +24,9 @@ for i = 1:1
     %     D = length(X);
     T = 100; % iterations
     J = 1; % initial number of clusters J
-    alphaW = 0.1; % small variance for projection Matrices Wd
+    alphaW = 0.05; % small variance for projection Matrices Wd
     K = 5; % dimensionality of the latent vector
-    
-    
-    
-    
-    
+     
     %         load(['synth',num2str(Kexp),'exp',num2str(i),'D',num2str(j)]);
     trueS = S;
     trueW = W;
