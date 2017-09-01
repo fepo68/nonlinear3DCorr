@@ -37,10 +37,10 @@ for j = 1:J
         %         auxCj = auxCj + Ndj*(Wd'*Wd);
         
         %% Nonlinear version
-        kern = kernCreate(Wd'*Wd,params.kernType);
-        kern.variance = params.variance;
-        kern.inversewidth = params.inversewith;
-        Kd = kernCompute(kern,Wd');
+        kern.type = params.kernType;
+        kern.variance = params.varianceKww;
+        kern.inverseWidth = params.inversewithKww;
+        Kd = mykernCompute(kern,Wd);
         auxCj = auxCj + Ndj*Kd;
         
         
@@ -63,18 +63,20 @@ for j = 1:J
         
         Wd = W{d};
         Xd = [X{d}]'; % Because objects are Md*Nd
-        aux_xdn =sum(Xd(:,n1),2);
+        %         aux_xdn =sum(Xd(:,n1),2);
         %         aux_mj = aux_mj + Wd'*aux_xdn;
         
         %% Compute the kernelized form of mu_j
         Ndn = length(n1);
-        kern = kernCreate(Wd',params.kernType);
-        kern.variance = params.variance;
-        kern.inversewidth = params.inversewith;
-        %         kern.inversewidth = 10;
-        kd = kernCompute(kern,Wd',aux_xdn'./Ndn);
-        %         aux_mj = aux_mj + Wd'*aux_xdn; % linear form
-        aux_mj = aux_mj + kd; % linear form
+        kdwx = zeros(params.K,1);
+        kern.type = params.kernType;
+        kern.variance = params.varianceKwx;
+        kern.inverseWidth = params.inversewithKwx;
+        for n = 1:Ndn
+            auxKwx = mykernCompute(kern,Wd,Xd(:,n1(n)));
+            kdwx = auxKwx + kdwx;
+        end
+        aux_mj = aux_mj + kdwx; % linear form
         
         
         
@@ -97,24 +99,13 @@ for d = 1:D
         [Md,Nd] = size(Xd);
     end
     
-    xdn = Xd(:,1);
+    
     %% Compute the kernelized form of mu_j
-    kern = kernCreate(xdn,params.kernType);
-    kern.variance = params.variance;
-    kern.inversewidth = params.inversewith;
-    %     tic
-    %     aux_xdn = aux_xdn +sum(diag(Xd'*Xd));
-    %     toc
-    %         tic
-    for n = 1:Nd
-        xdn = Xd(:,n);
-        
-        %         kern.inversewidth = 10;
-        kxx = kernCompute(kern,xdn');
-        %         aux_xdn = aux_xdn +(xdn'*xdn);
-        aux_xdn = aux_xdn +kxx;
-    end
-    %         toc
+    kern.type = params.kernType;
+    kern.variance = params.varianceKxx;
+    kern.inverseWidth = params.inversewithKxx;
+    Kdxx = mykernCompute(kern,Xd);
+    aux_xdn = aux_xdn +sum(diag(Kdxx));
     
 end
 aux_muCj = 0;

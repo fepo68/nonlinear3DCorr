@@ -39,18 +39,27 @@ kern.inverseWidth = params.inversewithKww;
 Kd = mykernCompute(kern,W{de});
 invCj(:,:,j) = Kd+invCj_no_dn(:,:,j);
 % for mu
-kern.type = params.kernType;
-kern.variance = params.varianceKwx;
-kern.inverseWidth = params.inversewithKwx;
-Kwx = mykernCompute(kern,W{de},[X{de}(ne,:)]');
 
+kern.type = 'rbf';
+kern.variance = params.varianceKwx;
+kern.inversewidth = params.inversewithKwx;
+Kwx = zeros(params.K,1);
+for jk = 1:params.K
+    Kwx(jk,1) = mykernCompute(kern,W{de}(:,jk),[X{de}(ne,:)]');
+    
+    
+end
 mu_j(:,j) = (invCj(:,:,j))\(Kwx+ ...
     invCj_no_dn(:,:,j)*mu_j_no_dn(:,j));
 % for bp
-kern.type = params.kernType;
+kern.type = 'rbf';
 kern.variance = params.varianceKxx;
-kern.inverseWidth = params.inversewithKxx;
-kxx = mykernCompute(kern,[X{de}(ne,:)]');
+kern.inversewidth = params.inversewithKxx;
+% kern = kernCreate([X{de}(ne,:)]',params.kernType);
+% kern.variance = params.varianceKxx;
+% kern.inversewidth = params.inversewithKxx;
+% kxx = kernCompute(kern,[X{de}(ne,:)]);
+kxx = mykernCompute(kern,[X{de}(ne,:)]',[X{de}(ne,:)]');
 bp(j) = bp_no_dn + 0.5*kxx+...
     0.5*mu_j_no_dn(:,j)'*invCj_no_dn(:,:,j)*mu_j_no_dn(:,j)-0.5*mu_j(:,j)'*invCj(:,:,j)*mu_j(:,j);
 

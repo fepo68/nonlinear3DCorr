@@ -4,7 +4,7 @@ function [X,S,W,params] = lvmInferCorrespondenceNonLin(T,D,K,alphaW,X)
 % T: number of iterations
 % D: number of domains
 % K: dimensionality of the latent vector
-%. X: Observed data
+% X: Observed data
 
 % model parameters
 a = 1;
@@ -13,12 +13,9 @@ r = 1;
 gammaVal = 1;
 % K = 3;
 
-%% Kernel Parameters
-params.kernType = 'rbf';
-params.variance = 0.1;
-params.inversewith = 1/(0.1)^2;
 
-optiW = false;
+
+optiW = true;
 
 N = 0;
 auxN = 0;
@@ -64,8 +61,8 @@ for d = 1:D
     S{d} = s_dn;
     [Nd,Md] = size(X{d});
     W{d} = alphaW*normrnd(0,1,[Md,params.K]);
-    cs{d} = S{d};
-    numOfPointsInClass = hist(cs{d},1:numOfClasses);
+%     cs{d} = S{d};
+%     numOfPointsInClass = hist(cs{d},1:numOfClasses);
 end
 params.S = S;
 % Sample alpha from prior
@@ -80,6 +77,23 @@ z_j = mvnrnd(zeros(params.K,1),((alpha*r)^(-1))*eye(params.K));
 %     end
 %     precs(:,:,i) = (alpha^(-1))*eye(params.K);
 % end
+
+%% Kernel Parameters
+params.kernType = 'linear';
+% Since we have three different Kernels
+% for Wd'Wd Kernel
+params.varianceKww = 0.1;
+val = mean(mean(dist2(W{1}',W{1}')));
+params.inversewithKww = 1/(val)^2;
+% for Wd'xdn Kernel
+params.varianceKwx = 0.1;
+val = mean(mean(dist2(W{1}',X{1}(1,:))));
+params.inversewithKwx = 1/(val)^2;
+% for xdn'xdn Kernel
+params.varianceKxx = 0.1;
+val = mean(mean(dist2(X{1}(1,:),X{2}(1,:))));
+params.inversewithKxx = 1/(val)^2;
+
 
 %% Second factor parameters depicted in (4)
 [ap,bp,mu_j,invCj] = equation4IWataNonLinear(X,S,W,params);
@@ -218,13 +232,18 @@ for t = 1:T
                 %                 params.mu_j = mu_j;
                 %                 params.invCj = invCj;
                 
-                pos_alpha = gamrnd(ap,1/bp);
-                pos_zj(j,:) = mvnrnd(params.mu_j(:,j),(pos_alpha^-1)*inv(params.invCj(:,:,j)));
+                %                 pos_alpha = gamrnd(ap,1/bp);
+                %                 pos_zj(j,:) = mvnrnd(params.mu_j(:,j),(pos_alpha^-1)*inv(params.invCj(:,:,j)));
                 
                 numOfClasses          = numOfClasses + 1;
                 fprintf('Adding new class %d\n',params.J);
             else
-                [~ , S{d}(n)] = find(s_dnNew==1);
+                
+                try
+                    [~ , S{d}(n)] = find(s_dnNew==1);
+                catch
+                    S{d}(n) = 1;
+                end
                 
             end
             
@@ -268,11 +287,56 @@ for t = 1:T
     
     for d = 1:D
         if optiW == true
+            
             %  update Wd using a numerical optimization method using (18)
-            x0 = W{d}(:);
-            out = ncg(@(x) projectionMatrixOptFCN(x,params,X,S,d),x0,'RelFuncTol',1e-16,'StopTol',1e-8,...
-                'MaxFuncEvals',500,'Display','final');
-            W{d} =reshape(out.X,params.Md(d),params.K);
+            if ~strcmp(params.kernType,'linear')
+                x0 = [];
+                x0(1) = params.varianceKxx;
+                x0(2) = params.inversewithKxx;
+                x0(3) = params.varianceKwx;
+                x0(4) = params.inversewithKwx;
+                x0(5) = params.varianceKww;
+                x0(6) = params.inversewithKww;
+                x0 = [x0,W{d}(:)'];
+                fun = @(x) likelihood_WGradOffNonLin(x,params,W,X,S,d); % Without Gradients
+                
+                %             opt = optimset('GradObj','on'); % This is how to specify options for fminunc
+                opt = optimset('TolX',1e-6);
+                opt = optimset(opt,'LargeScale','off');
+                opt = optimset(opt,'Display','iter');
+                
+                
+                %             [w_opt,fval,exitflag,output,grad] = fminunc(fun,x0,opt);
+                lb = [1e-6,1e-6,1e-6,1e-15,1e-6,1e-6,-Inf*ones(1,length(x0(7:end)))];
+                ub = [Inf,Inf,Inf,Inf,Inf,Inf,Inf*ones(1,length(x0(7:end)))];
+                [w_opt,~,~,~,~,grad,~] = fmincon(fun,x0,[],[],[],[],lb,ub,[],opt);
+                
+                fprintf('Gradient: %f\n',norm(grad));
+                
+                params.varianceKxx = w_opt(1);
+                params.inversewithKxx = w_opt(2);
+                
+                params.varianceKwx = w_opt(3);
+                params.inversewithKwx = w_opt(4);
+                
+                params.varianceKww = w_opt(5);
+                params.inversewithKww = w_opt(6);
+                W{d} =reshape(w_opt(7:end)',params.Md(d),params.K);
+            else
+                x0 = W{d}(:)';
+                fun = @(x) likelihood_WGradOffNonLin(x,params,W,X,S,d); % Without Gradients
+                
+                opt = optimset('GradObj','on'); % This is how to specify options for fminunc
+                opt = optimset(opt,'TolX',1e-6);
+                opt = optimset(opt,'LargeScale','off');
+                opt = optimset(opt,'Display','iter');
+                [w_opt,fval,exitflag,output,grad] = fminunc(fun,x0,opt);
+                fprintf('Gradient: %f\n',norm(grad));
+                 W{d} =reshape(w_opt',params.Md(d),params.K);
+            end
+            
+            
+            
         else
             %   update Wd using a exact equation (19)
             W{d} = MstepJointLLexact(X,S,params,d);
@@ -289,7 +353,7 @@ for t = 1:T
     
     
     
-    ll(t) = log_likelihoodEq4(params);
+    ll(t) = log_likelihoodEq4(S,params);
     fprintf('Log-Likelihood: %f\n',ll(t));
 end
 

@@ -10,12 +10,12 @@ K = 10;
 Md = [50 50];
 Nd = [200 200];
 
-for D = 2:2 % for several domains experiments
+for D = 2:10 % for several domains experiments
     
     Md = 50*ones(1,D);
     Nd = 200*ones(1,D);
     
-    for i = 1:1
+    for i = 1:5
         
         
         s = RandStream('mt19937ar','Seed',10e5*i);

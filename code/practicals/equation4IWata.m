@@ -41,22 +41,14 @@ end
 
 % For b' eq(6)
 aux_xdn = 0;
-
 for d = 1:D
     Xd = [X{d}]';
     [Md,Nd] = size(Xd);
     
-    % For speedup
-%     tic
-    aux = sum(diag(Xd'*Xd));
-    aux_xdn = aux_xdn + aux;
-%     toc
-%     tic
-%     for n = 1:Nd
-%         xdn = Xd(:,n);
-%         aux_xdn = aux_xdn +(xdn'*xdn);
-%     end
-%     toc
+    for n = 1:Nd
+        xdn = Xd(:,n);
+        aux_xdn = aux_xdn +(xdn'*xdn);
+    end
 end
 aux_muCj = 0;
 for j = 1:J

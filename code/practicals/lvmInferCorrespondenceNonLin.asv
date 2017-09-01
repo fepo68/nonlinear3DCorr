@@ -1,9 +1,10 @@
-function [X,S,W,params] = lvmInferCorrespondenceLin(T,D,K,alphaW,X)
+function [X,S,W,params] = lvmInferCorrespondenceNonLin(T,D,K,alphaW,X)
+% For the inference of the nonlinear model
 
 % T: number of iterations
 % D: number of domains
 % K: dimensionality of the latent vector
-% X: Observed data
+%. X: Observed data
 
 % model parameters
 a = 1;
@@ -11,6 +12,20 @@ b = 1;
 r = 1;
 gammaVal = 1;
 % K = 3;
+
+%% Kernel Parameters
+params.kernType = 'rbf';
+% Since we have three different Kernels
+% for Wd'Wd Kernel
+params.varianceKww = 0.1;
+params.inversewithKww = 1/(0.1)^2;
+% for Wd'xdn Kernel
+params.varianceKwx = 0.1;
+params.inversewithKwx = 1/(1e6)^2;
+% for xdn'xdn Kernel
+params.varianceKxx = 0.1;
+params.inversewithKxx = 1/(0.1)^2;
+
 
 optiW = true;
 
@@ -58,8 +73,8 @@ for d = 1:D
     S{d} = s_dn;
     [Nd,Md] = size(X{d});
     W{d} = alphaW*normrnd(0,1,[Md,params.K]);
-%     cs{d} = S{d};
-%     numOfPointsInClass = hist(cs{d},1:numOfClasses);
+    cs{d} = S{d};
+    numOfPointsInClass = hist(cs{d},1:numOfClasses);
 end
 params.S = S;
 % Sample alpha from prior
@@ -76,10 +91,10 @@ z_j = mvnrnd(zeros(params.K,1),((alpha*r)^(-1))*eye(params.K));
 % end
 
 %% Second factor parameters depicted in (4)
-[ap,bp,mu_j,invCj] = equation4IWata(X,S,W,params);
+[ap,bp,mu_j,invCj] = equation4IWataNonLinear(X,S,W,params);
 params.ap = ap;
 params.bp = bp;
-params.mu_j = mu_j;
+params.mu_j = 1e12*mu_j;
 params.invCj = invCj;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ll = zeros(1,T);
@@ -113,7 +128,7 @@ for t = 1:T
             %% Inference part I
             % Compute de model parameters by excluding the x_dn object
             [params.ap_no_dn,params.bp_no_dn,params.mu_j_no_dn,params.invCj_no_dn] = ...
-                equation13IWata_excluding_dn(X,S,W,params,d,n);
+                equation13IWata_excluding_dnNonLinear(X,S,W,params,d,n);
             
             % Remove the old cluster ssignement for x_dn and update
             % the parameters accordingly of the cluster it got removed from
@@ -157,7 +172,7 @@ for t = 1:T
             probEq14_log = NaN*zeros(1,numOfClasses+1);
             for j = 1:params.J
                 [ap_sdn_j,bp_sdn_j,mu_j_sdn_j,invCj_sdn_j] = ...
-                    equation13IWata_sdn_j(X,S,W,params,d,n,j);
+                    equation13IWata_sdn_jNonLinear(X,S,W,params,d,n,j);
                 % Calculate p(s_dn=j ...) eq 14 for an existing cluster
                 Nj_dn = Ndot_j_dn(S,d,n,j,params);
                 prob_s_dn = Nj_dn/(N-1+params.gamma);
@@ -182,7 +197,7 @@ for t = 1:T
             % Now calculate the prior and likelihood for a new cluster
             xdn = X{d}(n,:);
             %             probNew = probEq13NewCluster(params,W,X,d,n); %
-            [probNew,apNew,bpNew, mu_jNew, invCjNew] = probEq13NewClusterCDG(params,W,X,d,n);
+            [probNew,apNew,bpNew, mu_jNew, invCjNew] = probEq13NewClusterCDGNonLinear(params,W,X,d,n);
             
             % Eq 14 - iwata
             prob(end) = ((params.gamma)/(params.N-1+params.gamma))*probNew; % Eq 2 iwata
@@ -206,7 +221,7 @@ for t = 1:T
                 params.invCj(:,:,params.J) = invCjNew;
                 %                 S = params.S;
                 %                 [ap,bp,mu_j,invCj] = equation4IWata(X,S,W,params);
-                [bp] = equation4IWataUpdateNewCluster(X,S,W,params);
+                [bp] = equation4IWataUpdateNewClusterNonLinear(X,S,W,params);
                 %                 params.ap = ap;
                 params.bp = bp;
                 %                 params.mu_j = mu_j;
@@ -218,7 +233,12 @@ for t = 1:T
                 numOfClasses          = numOfClasses + 1;
                 fprintf('Adding new class %d\n',params.J);
             else
-                [~ , S{d}(n)] = find(s_dnNew==1);
+                
+                try
+                    [~ , S{d}(n)] = find(s_dnNew==1);
+                catch
+                    S{d}(n) = 1;
+                end
                 
             end
             
@@ -248,7 +268,7 @@ for t = 1:T
                     params.mu_j(:,iRem) = [];
                     params.invCj_no_dn(:,:,iRem) = [];
                     params.mu_j_no_dn(:,iRem) = [];
-                    [bp] = equation4IWataUpdateNewCluster(X,S,W,params);
+                    [bp] = equation4IWataUpdateNewClusterNonLinear(X,S,W,params);
                     %             params.ap = [];
                     %              params.bp =[];
                 end
@@ -262,40 +282,42 @@ for t = 1:T
     
     for d = 1:D
         if optiW == true
+            
             %  update Wd using a numerical optimization method using (18)
-            x0 = W{d}(:)';
-            %             params.X = X;
-            %             params.S = S;
-            %             params.d = d;
-            %             params.W = W;
-            %             paramsT=params;
-            %             out = ncg(@(x)projectionMatrixOptFCN(x,params,X,S,d),x0,'RelFuncTol',1e-16,'StopTol',1e-8,...
-            %                 'MaxFuncEvals',500,'Display','final');
-            %             fun = @(x)prjectionWOptim(x,params,W,X,S,d);
+            x0 = [];
+            x0(1) = params.varianceKxx;
+            x0(2) = params.inversewithKxx;
+            x0(3) = params.varianceKwx;
+            x0(4) = params.inversewithKwx;
+            x0(5) = params.varianceKww;
+            x0(6) = params.inversewithKww;
+            x0 = [x0,W{d}(:)'];
             
-            fun = @(x) likelihood_WGradOff(x,params,W,X,S,d); % Without Gradients
+            fun = @(x) likelihood_WGradOffNonLin(x,params,W,X,S,d); % Without Gradients
             
-            %             fun_g = @(x)gradientLLEq18(x,X,W,S,params,d); % Using Gradients
-            %             mydeal = @(varargin)varargin{1:nargout};
-            
-            opt = optimset('GradObj','on'); % This is how to specify options for fminunc
-            opt = optimset(opt,'TolX',1e-6);
-%             opt = optimset('TolX',1e-6);
-            opt = optimset(opt,'LargeScale','off');
+            %             opt = optimset('GradObj','on'); % This is how to specify options for fminunc
+            opt = optimset('TolX',1e-6);
+            %             opt = optimset(opt,'LargeScale','off');
             opt = optimset(opt,'Display','iter');
-            %             opt = optimset(opt,'Algorithm','levenberg-marquardt');
             
             
-            [w_opt,fval,exitflag,output,grad] = fminunc(fun,x0,opt);
-            %             w_opt = fminunc(@(ww)mydeal(fun(ww),fun_g(ww)),x0,opt);
+            %             [w_opt,fval,exitflag,output,grad] = fminunc(fun,x0,opt);
+            lb = [];
+            ub = []
+            [w_opt,fval,exitflag,output,grad] = fmincon(fun,x0,[],[],[],[],lb,ub,[],opt);
             
             fprintf('Gradient: %f\n',norm(grad));
             
-%             out = ncg(fun, x0, 'RelFuncTol', 1e-16, 'StopTol', 1e-8, ...
-%                 'MaxFuncEvals',1000,'Display','final');
+            params.varianceKxx = w_opt(1);
+            params.inversewithKxx = w_opt(2);
             
-            W{d} =reshape(w_opt',params.Md(d),params.K);
-            %             W{d} =reshape(out.X,params.Md(d),params.K);
+            params.varianceKwx = w_opt(3);
+            params.inversewithKwx = w_opt(4);
+            
+            params.varianceKww = w_opt(5);
+            params.inversewithKww = w_opt(6);
+            W{d} =reshape(w_opt(7:end)',params.Md(d),params.K);
+            
         else
             %   update Wd using a exact equation (19)
             W{d} = MstepJointLLexact(X,S,params,d);
@@ -303,7 +325,7 @@ for t = 1:T
     end
     
     %% Second factor parameters depicted in (4)
-    [ap,bp,mu_j,invCj] = equation4IWata(X,S,W,params);
+    [ap,bp,mu_j,invCj] = equation4IWataNonLinear(X,S,W,params);
     params.ap = ap;
     params.bp = bp;
     params.mu_j = mu_j;

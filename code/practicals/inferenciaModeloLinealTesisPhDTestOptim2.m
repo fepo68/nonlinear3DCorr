@@ -43,7 +43,7 @@ for i = 1:1
     %% Linear model
 %     [X,S,W,params] = lvmInferCorrespondenceLin(T,D,K,alphaW,X);
     %% Nonlinear model
-    [X,S,W,params] = lvmInferCorrespondenceNonLin(T,D,K,alphaW,X);
+    [X,Sout,W,params] = lvmInferCorrespondenceNonLin(T,D,K,alphaW,X);
     
     %% Metrics
     Svect = [];

@@ -42,29 +42,39 @@ mu_j = params.mu_j;
 % end
 
 % For b' eq(6)
+
 aux_xdn = 0;
 
 for d = 1:D
     Xd = [X{d}]';
     [Md,Nd] = size(Xd);
-    xdn = Xd(:,1);
+        
+    %% Linear form 
+%     aux = sum(diag((Xd'*Xd));
+%     aux_xdn =aux_xdn + aux;
     %% Compute the kernelized form of mu_j
-    kern = kernCreate(xdn,params.kernType);
-    kern.variance = params.variance;
-    kern.inversewidth = params.inversewith;
+    %     kern = kernCreate(xdn,params.kernType);
+    %     kern.variance = params.varianceKxx;
+    %     kern.inversewidth = params.inversewithKxx;
     %     tic
     %     aux_xdn = aux_xdn +sum(diag(Xd'*Xd));
     %     toc
-    %         tic
-    for n = 1:Nd
-        xdn = Xd(:,n);
-        
-        %         kern.inversewidth = 10;
-        kxx = kernCompute(kern,xdn');
-        %         aux_xdn = aux_xdn +(xdn'*xdn);
-        aux_xdn = aux_xdn +kxx;
-    end
-    %         toc
+    %         tic    
+    kern.type = params.kernType;
+    kern.variance = params.varianceKxx;
+    kern.inverseWidth = params.inversewithKxx;
+    Kdxx = mykernCompute(kern,Xd);
+    aux_xdn = aux_xdn +sum(diag(Kdxx));
+%     for n = 1:Nd
+%         xdn = Xd(:,n);
+%         
+%         %         kern.inversewidth = 10;
+%         %         kxx = kernCompute(kern,xdn');
+%         kxx = mykernCompute(kern,xdn);
+%         %         aux_xdn = aux_xdn +(xdn'*xdn);
+%         aux_xdn = aux_xdn +kxx;
+%     end
+%     %         toc
 end
 aux_muCj = 0;
 for j = 1:J
