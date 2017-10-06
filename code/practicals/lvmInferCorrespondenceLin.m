@@ -3,7 +3,7 @@ function [X,S,W,params] = lvmInferCorrespondenceLin(T,D,K,alphaW,X)
 % T: number of iterations
 % D: number of domains
 % K: dimensionality of the latent vector
-% X: Observed data
+%. X: Observed data
 
 % model parameters
 a = 1;
@@ -58,8 +58,8 @@ for d = 1:D
     S{d} = s_dn;
     [Nd,Md] = size(X{d});
     W{d} = alphaW*normrnd(0,1,[Md,params.K]);
-%     cs{d} = S{d};
-%     numOfPointsInClass = hist(cs{d},1:numOfClasses);
+    cs{d} = S{d};
+    numOfPointsInClass = hist(cs{d},1:numOfClasses);
 end
 params.S = S;
 % Sample alpha from prior
@@ -74,6 +74,39 @@ z_j = mvnrnd(zeros(params.K,1),((alpha*r)^(-1))*eye(params.K));
 %     end
 %     precs(:,:,i) = (alpha^(-1))*eye(params.K);
 % end
+
+%%%%% this to map W through basis functions
+mapsToBF = true;
+if mapsToBF == true
+    kern.weightVariance = 0.1;
+    kern.biasVariance = 0;
+    kern.variance = 0.1;
+    kern.degree = 5;
+    fBasis = 'polynomial';
+    Waux = {};
+    for d = 1:params.D
+        Waux{d} = W{d}';
+    end
+    X = polyToyMapBasis(X,kern,D,fBasis);
+    W = polyToyMapBasis(Waux,kern,D,fBasis);
+    
+    N = 0;
+    auxN = 0;
+    for d = 1:D
+        [Nd,Md] = size(X{d});
+        params.Md(d) = Md;
+        params.Nd(d) = Nd;
+        N = N + Nd;
+        auxN = auxN +(Nd*Md);
+        W{d} = W{d}';
+    end
+    
+    auxSumD = auxN/2;
+    params.N = N;
+    
+    params.auxN = auxN;
+    params.auxSumD = auxSumD;
+end
 
 %% Second factor parameters depicted in (4)
 [ap,bp,mu_j,invCj] = equation4IWata(X,S,W,params);
@@ -212,8 +245,8 @@ for t = 1:T
                 %                 params.mu_j = mu_j;
                 %                 params.invCj = invCj;
                 
-                pos_alpha = gamrnd(ap,1/bp);
-                pos_zj(j,:) = mvnrnd(params.mu_j(:,j),(pos_alpha^-1)*inv(params.invCj(:,:,j)));
+                %                 pos_alpha = gamrnd(ap,1/bp);
+                %                 pos_zj(j,:) = mvnrnd(params.mu_j(:,j),(pos_alpha^-1)*inv(params.invCj(:,:,j)));
                 
                 numOfClasses          = numOfClasses + 1;
                 fprintf('Adding new class %d\n',params.J);
@@ -280,7 +313,7 @@ for t = 1:T
             
             opt = optimset('GradObj','on'); % This is how to specify options for fminunc
             opt = optimset(opt,'TolX',1e-6);
-%             opt = optimset('TolX',1e-6);
+            %             opt = optimset('TolX',1e-6);
             opt = optimset(opt,'LargeScale','off');
             opt = optimset(opt,'Display','iter');
             %             opt = optimset(opt,'Algorithm','levenberg-marquardt');
@@ -291,8 +324,8 @@ for t = 1:T
             
             fprintf('Gradient: %f\n',norm(grad));
             
-%             out = ncg(fun, x0, 'RelFuncTol', 1e-16, 'StopTol', 1e-8, ...
-%                 'MaxFuncEvals',1000,'Display','final');
+            %             out = ncg(fun, x0, 'RelFuncTol', 1e-16, 'StopTol', 1e-8, ...
+            %                 'MaxFuncEvals',1000,'Display','final');
             
             W{d} =reshape(w_opt',params.Md(d),params.K);
             %             W{d} =reshape(out.X,params.Md(d),params.K);

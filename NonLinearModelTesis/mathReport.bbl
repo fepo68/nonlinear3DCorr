@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+
+\bibitem{Iwata13}
+Tomoharu Iwata, Tsutomu Hirao, and Naonori Ueda.
+\newblock Unsupervised cluster matching via probabilistic latent variable
+  models, 2013.
+
+\bibitem{Iwata16}
+Tomoharu Iwata, Tsutomu Hirao, and Naonori Ueda.
+\newblock Probabilistic latent variable models for unsupervised many-to-many
+  object matching.
+\newblock {\em Information Processing and Management}, 52(4):682 -- 697, 2016.
+
+\end{thebibliography}
