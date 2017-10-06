@@ -1013,14 +1013,43 @@ The last kernel is defined as $\kernelww{i}{i'}$, with hyperparámeters $\sigma^
 
 \begin{align}
 \frac{\partial \likel}{\partial \beta_{ww}} &= \left[-\frac{a'}{b'}\frac{\partial b'}{\partial\beta_{ww}} + \frac{1}{2}\sum_{j=1}^{Q} \operatorname{Tr}\left(\C^{-1}\frac{\partial \C}{\partial \beta_{ww}}\right)\right], \\
-& =  -\frac{a'}{b'}\frac{\partial }{\partial \wIj{i}}\left\{b+{\frac{1}{2}}\sum\limits_{d=1}^{D}\sum\limits_{n=1}^{N_d}\kernel{\indobj}{\indobj}-{\frac{1}{2}}\sum\limits_{j=1}^{Q}\boldsymbol{\mu}_j^\top \C^{-1}\muJ\right\}, \\
-& =  -\frac{a'}{b'}\frac{\partial }{\partial \wIj{i}}\left\{-{\frac{1}{2}}\sum\limits_{j=1}^{Q}\boldsymbol{\mu}_j^\top \C^{-1}\muJ\right\}, \\
-& =  \frac{a'}{2b'} \left\{\left(\C\sum\limits_{n:s_{dn}=j}{-\beta_{wx}\left(\wIj{i}-\indobj\right)\kawx}\right)^\top\C^{-1}\muJ \right. \\
-&\left. +   \muJ^\top\C^{-1}\left(\C\sum\limits_{n:s_{dn}=j}{-\beta_{wx}\left(\wIj{i}-\indobj\right)\kawx}\right)
-\right\},
+& =  \frac{\partial }{\partial \beta_{ww}}\left\{\frac{a'}{2b'}\sum\limits_{j=1}^{Q}\boldsymbol{\mu}_j^\top \C^{-1}\muJ\right\} +\frac{1}{2}\sum_{j=1}^{Q} \operatorname{Tr}\left(\C^{-1}\frac{\partial \C}{\partial \beta_{ww}}\right), \\
+& =  \frac{\partial }{\partial \beta_{ww}}\left\{\frac{a'}{2b'}\sum\limits_{j=1}^{Q}\boldsymbol{\mu}_j^\top \left(\sum\limits_{d=1}^{D}{N_{dj}\Kaww+r\mathbf{I}}\right)\muJ\right\} \\
+& +\frac{1}{2}\sum_{j=1}^{Q} \operatorname{Tr}\left(\C^{-1}\frac{\partial }{\partial \beta_{ww}}\left(\sum\limits_{d=1}^{D}{N_{dj}\Kaww+r\mathbf{I}}\right)^{-1}\right),\\
+& =  \frac{\partial }{\partial \beta_{ww}}\left\{\frac{a'}{2b'}\sum\limits_{j=1}^{Q}\boldsymbol{\mu}_j^\top \left(\sum\limits_{d=1}^{D}{N_{dj}\Kaww+r\mathbf{I}}\right)\muJ\right\} \\
+&+\frac{1}{2}\sum_{j=1}^{Q} \operatorname{Tr}\left(\C^{-1}\frac{\partial }{\partial \beta_{ww}}\left(\sum\limits_{d=1}^{D}{N_{dj}\Kaww+r\mathbf{I}}\right)^{-1}\right),\\
+& =  \left\{\frac{a'}{2b'}\sum\limits_{j=1}^{Q}\boldsymbol{\mu}_j^\top \frac{\partial }{\partial \beta_{ww}}\left(\sum\limits_{d=1}^{D}{N_{dj}\Kaww}\right)\muJ\right\} \\
+&-\frac{1}{2}\sum_{j=1}^{Q} \operatorname{Tr}\left(\C^{-1}\C \frac{\partial }{\partial \beta_{ww}}\left(\sum\limits_{d=1}^{D}{N_{dj}\Kaww+r\mathbf{I}}\right)\C\right),\\
+& =  \left\{\frac{a'}{2b'}\sum\limits_{j=1}^{Q}\boldsymbol{\mu}_j^\top \left(\sum\limits_{d=1}^{D}{N_{dj}\left(-(1/2)\left(\mathbf{P}_2\right)\Kaww\right)}\right)\muJ\right\} \\
+&-\frac{1}{2}\sum_{j=1}^{Q} \operatorname{Tr}\left( \left(\sum\limits_{d=1}^{D}{N_{dj}
+	\left(-(1/2)\left(\mathbf{P}_2\right)\right)\Kaww}\right)\C\right),
 \end{align}
 
+where $\mathbf{P}_2$ is the pairwise distance of $\projMatI$
 
+%% for simga^2_{ww}
+
+\begin{align}
+\frac{\partial \likel}{\partial \sigma^2_{ww}} &= \left[-\frac{a'}{b'}\frac{\partial b'}{\partial\sigma^2_{ww}} + \frac{1}{2}\sum_{j=1}^{Q} \operatorname{Tr}\left(\C^{-1}\frac{\partial \C}{\partial \sigma^2_{ww}}\right)\right], \\
+& =  \left\{\frac{a'}{2b'}\sum\limits_{j=1}^{Q}\boldsymbol{\mu}_j^\top \frac{\partial }{\partial \sigma^2_{ww}}\left(\sum\limits_{d=1}^{D}{N_{dj}\Kaww}\right)\muJ\right\} \\
+&-\frac{1}{2}\sum_{j=1}^{Q} \operatorname{Tr}\left(\C^{-1}\C \frac{\partial }{\partial \sigma^2_{ww}}\left(\sum\limits_{d=1}^{D}{N_{dj}\Kaww+r\mathbf{I}}\right)\C\right),\\
+& =  \left\{\frac{a'}{2b'}\sum\limits_{j=1}^{Q}\boldsymbol{\mu}_j^\top \left(\sum\limits_{d=1}^{D}{N_{dj}\left(\frac{1}{\sigma^2_{ww}}\Kaww\right)}\right)\muJ\right\} \\
+&-\frac{1}{2}\sum_{j=1}^{Q} \operatorname{Tr}\left( \left(\sum\limits_{d=1}^{D}{N_{dj}
+\frac{1}{\sigma^2_{ww}}\Kaww}\right)\C\right).
+\end{align}
+
+Finally for the $\wIj{i}$ parameter we have
+
+\begin{align}
+\frac{\partial \likel}{\partial \wIj{i}} &= \left[-\frac{a'}{b'}\frac{\partial b'}{\partial\wIj{i}} + \frac{1}{2}\sum_{j=1}^{Q} \operatorname{Tr}\left(\C^{-1}\frac{\partial \C}{\partial \wIj{i}}\right)\right], \\
+& =  \left\{\frac{a'}{2b'}\sum\limits_{j=1}^{Q}\boldsymbol{\mu}_j^\top \frac{\partial }{\partial \wIj{i}}\left(\sum\limits_{d=1}^{D}{N_{dj}\Kaww}\right)\muJ\right\} \\
+&-\frac{1}{2}\sum_{j=1}^{Q} \operatorname{Tr}\left(\C^{-1}\C \frac{\partial }{\partial \wIj{i}}\left(\sum\limits_{d=1}^{D}{N_{dj}\Kaww+r\mathbf{I}}\right)\C\right),\\
+& =  \left\{\frac{a'}{2b'}\sum\limits_{j=1}^{Q}\boldsymbol{\mu}_j^\top \left(\sum\limits_{d=1}^{D}{N_{dj}\left(-\beta_{ww}\mathbf{P}_1\Kaww\right)}\right)\muJ\right\} \\
+&-\frac{1}{2}\sum_{j=1}^{Q} \operatorname{Tr}\left( \left(\sum\limits_{d=1}^{D}{N_{dj}
+	-\beta_{ww}\mathbf{P}_1\Kaww}\right)\C\right),
+\end{align}
+
+where \comment{$\mathbf{P}_1$}{define mathematical notation}
 
 \bibliographystyle{plain}
 \bibliography{bibRevTesisDoc}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.14)  5 OCT 2017 03:48
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.14)  6 OCT 2017 09:14
 entering extended mode
 **mathReport.tex
 (C:\Users\digital065\Desktop\NonLinearModelTesis\mathReport.tex
@@ -381,8 +381,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 969--970
 [18] [19]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¡ in font cmr10!
- (C:\Users\digital065\Desktop\NonLinearModelTesis\mathReport.bbl)
-[20] (C:\Users\digital065\Desktop\NonLinearModelTesis\mathReport.aux)
+ [20] (C:\Users\digital065\Desktop\NonLinearModelTesis\mathReport.bbl) [21] (C:
+\Users\digital065\Desktop\NonLinearModelTesis\mathReport.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -417,9 +417,9 @@ fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on mathReport.pdf (20 pages, 605769 bytes).
+Output written on mathReport.pdf (21 pages, 609544 bytes).
 PDF statistics:
- 210 PDF objects out of 1000 (max. 8388607)
+ 213 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
