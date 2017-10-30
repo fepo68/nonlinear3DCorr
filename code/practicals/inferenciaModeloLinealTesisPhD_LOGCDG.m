@@ -8,13 +8,13 @@ clc
 % RandStream.setGlobalStream(s);
 
 
-Kexp = 3; %for synth3
+Kexp = 5; %for synth3
 
 AR = zeros(10,5);
 Rand =AR;
 Mirkin = AR;
 Hubert =AR;
-for j = 1:1
+for j = 3:3
     
     
     

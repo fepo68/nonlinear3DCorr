@@ -1,0 +1,104 @@
+\documentclass[]{book}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{amssymb}
+\usepackage{multirow}                                                      % you want to use the \thanks command
+%\usepackage{multicolumn}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{math}
+\usepackage{adjustbox}
+%\usepackage{graphics}
+\usepackage{subfigure}
+\setcounter{tocdepth}{3}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage{url,hyperref,lineno,microtype}
+%\usepackage[onehalfspacing]{setspace}
+%\usepackage{amssymb}
+%\usepackage{subfigure}
+%\usepackage{bm}
+%\usepackage{multirow}
+\usepackage{amsbsy}
+%\usepackage{color}
+%\usepackage{cite}
+%\setcounter{tocdepth}{3}
+%\usepackage{graphicx}
+\usepackage[bookmarksopen=true]{hyperref}
+
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\gD}[2]{\mathcal{N}\left(#1,#2\right)}
+\newcommand{\dWj}{\partial\projMat}
+\newcommand{\kernel}[2]{k\left(#1,#2\right)}
+\newcommand{\kernelww}[2]{k\left(\mathbf{w}_{#1}^d,\mathbf{w}_{#2}^d\right)}
+\newcommand{\kernelwx}[1]{k\left(\mathbf{w}_{#1}^d,\indobj\right)}
+\newcommand{\catD}[2]{\mathcal{G}\left(#1,#2\right)}
+\newcommand{\Z}{\boldsymbol{\mathrm{Z}}}
+\newcommand{\C}{\boldsymbol{\Lambda}_j}
+\newcommand{\Cin}{\mathbf{C}_j}
+\newcommand{\muJ}{\boldsymbol{\mu}_j}
+\newcommand{\gammaA}{\Gamma\left(a\right)}
+\newcommand{\eye}{\mathbf{I}}
+\newcommand{\Scluster}{\mathbf{S}}
+\newcommand{\W}{\boldsymbol{\mathcal{W}}}
+
+\newcommand{\WIn}{\mathbf{W}}
+
+\newcommand{\setX}{\mathbf{X}}
+\newcommand{\setXphi}{\boldsymbol{\Phi}}
+\newcommand{\setObj}{\mathbf{X}_d}
+\newcommand{\indobj}{\mathbf{x}_{dn}}
+\newcommand{\projMat}{\boldsymbol{\mathcal{W}}_d}
+
+\newcommand{\projMatI}{\mathbf{W}_d}
+\newcommand{\dWjIn}{\partial\projMatI}
+\newcommand{\lvecI}{\mathbf{z}_j}
+\newcommand{\lvecsI}{\mathbf{z}_{s_{dn}}}
+\newcommand{\lvec}{\boldsymbol{\zeta}_j}
+\newcommand{\lvecs}{\boldsymbol{\zeta}_{s_{dn}}}
+\newcommand{\mixwe}{{\theta}_j}
+\newcommand{\mapphi}{\phi\left(x\right)}
+\newcommand{\mapphit}{\phi\left(x'\right)}
+\newcommand{\comment}[2]{{\color{blue}#1} {\color{red}#2}}
+\newcommand{\phixnd}{\boldsymbol{\phi}\left(\indobj\right)}
+\newcommand{\phiwld}[1]{\boldsymbol{\varphi}\left(\mathbf{w}_{#1}^d\right)}
+\newcommand{\phiwldI}[2]{\varphi_{#2}\left(\mathbf{w}_{#1}^d\right)}
+\newcommand{\wH}{\boldsymbol{\omega}_{j}^d}
+\newcommand{\wHj}[1]{\boldsymbol{\omega}_{#1}^d}
+\newcommand{\wIj}[1]{\mathbf{w}_{#1}^d}
+\newcommand{\muJFa}{\sum_{d=1}^{D}\mathbf{\hat{k}}_d }
+\newcommand{\kawx}{\mathbf{\hat{k}}_d }
+\newcommand{\Kaww}{\mathbf{\hat{K}}_d }
+\newcommand{\dWd}{\partial \boldsymbol{\Theta}}
+\newcommand{\likel}{\log p\left(\boldsymbol{\Phi},\mathbf{S}|\W,a,b,r,\gamma\right)}
+
+
+%\everymath{\displaystyle}
+%\everymath{\scriptstyle}
+%opening
+\title{Probabilistic latent variable models for shape correspondence analysis}
+\author{Hern\'an F. Garc\'ia and Mauricio A. \'Alvarez}
+
+\begin{document}
+
+
+
+\frontmatter
+\maketitle
+\tableofcontents
+
+\chapter{Abstract}
+
+This report provides a detailed analysis of the mathematical aspects related to our model for shape correspondence analysis.
+
+
+\mainmatter
+\input{basisfunctionMethod}
+\input{kernelizedModel}
+
+\backmatter
+
+\bibliographystyle{plain}
+\bibliography{bibRevTesisDoc}
+
+\end{document}

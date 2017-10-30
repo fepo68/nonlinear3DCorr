@@ -1,4 +1,7 @@
 function [S,W,X] = createToyLVMCluster(Nd,Md,D,J,K)
+
+% s = RandStream('mt19937ar','Seed',seed);
+% RandStream.setGlobalStream(s);
 % First, we sampled latent vectors zj for j=1,...,J? from a
 % K-dimensional normal distribution with mean 0 and covariance I.
 Z = zeros(K,J);
@@ -25,7 +28,7 @@ X = {};
 S = {};
 for d = 1:D
     Wd = W{d};
-%     Xd = zeros(Md(d),Nd(d));
+    %     Xd = zeros(Md(d),Nd(d));
     Xd = [];
     Sd = [];
     for j = 1:J
@@ -39,5 +42,7 @@ for d = 1:D
     S{d} = Sd;
     
 end
+
+
 
 % save(['dataToyIwatamodel03Feb16_5',num2str(D),'D',num2str(Nd_j),'Ndj',num2str(J),'J',num2str(K),'K.mat'],'S','W','X','Nd','Md','D','J','K');

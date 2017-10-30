@@ -16,19 +16,18 @@ Mirkin = AR;
 Hubert =AR;
 ja = 1;
 Clusters = {};
-for i = 1:1
-    load synth3exp1D2PHI % synth3
-    % load dataToyIwatamodel31Ene162D40Ndj5J5K % synth5
-    % load dataToyIwatamodel31Ene162D40Ndj5J10K % synth10
-    
+pathD ='./toyData/';
+for i = 1:5
+%     load synth5exp8  % synth3 J = 3;
+    %     load synth3exp9 % synth3
+%     load([pathD,'synth5exp2'])
+%     load([pathD,'synth3exp1D2J5NLmap18oct18']);
+    load  dataToyirisDataset1exp
     %     D = length(X);
-    T = 100; % iterations
-    J = 1; % initial number of clusters J
-    alphaW = 0.1; % small variance for projection Matrices Wd
+    T = 300; % iterations
+    %     J = 1; % initial number of clusters J
+    alphaW = 0.1; % small variance for cprojection Matrices Wd
     K = 5; % dimensionality of the latent vector
-    
-    
-    
     
     
     %         load(['synth',num2str(Kexp),'exp',num2str(i),'D',num2str(j)]);
@@ -41,8 +40,22 @@ for i = 1:1
     
     
     %% Linear model
+    params.a = 1;
+    params.b = 1;
+    params.r = 1;
+    params.gammaVal = 20;
+    params.optimW = false;
+%         %%%%% this to map W through basis functions
+%         mapsToBF = false;
+%         if mapsToBF == true
+%             nfBasis = 50;
+%             fBasis = 'sigmoid';
+%             X = polyToyMapBasis(X,S,Md,Nd,nfBasis,fBasis,true);
+%     
+%         end
+%     
     
-    [X,S,W,params] = lvmInferCorrespondenceLin(T,D,K,alphaW,X);
+    [X,S,W,params] = lvmInferCorrespondenceLin(T,D,K,alphaW,X,params);
     %% Nonlinear model
     %     [X,S,W,params] = lvmInferCorrespondenceNonLin(T,D,K,alphaW,X);
     

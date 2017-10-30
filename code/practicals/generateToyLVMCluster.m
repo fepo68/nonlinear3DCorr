@@ -6,26 +6,39 @@ clc
 
 J = 5;
 D = 2;
-K = 10;
-Md = [50 50];
+K = 5;
+Md = [5 5];
 Nd = [200 200];
 
-for D = 2:10 % for several domains experiments
+for D = 2:2 % for several domains experiments
     
-    Md = 50*ones(1,D);
+    Md = Md(D)*ones(1,D);
     Nd = 200*ones(1,D);
     
     for i = 1:5
         
-        
-        s = RandStream('mt19937ar','Seed',10e5*i);
+%         seed = 1e5*3;
+        s = RandStream('mt19937ar','Seed',1e5*i);
         RandStream.setGlobalStream(s);
         
+        linToy = true;
+        if linToy == true
+            
+            [S,W,X] = createToyLVMCluster(Nd,Md,D,J,K); % For the linear
+            %         model
+            plot(X{1}(:,1),X{1}(:,2),'*r')
+            
+            save(['synth',num2str(K),'exp',num2str(i),'D',num2str(D),'17oct17.mat'],'S','W','X','Nd','Md','D','J','K');
+        else
+            
+            [S,W,X,PHIX] = createToyLVMClusterBasisFunc(Nd,Md,D,J,K,'gauss',[20 20]);
+            plot(X{1}(:,1),X{1}(:,2),'*r')
+            
+            save(['synth',num2str(K),'exp',num2str(i),'D',num2str(D),'Md5_5.mat'],'S','W','X','Nd','Md','D','J','K','PHIX');
+        end
         
-        [S,W,X] = createToyLVMCluster(Nd,Md,D,J,K);
+        % for the nonlinear model
         
-        plot(X{1}(:,1),X{1}(:,2),'*r')
         
-        save(['synth',num2str(K),'exp',num2str(i),'D',num2str(D),'.mat'],'S','W','X','Nd','Md','D','J','K');
     end
 end

@@ -1,18 +1,24 @@
-function [X,S,W,params] = lvmInferCorrespondenceLin(T,D,K,alphaW,X)
-
+function [X,S,W,params] = lvmInferCorrespondenceLin(T,D,K,alphaW,X,params)
+% RandStream.setGlobalStream(s);
 % T: number of iterations
 % D: number of domains
 % K: dimensionality of the latent vector
 %. X: Observed data
 
 % model parameters
-a = 1;
-b = 1;
-r = 1;
-gammaVal = 1;
-% K = 3;
-
-optiW = true;
+a = params.a;
+b = params.b;
+r = params.r;
+gammaVal = params.gammaVal;
+optiW = params.optimW;
+% K = params.K;
+% a = 1;
+% b = 1;
+% r = 1;
+% gammaVal = 1;
+% % K = 3;
+% 
+% optiW = true;
 
 N = 0;
 auxN = 0;
@@ -74,39 +80,6 @@ z_j = mvnrnd(zeros(params.K,1),((alpha*r)^(-1))*eye(params.K));
 %     end
 %     precs(:,:,i) = (alpha^(-1))*eye(params.K);
 % end
-
-%%%%% this to map W through basis functions
-mapsToBF = true;
-if mapsToBF == true
-    kern.weightVariance = 0.1;
-    kern.biasVariance = 0;
-    kern.variance = 0.1;
-    kern.degree = 5;
-    fBasis = 'polynomial';
-    Waux = {};
-    for d = 1:params.D
-        Waux{d} = W{d}';
-    end
-    X = polyToyMapBasis(X,kern,D,fBasis);
-    W = polyToyMapBasis(Waux,kern,D,fBasis);
-    
-    N = 0;
-    auxN = 0;
-    for d = 1:D
-        [Nd,Md] = size(X{d});
-        params.Md(d) = Md;
-        params.Nd(d) = Nd;
-        N = N + Nd;
-        auxN = auxN +(Nd*Md);
-        W{d} = W{d}';
-    end
-    
-    auxSumD = auxN/2;
-    params.N = N;
-    
-    params.auxN = auxN;
-    params.auxSumD = auxSumD;
-end
 
 %% Second factor parameters depicted in (4)
 [ap,bp,mu_j,invCj] = equation4IWata(X,S,W,params);
