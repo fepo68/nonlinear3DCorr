@@ -13,29 +13,48 @@ labels = loadMNISTLabels('train-labels-idx1-ubyte');
 disp(labels(1:10));
 
 %% Processing MNITS
-% First we downsampled each image to have 16x16 size
-for k = 1:400:2000
+% First we downsampled each image to have pixNxpixN size
+iRes = false;
+count = 1;
+for k = 1:800:4000
     X = {};
     S = {};
-    Nd = [200,200];
+    Nd = [400,400];
+    dataDs = 255*images(:,k:k+799);
+    labelsDb = labels(k:k+799);
+    [aa pp] = sort(labelsDb);
+    dataDs = dataDs(:,pp);
+    labelsDb = aa+1;
+    CVO = cvpartition(labelsDb,'k',2);
+    d1Idx = CVO.training(1);
+    d2Idx = CVO.test(1);
     
-    dataDs = images(:,k:k+399);
+    
+    
+    
     [Md,N] = size(dataDs);
-    dataDlowres = zeros(16^2,N);
-    for i = 1:N
-        img = reshape(dataDs(:,i),[28,28]);
-        img = imresize(img,[16,16]);
-        %     imshow(img,[]);
-        dataDlowres(:,i) = img(:);
+    pixN = 28;
+    dataDlowres = zeros(pixN^2,N);
+    if iRes ==true
+        for i = 1:N
+            img = reshape(dataDs(:,i),[28,28]);
+            %         img = imresize(img,[pixN,pixN]);
+            %     imshow(img,[]);
+            dataDlowres(:,i) = img(:);
+        end
+    else
+        dataDlowres = dataDs;
     end
-    labelsDb = labels(1:2*Nd(1))+1;
-    Md = [16^2,16^2];
-    X{1} = dataDlowres(:,1:200)';
-    X{2} = dataDlowres(:,201:end)';
-    S{1} = labelsDb(1:200)';
-    S{2} = labelsDb(201:end)';
+    %     labelsDb = labels(1:2*Nd(1))+1;
+    
+    Md = [pixN^2,pixN^2];
+    X{1} = dataDlowres(:,d1Idx)';
+    X{2} = dataDlowres(:,d2Idx)';
+    S{1} = labelsDb(d1Idx)';
+    S{2} = labelsDb(d2Idx)';
     D = 2;
-    save(['dataToy','MNIST','Dataset',num2str(k),'exp'],'D','X','S','Md','Nd');
+    save(['dataToy','MNIST','Dataset',num2str(count),'exp'],'D','X','S','Md','Nd');
+    count = count +1;
     
 end
 

@@ -1,0 +1,16 @@
+function plotMultiViewData(Y)
+cmap = colormap('lines');
+V = length(Y);
+% figure
+
+for v = 1:V
+    Yd = Y{v};
+    [Nd,Dd] = size(Yd);
+    plot(Yd(:,1),Yd(:,2), 'o','Color',cmap(v,:));
+    hold on
+    legend(['View data',num2str(v)]);
+end
+
+for v = 1:V
+    legend(['View data',num2str(v)]);
+end
