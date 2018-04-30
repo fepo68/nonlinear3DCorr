@@ -1,0 +1,31 @@
+\begin{thebibliography}{1}
+
+\bibitem{Alvarez12KVF}
+Mauricio~A. \'{A}lvarez, Lorenzo Rosasco, and Neil~D. Lawrence.
+\newblock Kernels for vector-valued functions: A review.
+\newblock {\em Found. Trends Mach. Learn.}, 4(3):195--266, March 2012.
+
+\bibitem{Iwata13}
+Tomoharu Iwata, Tsutomu Hirao, and Naonori Ueda.
+\newblock Unsupervised cluster matching via probabilistic latent variable
+  models, 2013.
+
+\bibitem{Iwata16}
+Tomoharu Iwata, Tsutomu Hirao, and Naonori Ueda.
+\newblock Probabilistic latent variable models for unsupervised many-to-many
+  object matching.
+\newblock {\em Information Processing and Management}, 52(4):682 -- 697, 2016.
+
+\bibitem{Lawrence09NMF}
+Neil~D. Lawrence and Raquel Urtasun.
+\newblock Non-linear matrix factorization with gaussian processes.
+\newblock In {\em Proceedings of the 26th Annual International Conference on
+  Machine Learning}, ICML '09, pages 601--608, New York, NY, USA, 2009. ACM.
+
+\bibitem{IwaDuvGha2012warped}
+Zoubin~Ghahramani Tomoharu~Iwata, David~Duvenaud.
+\newblock Warped mixtures for nonparametric cluster shapes.
+\newblock In {\em 29th Conference on Uncertainty in Artificial Intelligence},
+  pages 311--319, 2013.
+
+\end{thebibliography}
