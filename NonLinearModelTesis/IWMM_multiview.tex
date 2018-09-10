@@ -284,7 +284,7 @@ Based on the iWMM (see \cite{IwaDuvGha2012warped}) our generative model generate
 		\item For each observed dimension $d = 1,\cdots,D_v$
 
 		\begin{enumerate}
-					\item Draw projection variable ${w}_{d}^v\sim \gD{\rho_d^v}{\omega_d^v}$
+					\item Draw projection variable ${w}_{d}^v\sim \gD{0}{\rho_d^v}$
 			\item For each observation $n = 1,\cdots,N_v$
 			\begin{enumerate}
 				\item Draw feature $y_{nd}^{v}\sim \gD{\textcolor{red}{{w}_{d}^v}f_d^{v}(\mathbf{x}_{nv})}{\beta^{-1}}$
@@ -304,6 +304,8 @@ We define the dimensionalities of our variables as:
 	\item $\boldsymbol{\mu}_c \in \mathbb{R}^{Q\times 1}$
 \end{itemize}
 
+
+\textbf{Question:} Can we relate the outputs $y_{nd}$ through multi-output GPs?
 
 \subsection{Latent Multi-view Warped Mixture Model}
 
