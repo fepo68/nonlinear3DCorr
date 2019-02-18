@@ -57,6 +57,7 @@
 \newcommand{\hParams}{\boldsymbol{\theta}}
 \newcommand{\hParamsv}{\boldsymbol{\theta}^{v}}
 
+\newcommand{\obspv}{\mathbf{x}_{nv}}
 \newcommand{\projMatI}{\mathbf{W}_d}
 \newcommand{\dWjIn}{\partial\projMatI}
 \newcommand{\lvecI}{\mathbf{z}_j}
@@ -101,130 +102,6 @@
 Probabilistic approach for the correspondence problem based on the Single View WMM\cite{IwaDuvGha2012warped}.
 \end{abstract}
 
-\section{The model}
-
-Based on the Iwatta's paper (see \cite{Iwata13,Iwata16}), we set nonlinear approaches for the shape correspondence analysis using probabilistic latent variable models.
-
-Suppose that we are given objects in $D$ domains $\mathcal{X}=\left\{\setObj\right\}_{d=1}^D$ mapped to a Hilbert space $\mathcal{H}$, where $\setObj = \left\{\indobj\right\}_{n=1}^{N_d}$ is a set of objects in the $d$th domain, and $\indobj \in \mathbb{R}^{M_d}$ is  the observed vector of the $n$th object in the $d$th domain. We can cluster groups of correspondences by using a non-linear function that represents the shape descriptors in the Hilbert space.
-
-%Our notation is summarized in Table \ref{tab:not}. Note that we are unaware of any correspondence between objects in different domains. The number of objects $N_d$ and the dimensionality $L_d$ for each domain in $\mathcal{H}$ can be different from those of other domains.  Therefore, our task is to match clusters of descriptors (groupwise correspondences) across multiple brain structures in an
-%unsupervised manner \cite{Iwata16}.
-%
-%\begin{table}
-%\centering
-%\caption{Notation.}
-%\label{tab:not}
-%\resizebox{\textwidth}{!}{
-%\begin{tabular}{l l l}
-%\hline
-%Symbol in $\mathcal{I}$& Symbol in $\mathcal{H}$  & Description \\
-%\hline
-%$D$ & &Number of shapes \\
-%$N_d$ && Number of objects ($3D$-landmarks) in the $d$th shape\\
-%$M_d$ &$L_d$& Dimensionality of the observed features in the $d$th shape\\
-%$K$ & $P$ & Dimensionality of a latent vector\\
-%$J$ & $Q$ & Number of correspondences (latent vectors) to which objects are assigned\\
-%$\indobj$ & $\phixnd$ & Observation of the $n$th object in the $d$th shape, $\indobj \in \mathbb{R}^{M_d}$\\
-%$\mathbf{z}_j$  &$\lvec$& Latent vector for the $j$th correspondence, $\lvec \in \mathbb{R}^{K}$ \\
-%$\mathbf{W}_d $ &$\projMat$& Projection matrix for the $d$th domain, $\mathbf{W}_d \in \mathbb{R}^{M_d \times K}$ \\
-%$\mixwe$ && Mixture weight for the  $j$th cluster, $\mixwe \ge 0$, $\sum_{j=1}^{\infty}{\mixwe} = 1$\\
-%\hline
-%\hline 
-%\end{tabular}}
-%\end{table}
-%%
-
-As in infinite Gaussian mixture models, our approach assumes that there are an infinite number of clusters related to each
-correspondence, and each cluster $j$ has a latent vector $\lvecI\in \mathbb{R}^K$ in a latent space of dimension $K$. Descriptors that have the same cluster assignments $s_{dn}$ are related by the same latent vector and considered to match (establish a groupwise correspondence).
-
-Each object in $\indobj \in \mathcal{R}^{M_d}$ in the $d$th domain is generated depending on the domain-specific projection matrix $\projMatI \in \mathbb{R}^{M_d \times K}$ and latent vector $\lvecsI$ that is selected from a set of latent vectors $\Z = \left\{\lvecI\right\}_{j=1}^\infty$. Here, $s_{dn}=\left\{1,\dots,\infty\right\}$ is the latent cluster assignment of object $\indobj$.
-
-
-The proposed model is based on an infinite mixture model, where the
-probability of descriptor mapped in a Hilbert space $\indobj$ is given by
-
-\begin{equation}
-p\left( {{\indobj}|{\Z},{\boldsymbol{{W}}},{\boldsymbol{\theta }}} \right) = \sum\limits_{j = 1}^\infty  {{\theta _j}\mathcal{N}\left(\indobj|\projMatI\lvecI,\alpha^{-1}\mathbf{I}\right)}, 
-\label{eq:llNLmodel}
-\end{equation}
-
-where $\boldsymbol{{W}} = \left\{\projMatI \right\}_{d=1}^{D}$ is a set of projections
-matrices, $\boldsymbol{\theta}=\left(\theta_j\right)_{j=1}^{\infty}$
-are the mixture weights, $\theta_j$ represents the probability that
-the $j$th cluster is chosen, and
-$\mathcal{N}\left(\boldsymbol{\mu},\boldsymbol{\Sigma}\right)$ denotes
-a normal distribution with mean $\boldsymbol{\mu}$ and covariance
-matrix $\boldsymbol{\Sigma}$. One important contribution derived in \cite{Iwata13}, is that we can analyze multiples structures with different properties and dimensionalities, by employing projection matrices for each brain structure (domain-specific). Figure
-\ref{fig:pipeline} shows the scheme of the proposed model, in which
-the relationship between shape descriptors, and
-latent vectors is described.
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.6\textwidth]{img/pipelineGroupCorr}
-\caption{Scheme for the groupwise correspondence method. The
-  figure shows an example of establishing clusters of correspondences
-  in two domains (left ventrals).}
-\label{fig:pipeline}
-\end{figure} 
-
-\section{Model Approaches}
-
-The main ideas for the probabilistic correspondence problem are summarized
-
-\begin{enumerate}
-	\item We can relax the assumption that the observations are linear with respect to their latent vectors by using nonlinear matrix factorization techniques (\cite{Lawrence09NMF}). From these work we point out that by marginalizing out the mapping matrix $\mathbf{W}$(which goes
-	from the latent space to the observed data space), derived in a Bayesian multi-output regression model. 
-	
-	Our model can be formalized as
-	
-	\begin{align}
-	p\left( {{\indobj}|{\Z},{\mathbf{{W}}},{\boldsymbol{\theta }}} \right) = \sum_{j=1}^{\infty} \theta_{j}{\prod_{m=1}^{M_d}\gD{\mathbf{x}_{dnm}|f_{dm}\left(\lvecI\right)}{\alpha^{-1}}}
-	\end{align}
-	
-	where $f_{dm}$ can handled from two perspectives
-	\begin{enumerate}
-		\item Set the same covariance matrix for all domains
-		\begin{align}
-		f_{dm} \sim \GP{\mu_{dm}\left(\lvecI\right)}{\kernel{\lvecI}{\lvecI'}}
-		\end{align}
-		
-		\item One covariance matrix for each domain
-		\begin{align}
-		f_{dm} \sim \GP{\mu_{dm}\left(\lvecI\right)}{k_d\left({\lvecI},{\lvecI'}\right)}
-		\end{align}
-	\end{enumerate}
-	
-	\item As in the in the linear model of coregionalization (LMC), the outputs are expressed as linear combinations
-	of independent random functions \cite{Alvarez12KVF}. Consider a set of $D$ outputs $\left\{\mathbf{f}_d(\mathbf{\lvecI})\right\}_{d=1}^D$
-    with $\mathbf{f}_d(\mathbf{\lvecI}) \in \mathbb{R}^{M_d}$. By adopting this framework, our model can be formulated as
-    
-    \begin{align}
-    p\left( {{\indobj}|{\Z},{\mathbf{{W}}},{\boldsymbol{\theta }}} \right) = \sum_{j=1}^{\infty} \theta_j \gD{\indobj|\mathbf{f}_{d}(\mathbf{\lvecI})}{\alpha^{-1}\eye},
-    \end{align}
-    
-    where each component can be expressed as:
-    
-    \begin{enumerate}
-    	\item By using the linear model of coregionalization  
-    	\begin{align}
-    	\mathbf{f}_d(\mathbf{\lvecI}) \sim \GP{\boldsymbol{0}}{\sum_{q=1}^{Q}\mathbf{B}_q k_d\left(\lvecI,\lvecI'\right)},
-    	\end{align}
-    	
-    	where $\mathbf{B}_q = \mathbf{L}_q^\top\mathbf{L}_q \in \mathbb{R}^{M_d \times M_d}$ is the coregionalization matrix (computed from the Cholesky decomposition)
-    	
-    	\item By using simplified version of the LMC, known as the intrinsic coregionalization model (ICM) (see \cite{Alvarez12KVF}), assumes that the elements of the coregionalization matrix $\mathbf{B}_q$ can be written as a scaled version of the elements $b_q$, which do not depend on the particular output functions $f_d(\lvecI)$.
-    	
-    	\begin{align}
-    	\mathbf{f}_d(\mathbf{\lvecI}) \sim \GP{\boldsymbol{0}}{\mathbf{B} k\left(\lvecI,\lvecI'\right)},
-    	\end{align}
-    	
-    \end{enumerate}
-
-\end{enumerate}
-
-
-
 \section{Multiview Warped Mixture Models}
 
 We can use the single view problem of the warped mixture model from \cite{IwaDuvGha2012warped} in which they warp a latent mixture of Gaussians into nonparametric cluster shapes. The low-dimensional latent mixture model summarizes the properties of the high-dimensional density manifolds describing the data.
@@ -233,11 +110,11 @@ Our idea is to introduce a model which warps a multiview latent mixture of Gauss
 (or density manifolds) describing the data. The number of manifolds, as well as the shape and dimension of each manifold is automatically inferred.}
 
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=.9\linewidth]{img/iwmm_talk_Model}
-	\caption{WMM from \cite{IwaDuvGha2012warped}}
-\end{figure}
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width=.9\linewidth]{img/iwmm_talk_Model}
+%	\caption{WMM from \cite{IwaDuvGha2012warped}}
+%\end{figure}
 
 \subsection{The model}
 
@@ -305,7 +182,7 @@ We define the dimensionalities of our variables as:
 \end{itemize}
 
 
-\textbf{Question:} Can we relate the outputs $y_{nd}$ through multi-output GPs?
+%\textbf{Question:} Can we relate the outputs $y_{nd}$ through multi-output GPs?
 
 \subsection{Latent Multi-view Warped Mixture Model}
 
@@ -380,23 +257,128 @@ where $C$ is the number of components for which $N_{vc} >
 p\left(\setY,\setX,\Z|\hParams,\nu,\mathbf{u},r\eta\right) = \prod_{v=1}^{V}p\left(\setYv|\setXv,\hParamsv\right)p\left(\setXv|\Z_v,\Scluster_v , \nu,\mathbf{u},r\right)p\left(\Z_v|\eta\right).
 \end{align}
 
-\subsection{Bayesian Multi-view Warped Mixture Model}
 
-Since we have a multi-view data set defined as $\mathcal{Y}=\left\{\mathbf{Y}^{v}\right\}_{v=1}^{V}$, where each view is set as $\mathbf{Y}^{v}\in \mathbb{R}^{N_v\times D_v}$, the joint likelihood is given by 
+\subsection{Inference}
+
+We infer the posterior distribution of the latent coordinates
+$\setX = \left\{\setXv\right\}_v^{V}$ and cluster assignments $\setZv$ using Markov
+chain Monte Carlo (MCMC). In particular, we alternate
+collapsed Gibbs sampling of $\Z$, and hybrid Monte
+Carlo sampling of $\setX$. Given $\setX$, we can efficiently sample
+$\setZv$ using collapsed Gibbs sampling, integrating out
+the mixture parameters. Given $\setZv$, we can calculate the
+gradient of the unnormalized posterior distribution of
+$\setX$, integrating over warping functions. This gradient
+allows us to sample $\setX$ using hybrid Monte Carlo.
+
+First, we explain collapsed Gibbs sampling for Z.
+Given a sample of X, $p\left(\Z|\setX,\Scluster,v,\mathbf{u},r,\eta\right)$ does not depend
+on Y. This lets resample cluster assignments,
+integrating out the iGMM likelihood in close form.
+Given the current state of all but one latent component
+zn, a new value for zn is sampled from the following
+probability:
+
+\begin{align*}
+p\left(\mathbf{z}_{nv} = c| \setX,\Z_{\setminus nv},\Scluster,v,\mathbf{u},r,\eta\right) \propto \left\{\begin{array}{cc}
+N_{vc\setminus{nv}}\cdot p\left(\obspv|\setX_c, \Scluster,v,\mathbf{u},r\right) & \textrm{existing components}\\
+\eta\cdot p\left(\obspv|\Scluster,v,\mathbf{u},r\right) & \textrm{a new cluster}
+\end{array}\right.
+\end{align*} 
+
+where $\setX_c = \left\{\obspv|\mathbf{z}_{nv}=c\right\}$ is the set of latent coordinates
+assigned to the $c^{th}$ component, and $\setminus{nv}$ represents
+the value or set when excluding the $n$-th observation in the $v$-th view. We can analytically calculate $p\left(\obspv|\setX_c, \Scluster,v,\mathbf{u},r\right)$  as follows:
+
+\begin{align*}
+p\left(\obspv|\setX_c, \Scluster,v,\mathbf{u},r\right) = \pi^{-\frac{N_{vc\setminus n}Q}{2}}\frac{r^{Q/2}|\Scluster|^{\nu/2}}{r_c^{Q/2}|\Scluster_c|^{\nu_c/2}}\prod_{q=1}^{Q}\frac{\Gamma\left(\frac{\nu_c + 1 -q}{2}\right)}{\Gamma\left(\frac{\nu + 1 -q}{2}\right)}
+\end{align*}
 
 
-\begin{align}
-p\left(\mathbf{Y},\mathbf{X},\mathbf{Z}\right) = \prod_{v=1}^{V}p\left(\setYv|\setFv,\setXv,
-\hParams\right)p\left(\setFv|\setXv\right)p\left(\setXv|\setZv\right)p\left(\setZv\right)
-\end{align}
+\section{Results}
+
+\section{Clustering performance on real datasets}
+
+\begin{table*}[ht!]
+	\centering
+	\caption{Average Rand index for evaluating clustering performance.}
+	\label{tab:comparison1}
+	\begin{tabular}{c c c c c c c}
+		\cline{2-7}
+		& \multicolumn{5}{c}{\textbf{Database}}\\
+		\hline
+		\textbf{Approach} &  	Wine & 2-curve & 3-semi & 2-circle & Pinwheel& Vowel\\
+		\hline\hline
+%		iGMM  & $0.72\pm0.06$ &&&&&\\
+%		iWMM ($Q=2$) & $0.65\pm0.05$ &&&&&\\
+%		iWMM ($Q=D$) & $0.77\pm0.03$ &&&&&\\
+		\hline
+		MV-WMM($Q=2$) & $0.68\pm0.03$  &$0.83\pm0.02$ &$0.83\pm0.01$&$0.88\pm0.02$&$0.87\pm0.02$ & $0.65\pm0.01$\\
+		MV-WMM($Q=D$) & $0.85\pm 0.02$ &$0.83\pm0.02$&$0.83\pm0.01$&$0.88\pm0.02$&$0.87\pm0.02$&$0.73\pm0.02$\\
+		\hline
+
+	\end{tabular}
+\end{table*}
+
+%2-curve 3-semi 2-circle Pinwheel Iris Glass Wine Vowel
+%iGMM 0:52 0:79 0:83 0:81 0:78 0:60 0:72 0:76
+%iWMM(Q=2) 0:86 0:99 0:89 0:94 0:81 0:65 0:65 0:50
+%iWMM(Q=D) 0:86 0:99 0:89 0:94 0:77 0:62 0:77 0:76
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.9\linewidth]{img/mvwmmPW2arms100N}
+	\caption{Experimental results for the Pinwheel dataset. Current mixture parameters, along with the latent positions (Top left). Original data and predicted assignments (Top right). }
+\end{figure}
 
 
-We assume that we have observations (inputs) in different views, in which observations are generated by mapping the latent coordinates through a set of smooth functions, over which Gaussian process priors are placed.
+\subsection{Comparison with linear approaches}
 
-\begin{align}
-p\left(\setYv|\setFv,\setXv,\setZv,\hParams\right) = \gD{\setYv|\setWv\setFv}{\beta^{-1}\eye}
-\end{align}
+First, we test the performance of our approaches (both NL-UCM and MV-WMM) regarding the adjusted Rand index (we report both average and standard deviation), to quantify the similarity between the inferred clusters \cite{Iwata16} and the true labels. For comparison, we use unsupervised clustering matching (UCM) \cite{Iwata16}, k-means (KM), and convex kernelized sorting (CKS) \cite{Djuric12}. Table \ref{tab:comparison} shows that our approaches outperforms the state-of-the-art methods for unsupervised clustering for the three databases. The results also show that by mapping the observed data through  random feature expansions, the model can handle real-world datasets with better performance than linear approaches as in the case of NL-UCM (i.e., $0.17$ for the MNIST dataset against $0.085$ obtained from the UCM method). 
 
+\begin{table*}[ht!]
+	\centering
+	\caption{Adjusted Rand index of the proposed method against the state-of-the-art methods for unsupervised clustering.}
+	\label{tab:comparison}
+	\begin{tabular}{c c c c c c}
+		\cline{2-6}
+		& \multicolumn{4}{c}{\textbf{Approach}}\\
+		\hline
+		Database &  	UCM & KM & KM-CKS& \textbf{NL-UCM} & \textbf{MV-WMM}\\
+		\hline\hline
+		Iris & $0.383\pm0.189$ &  $0.224 \pm 0.0910$  &  $0.254 \pm 0.154$ &$\mathbf{0.546\pm 0.080}$ & $\mathbf{0.498\pm 0.001}$\\
+		Glass & $0.160 \pm 0.020$ & $0.050 \pm 0.008$     &  $0.052 \pm 0.011$       & $\mathbf{0.378\pm 0.045}$ & $\mathbf{0.384\pm 0.003}$\\
+		MNIST & $0.085 \pm 0.016$&      $0.030 \pm 0.007$   &  $0.037 \pm 0.008$  & $\mathbf{0.167\pm 0.013}$ & $\mathbf{0.133\pm 0.004}$\\
+	\end{tabular}
+\end{table*}
+
+\subsection{Non-rigid 3D shape datasets}
+
+
+\begin{figure}[ht!]
+	\centering
+	
+		\includegraphics[width=0.43\linewidth]{img/gorillaAMVMMexp1}
+			\includegraphics[width=0.4\linewidth]{img/gorillaAMVMMexp2}\\
+	\includegraphics[width=0.45\linewidth]{img/GorillasMVWMM100Nexp2}
+	\caption{Experimental results for the TOSCA dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different poses. Average Rand Index $0.5857$ }
+\end{figure}
+%\subsection*{Bayesian Multi-view Warped Mixture Model}
+%
+%Since we have a multi-view data set defined as $\mathcal{Y}=\left\{\mathbf{Y}^{v}\right\}_{v=1}^{V}$, where each view is set as $\mathbf{Y}^{v}\in \mathbb{R}^{N_v\times D_v}$, the joint likelihood is given by 
+%
+%
+%\begin{align}
+%p\left(\mathbf{Y},\mathbf{X},\mathbf{Z}\right) = \prod_{v=1}^{V}p\left(\setYv|\setFv,\setXv,
+%\hParams\right)p\left(\setFv|\setXv\right)p\left(\setXv|\setZv\right)p\left(\setZv\right)
+%\end{align}
+%
+%
+%We assume that we have observations (inputs) in different views, in which observations are generated by mapping the latent coordinates through a set of smooth functions, over which Gaussian process priors are placed.
+%
+%\begin{align}
+%p\left(\setYv|\setFv,\setXv,\setZv,\hParams\right) = \gD{\setYv|\setWv\setFv}{\beta^{-1}\eye}
+%\end{align}
+%
 
 
 \bibliographystyle{plain}

@@ -1,0 +1,21 @@
+\begin{thebibliography}{1}
+
+\bibitem{Iwata16}
+Tomoharu Iwata, Tsutomu Hirao, and Naonori Ueda.
+\newblock Probabilistic latent variable models for unsupervised many-to-many
+  object matching.
+\newblock {\em Information Processing and Management}, 52(4):682 -- 697, 2016.
+
+\bibitem{Lawrence03}
+Neil Lawrence.
+\newblock Gaussian process latent variable models for visualisation of high
+  dimensional data.
+\newblock In {\em In NIPS}, page 2004, 2003.
+
+\bibitem{IwaDuvGha2012warped}
+Zoubin~Ghahramani Tomoharu~Iwata, David~Duvenaud.
+\newblock Warped mixtures for nonparametric cluster shapes.
+\newblock In {\em 29th Conference on Uncertainty in Artificial Intelligence},
+  pages 311--319, 2013.
+
+\end{thebibliography}

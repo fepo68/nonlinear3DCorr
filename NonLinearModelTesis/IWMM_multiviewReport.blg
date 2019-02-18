@@ -1,0 +1,13 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: IWMM_multiviewReport.aux
+The style file: plain.bst
+Database file #1: bibRevTesisDoc.bib
+I was expecting a `,' or a `}'---line 606 of file bibRevTesisDoc.bib
+ : url = author 
+ :              = "Michael Leyton"
+I'm skipping whatever remains of this entry
+You're missing a field part---line 1021 of file bibRevTesisDoc.bib
+ :    eid = 
+ :          ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Djuric12"
+(There were 2 error messages)
