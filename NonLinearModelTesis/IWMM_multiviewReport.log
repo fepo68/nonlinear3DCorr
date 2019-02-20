@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.15)  18 FEB 2019 11:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.15)  20 FEB 2019 13:21
 entering extended mode
 **./IWMM_multiviewReport.tex
 (IWMM_multiviewReport.tex
@@ -387,11 +387,11 @@ Package pdftex.def Info: img/mvwmmPW2arms100N.pdf  used on input line 329.
 LaTeX Warning: Citation `Djuric12' on page 3 undefined on input line 336.
 
 [3]
-<img/gorillaAMVMMexp1.png, id=33, 207.77625pt x 192.72pt>
+<img/gorillaAMVMMexp1.png, id=33, 233.37187pt x 228.855pt>
 File: img/gorillaAMVMMexp1.png Graphic file (type png)
 <use img/gorillaAMVMMexp1.png>
 Package pdftex.def Info: img/gorillaAMVMMexp1.png  used on input line 360.
-(pdftex.def)             Requested size: 194.77287pt x 180.66571pt.
+(pdftex.def)             Requested size: 194.77287pt x 191.01117pt.
 <img/gorillaAMVMMexp2.png, id=34, 197.23688pt x 195.73125pt>
 File: img/gorillaAMVMMexp2.png Graphic file (type png)
 <use img/gorillaAMVMMexp2.png>
@@ -407,18 +407,50 @@ File: img/GorillasMVWMM100Nexp2.pdf Graphic file (type pdf)
 Package pdftex.def Info: img/GorillasMVWMM100Nexp2.pdf  used on input line 362.
 
 (pdftex.def)             Requested size: 203.83417pt x 155.28564pt.
+<img/dogMVWMM100Nexp2.png, id=36, 212.29312pt x 231.86626pt>
+File: img/dogMVWMM100Nexp2.png Graphic file (type png)
+<use img/dogMVWMM100Nexp2.png>
+Package pdftex.def Info: img/dogMVWMM100Nexp2.png  used on input line 369.
+(pdftex.def)             Requested size: 194.77287pt x 212.7393pt.
+<img/dogMVWMM100Nexp2b.png, id=37, 127.22531pt x 177.66376pt>
+File: img/dogMVWMM100Nexp2b.png Graphic file (type png)
+<use img/dogMVWMM100Nexp2b.png>
+Package pdftex.def Info: img/dogMVWMM100Nexp2b.png  used on input line 370.
+(pdftex.def)             Requested size: 154.00742pt x 215.0741pt.
+<img/lionlessMVMMexp1.png, id=38, 277.035pt x 153.57375pt>
+File: img/lionlessMVMMexp1.png Graphic file (type png)
+<use img/lionlessMVMMexp1.png>
+Package pdftex.def Info: img/lionlessMVMMexp1.png  used on input line 378.
+(pdftex.def)             Requested size: 194.77287pt x 107.9719pt.
+<img/lionlessMVMMexp2.png, id=39, 283.81032pt x 164.11313pt>
+File: img/lionlessMVMMexp2.png Graphic file (type png)
+<use img/lionlessMVMMexp2.png>
+Package pdftex.def Info: img/lionlessMVMMexp2.png  used on input line 379.
+(pdftex.def)             Requested size: 185.71849pt x 107.39597pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/lionlessMVMMexp3.pdf): PDF inclusion: 
+found PDF version <1.7>, but at most version <1.5> allowed
+<img/lionlessMVMMexp3.pdf, id=40, 153.75311pt x 123.55159pt>
+File: img/lionlessMVMMexp3.pdf Graphic file (type pdf)
+<use img/lionlessMVMMexp3.pdf>
+Package pdftex.def Info: img/lionlessMVMMexp3.pdf  used on input line 380.
+(pdftex.def)             Requested size: 203.83417pt x 163.79742pt.
 (IWMM_multiviewReport.bbl) [4 <./img/mvwmmPW2arms100N.pdf>] [5 <./img/gorillaAM
 VMMexp1.png (PNG copy)> <./img/gorillaAMVMMexp2.png (PNG copy)> <./img/Gorillas
-MVWMM100Nexp2.pdf>] (IWMM_multiviewReport.aux)
+MVWMM100Nexp2.pdf> <./img/dogMVWMM100Nexp2.png (PNG copy)> <./img/dogMVWMM100Ne
+xp2b.png (PNG copy)>] [6 <./img/lionlessMVMMexp1.png (PNG copy)> <./img/lionles
+sMVMMexp2.png (PNG copy)> <./img/lionlessMVMMexp3.pdf>]
+(IWMM_multiviewReport.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4629 strings out of 492970
- 64570 string characters out of 3135854
+ 4654 strings out of 492970
+ 65274 string characters out of 3135854
  148212 words of memory out of 3000000
- 8392 multiletter control sequences out of 15000+200000
+ 8412 multiletter control sequences out of 15000+200000
  14905 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,16n,37p,875b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -442,9 +474,9 @@ c/amsfonts/cm/cmr8.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
 Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files/MiK
 TeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on IWMM_multiviewReport.pdf (5 pages, 1541183 bytes).
+Output written on IWMM_multiviewReport.pdf (6 pages, 1945747 bytes).
 PDF statistics:
- 208 PDF objects out of 1000 (max. 8388607)
+ 262 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
