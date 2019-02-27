@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.15)  21 FEB 2019 13:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.15)  27 FEB 2019 11:29
 entering extended mode
 **./IWMM_multiviewReport.tex
 (IWMM_multiviewReport.tex
@@ -487,23 +487,231 @@ File: img/horseMVMMexp3.pdf Graphic file (type pdf)
 <use img/horseMVMMexp3.pdf>
 Package pdftex.def Info: img/horseMVMMexp3.pdf  used on input line 416.
 (pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
-(IWMM_multiviewReport.bbl) [4 <./img/mvwmmPW2arms100N.pdf>] [5 <./img/gorillaAM
-VMMexp1.png (PNG copy)> <./img/gorillaAMVMMexp2.png (PNG copy)> <./img/Gorillas
-MVWMM100Nexp2.pdf> <./img/dogMVWMM100Nexp2.png (PNG copy)> <./img/dogMVWMM100Ne
-xp2b.png (PNG copy)>] [6 <./img/lionlessMVMMexp1.png (PNG copy)> <./img/lionles
-sMVMMexp2.png (PNG copy)> <./img/lionlessMVMMexp3.pdf> <./img/centaurMVMMexp1.p
-ng (PNG copy)>] [7 <./img/catMVMMexp1.png (PNG copy)> <./img/catMVMMexp3.pdf> <
-./img/wolfMVMMexp1.png (PNG copy)> <./img/wolfMVMMexp3.pdf> <./img/horseMVMMexp
-1.png (PNG copy)> <./img/horseMVMMexp3.pdf>] (IWMM_multiviewReport.aux)
+<img/davidMVMMexp1.png, id=48, 325.215pt x 212.29312pt>
+File: img/davidMVMMexp1.png Graphic file (type png)
+<use img/davidMVMMexp1.png>
+Package pdftex.def Info: img/davidMVMMexp1.png  used on input line 423.
+(pdftex.def)             Requested size: 249.13371pt x 162.6337pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/davidMVMMexp3.pdf): PDF inclusion: fou
+nd PDF version <1.7>, but at most version <1.5> allowed
+<img/davidMVMMexp3.pdf, id=49, 152.57pt x 123.96312pt>
+File: img/davidMVMMexp3.pdf Graphic file (type pdf)
+<use img/davidMVMMexp3.pdf>
+Package pdftex.def Info: img/davidMVMMexp3.pdf  used on input line 425.
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+<img/kidMVMMexp1.png, id=50, 176.91093pt x 224.33812pt>
+File: img/kidMVMMexp1.png Graphic file (type png)
+<use img/kidMVMMexp1.png>
+Package pdftex.def Info: img/kidMVMMexp1.png  used on input line 436.
+(pdftex.def)             Requested size: 135.89174pt x 172.32326pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/kidMVMMexp3.pdf): PDF inclusion: found
+ PDF version <1.7>, but at most version <1.5> allowed
+<img/kidMVMMexp3.pdf, id=51, 152.57pt x 123.96312pt>
+File: img/kidMVMMexp3.pdf Graphic file (type pdf)
+<use img/kidMVMMexp3.pdf>
+Package pdftex.def Info: img/kidMVMMexp3.pdf  used on input line 438.
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+<img/kid2MVMMexp1.png, id=52, 311.66437pt x 158.09062pt>
+File: img/kid2MVMMexp1.png Graphic file (type png)
+<use img/kid2MVMMexp1.png>
+Package pdftex.def Info: img/kid2MVMMexp1.png  used on input line 445.
+(pdftex.def)             Requested size: 226.48395pt x 114.88412pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/kid2MVMMexp3.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+<img/kid2MVMMexp3.pdf, id=53, 152.57pt x 123.96312pt>
+File: img/kid2MVMMexp3.pdf Graphic file (type pdf)
+<use img/kid2MVMMexp3.pdf>
+Package pdftex.def Info: img/kid2MVMMexp3.pdf  used on input line 447.
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+<img/kid3MVMMexp1.png, id=54, 281.55188pt x 252.945pt>
+File: img/kid3MVMMexp1.png Graphic file (type png)
+<use img/kid3MVMMexp1.png>
+Package pdftex.def Info: img/kid3MVMMexp1.png  used on input line 454.
+(pdftex.def)             Requested size: 181.18439pt x 162.77582pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/kid3MVMMexp3.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+<img/kid3MVMMexp3.pdf, id=55, 152.57pt x 123.96312pt>
+File: img/kid3MVMMexp3.pdf Graphic file (type pdf)
+<use img/kid3MVMMexp3.pdf>
+Package pdftex.def Info: img/kid3MVMMexp3.pdf  used on input line 456.
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+<img/partialCat1MVMMexp1.png, id=56, 290.58563pt x 168.63pt>
+File: img/partialCat1MVMMexp1.png Graphic file (type png)
+<use img/partialCat1MVMMexp1.png>
+Package pdftex.def Info: img/partialCat1MVMMexp1.png  used on input line 467.
+(pdftex.def)             Requested size: 181.18439pt x 105.14389pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/partialCat1MVMMexp3.pdf): PDF inclusio
+n: found PDF version <1.7>, but at most version <1.5> allowed
+<img/partialCat1MVMMexp3.pdf, id=57, 152.57pt x 126.22156pt>
+File: img/partialCat1MVMMexp3.pdf Graphic file (type pdf)
+<use img/partialCat1MVMMexp3.pdf>
+Package pdftex.def Info: img/partialCat1MVMMexp3.pdf  used on input line 469.
+(pdftex.def)             Requested size: 158.54152pt x 131.16716pt.
+[4 <./img/mvwmmPW2arms100N.pdf>]
+<img/partialWolf1MVMMexp1.png, id=115, 238.64156pt x 198.7425pt>
+File: img/partialWolf1MVMMexp1.png Graphic file (type png)
+<use img/partialWolf1MVMMexp1.png>
+Package pdftex.def Info: img/partialWolf1MVMMexp1.png  used on input line 476.
+(pdftex.def)             Requested size: 181.18439pt x 150.89119pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/partialWolf1MVMMexp3.pdf): PDF inclusi
+on: found PDF version <1.7>, but at most version <1.5> allowed
+<img/partialWolf1MVMMexp3.pdf, id=116, 152.57pt x 123.96312pt>
+File: img/partialWolf1MVMMexp3.pdf Graphic file (type pdf)
+<use img/partialWolf1MVMMexp3.pdf>
+Package pdftex.def Info: img/partialWolf1MVMMexp3.pdf  used on input line 478.
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+<img/partialCentaur1MVMMexp1.png, id=117, 258.9675pt x 199.49532pt>
+File: img/partialCentaur1MVMMexp1.png Graphic file (type png)
+<use img/partialCentaur1MVMMexp1.png>
+Package pdftex.def Info: img/partialCentaur1MVMMexp1.png  used on input line 48
+6.
+(pdftex.def)             Requested size: 181.18439pt x 139.58183pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/partialCentaur1MVMMexp3.pdf): PDF incl
+usion: found PDF version <1.7>, but at most version <1.5> allowed
+<img/partialCentaur1MVMMexp3.pdf, id=118, 152.57pt x 123.96312pt>
+File: img/partialCentaur1MVMMexp3.pdf Graphic file (type pdf)
+<use img/partialCentaur1MVMMexp3.pdf>
+Package pdftex.def Info: img/partialCentaur1MVMMexp3.pdf  used on input line 48
+8.
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+<img/partialDog1MVMMexp1.png, id=119, 293.59688pt x 159.59625pt>
+File: img/partialDog1MVMMexp1.png Graphic file (type png)
+<use img/partialDog1MVMMexp1.png>
+Package pdftex.def Info: img/partialDog1MVMMexp1.png  used on input line 495.
+(pdftex.def)             Requested size: 226.48395pt x 123.11351pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/partialDog1MVMMexp3.pdf): PDF inclusio
+n: found PDF version <1.7>, but at most version <1.5> allowed
+<img/partialDog1MVMMexp3.pdf, id=120, 152.57pt x 123.96312pt>
+File: img/partialDog1MVMMexp3.pdf Graphic file (type pdf)
+<use img/partialDog1MVMMexp3.pdf>
+Package pdftex.def Info: img/partialDog1MVMMexp3.pdf  used on input line 497.
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+<img/partialHorse1MVMMexp1.png, id=121, 266.49562pt x 197.23688pt>
+File: img/partialHorse1MVMMexp1.png Graphic file (type png)
+<use img/partialHorse1MVMMexp1.png>
+Package pdftex.def Info: img/partialHorse1MVMMexp1.png  used on input line 504.
+
+(pdftex.def)             Requested size: 226.48395pt x 167.62804pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/partialHorse1MVMMexp3.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<img/partialHorse1MVMMexp3.pdf, id=122, 154.82843pt x 123.96312pt>
+File: img/partialHorse1MVMMexp3.pdf Graphic file (type pdf)
+<use img/partialHorse1MVMMexp3.pdf>
+Package pdftex.def Info: img/partialHorse1MVMMexp3.pdf  used on input line 506.
+
+(pdftex.def)             Requested size: 158.54152pt x 126.94763pt.
+<img/partialDavid1MVMMexp1.png, id=123, 326.72063pt x 205.5178pt>
+File: img/partialDavid1MVMMexp1.png Graphic file (type png)
+<use img/partialDavid1MVMMexp1.png>
+Package pdftex.def Info: img/partialDavid1MVMMexp1.png  used on input line 513.
+
+(pdftex.def)             Requested size: 226.48395pt x 142.46599pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/partialDavid1MVMMexp3.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<img/partialDavid1MVMMexp3.pdf, id=124, 152.57pt x 123.96312pt>
+File: img/partialDavid1MVMMexp3.pdf Graphic file (type pdf)
+<use img/partialDavid1MVMMexp3.pdf>
+Package pdftex.def Info: img/partialDavid1MVMMexp3.pdf  used on input line 515.
+
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+<img/holesCat1MVMMexp1.png, id=125, 283.0575pt x 190.46156pt>
+File: img/holesCat1MVMMexp1.png Graphic file (type png)
+<use img/holesCat1MVMMexp1.png>
+Package pdftex.def Info: img/holesCat1MVMMexp1.png  used on input line 526.
+(pdftex.def)             Requested size: 226.48395pt x 152.3985pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/holesCat1MVMMexp3.pdf): PDF inclusion:
+ found PDF version <1.7>, but at most version <1.5> allowed
+<img/holesCat1MVMMexp3.pdf, id=126, 154.07562pt x 123.96312pt>
+File: img/holesCat1MVMMexp3.pdf Graphic file (type pdf)
+<use img/holesCat1MVMMexp3.pdf>
+Package pdftex.def Info: img/holesCat1MVMMexp3.pdf  used on input line 528.
+(pdftex.def)             Requested size: 158.54152pt x 127.56616pt.
+
+Overfull \vbox (37.12787pt too high) has occurred while \output is active []
+
+
+[5 <./img/gorillaAMVMMexp1.png (PNG copy)> <./img/gorillaAMVMMexp2.png (PNG cop
+y)> <./img/GorillasMVWMM100Nexp2.pdf> <./img/dogMVWMM100Nexp2.png (PNG copy)> <
+./img/dogMVWMM100Nexp2b.png (PNG copy)>]
+<img/holesWolf1MVMMexp1.png, id=175, 275.52937pt x 198.7425pt>
+File: img/holesWolf1MVMMexp1.png Graphic file (type png)
+<use img/holesWolf1MVMMexp1.png>
+Package pdftex.def Info: img/holesWolf1MVMMexp1.png  used on input line 534.
+(pdftex.def)             Requested size: 226.48395pt x 163.3702pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/holesWolf1MVMMexp3.pdf): PDF inclusion
+: found PDF version <1.7>, but at most version <1.5> allowed
+<img/holesWolf1MVMMexp3.pdf, id=176, 155.58125pt x 123.96312pt>
+File: img/holesWolf1MVMMexp3.pdf Graphic file (type pdf)
+<use img/holesWolf1MVMMexp3.pdf>
+Package pdftex.def Info: img/holesWolf1MVMMexp3.pdf  used on input line 536.
+(pdftex.def)             Requested size: 158.54152pt x 126.32343pt.
+<img/holesCentaur1MVMMexp1.png, id=177, 255.20343pt x 189.70876pt>
+File: img/holesCentaur1MVMMexp1.png Graphic file (type png)
+<use img/holesCentaur1MVMMexp1.png>
+Package pdftex.def Info: img/holesCentaur1MVMMexp1.png  used on input line 543.
+
+(pdftex.def)             Requested size: 226.48395pt x 168.36841pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/holesCentaur1MVMMexp3.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<img/holesCentaur1MVMMexp3.pdf, id=178, 152.57pt x 123.96312pt>
+File: img/holesCentaur1MVMMexp3.pdf Graphic file (type pdf)
+<use img/holesCentaur1MVMMexp3.pdf>
+Package pdftex.def Info: img/holesCentaur1MVMMexp3.pdf  used on input line 545.
+
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+(IWMM_multiviewReport.bbl) [6 <./img/lionlessMVMMexp1.png (PNG copy)> <./img/li
+onlessMVMMexp2.png (PNG copy)> <./img/lionlessMVMMexp3.pdf> <./img/centaurMVMMe
+xp1.png (PNG copy)>] [7 <./img/catMVMMexp1.png (PNG copy)> <./img/catMVMMexp3.p
+df> <./img/wolfMVMMexp1.png (PNG copy)> <./img/wolfMVMMexp3.pdf> <./img/horseMV
+MMexp1.png (PNG copy)> <./img/horseMVMMexp3.pdf>] [8 <./img/davidMVMMexp1.png (
+PNG copy)> <./img/davidMVMMexp3.pdf> <./img/kidMVMMexp1.png (PNG copy)> <./img/
+kidMVMMexp3.pdf> <./img/kid2MVMMexp1.png (PNG copy)> <./img/kid2MVMMexp3.pdf>]
+[9 <./img/kid3MVMMexp1.png (PNG copy)> <./img/kid3MVMMexp3.pdf> <./img/partialC
+at1MVMMexp1.png (PNG copy)> <./img/partialCat1MVMMexp3.pdf> <./img/partialWolf1
+MVMMexp1.png (PNG copy)> <./img/partialWolf1MVMMexp3.pdf>] [10 <./img/partialCe
+ntaur1MVMMexp1.png (PNG copy)> <./img/partialCentaur1MVMMexp3.pdf> <./img/parti
+alDog1MVMMexp1.png (PNG copy)> <./img/partialDog1MVMMexp3.pdf> <./img/partialHo
+rse1MVMMexp1.png (PNG copy)> <./img/partialHorse1MVMMexp3.pdf>] [11 <./img/part
+ialDavid1MVMMexp1.png (PNG copy)> <./img/partialDavid1MVMMexp3.pdf> <./img/hole
+sCat1MVMMexp1.png (PNG copy)> <./img/holesCat1MVMMexp3.pdf> <./img/holesWolf1MV
+MMexp1.png (PNG copy)> <./img/holesWolf1MVMMexp3.pdf>] [12 <./img/holesCentaur1
+MVMMexp1.png (PNG copy)> <./img/holesCentaur1MVMMexp3.pdf>]
+(IWMM_multiviewReport.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4689 strings out of 492970
- 66166 string characters out of 3135854
- 148212 words of memory out of 3000000
- 8440 multiletter control sequences out of 15000+200000
+ 4821 strings out of 492970
+ 70203 string characters out of 3135854
+ 148215 words of memory out of 3000000
+ 8546 multiletter control sequences out of 15000+200000
  14905 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,16n,37p,875b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -527,9 +735,9 @@ c/amsfonts/cm/cmr8.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
 Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files/MiK
 TeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on IWMM_multiviewReport.pdf (7 pages, 2396734 bytes).
+Output written on IWMM_multiviewReport.pdf (12 pages, 4324609 bytes).
 PDF statistics:
- 340 PDF objects out of 1000 (max. 8388607)
+ 667 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 211 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -6,6 +6,10 @@ Tomoharu Iwata, Tsutomu Hirao, and Naonori Ueda.
   object matching.
 \newblock {\em Information Processing and Management}, 52(4):682 -- 697, 2016.
 
+\bibitem{SHREC16}
+Z.~L\.
+\newblock Shrec’16: Matching of deformable shapes with topological noise.
+
 \bibitem{Lawrence03}
 Neil Lawrence.
 \newblock Gaussian process latent variable models for visualisation of high

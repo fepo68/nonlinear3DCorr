@@ -297,7 +297,7 @@ p\left(\obspv|\setX_c, \Scluster,v,\mathbf{u},r\right) = \pi^{-\frac{N_{vc\setmi
 
 \section{Results}
 
-\section{Clustering performance on real datasets}
+\subsection{Clustering performance on real datasets}
 
 \begin{table*}[ht!]
 	\centering
@@ -415,6 +415,135 @@ First, we test the performance of our approaches (both NL-UCM and MV-WMM) regard
 	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
 	\includegraphics[width=0.35\linewidth]{img/horseMVMMexp3}
 	\caption{Experimental results for the TOSCA dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different poses. Average Rand Index $0.6576$ }
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.55\linewidth]{img/davidMVMMexp1}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	\includegraphics[width=0.35\linewidth]{img/davidMVMMexp3}
+	\caption{Experimental results for the TOSCA dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different poses. Average Rand Index $0.7049$ }
+\end{figure}
+
+\subsection{Deformable 3D Shapes  with Topological Noise}
+
+In this section, we test our model with KIDS dataset \cite{SHREC16}. This data consists of a collection of 3D shapes undergoing within-class deformations that include in topological changes. The changes simulate coalescence of spatially close surface regions – a scenario that frequently occurs when dealing with real data under suboptimal acquisition conditions. The dataset is based on the fat kid from the KIDS dataset with additional poses.
+
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.3\linewidth]{img/kidMVMMexp1}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	\includegraphics[width=0.35\linewidth]{img/kidMVMMexp3}
+	\caption{Experimental results for the KIDS dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different poses. Average Rand Index $0.7003$ }
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.5\linewidth]{img/kid2MVMMexp1}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	\includegraphics[width=0.35\linewidth]{img/kid2MVMMexp3}
+	\caption{Experimental results for the KIDS dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different poses. Average Rand Index $0.7432$ }
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.4\linewidth]{img/kid3MVMMexp1}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	\includegraphics[width=0.35\linewidth]{img/kid3MVMMexp3}
+	\caption{Experimental results for the KIDS dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different poses. Average Rand Index $0.7179$ }
+\end{figure}
+
+
+\subsection{Partial matching}
+
+\subsubsection{Shapes undergoing a single cut}
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.4\linewidth]{img/partialCat1MVMMexp1}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	\includegraphics[width=0.35\linewidth]{img/partialCat1MVMMexp3}
+	\caption{Experimental results for the partial matching TOSCA dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the shape. Average Rand Index $0.8016$ }
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.4\linewidth]{img/partialWolf1MVMMexp1}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	\includegraphics[width=0.35\linewidth]{img/partialWolf1MVMMexp3}
+	\caption{Experimental results for the partial matching TOSCA dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the shape. Average Rand Index $0.6365$ }
+\end{figure}
+
+
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.4\linewidth]{img/partialCentaur1MVMMexp1}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	\includegraphics[width=0.35\linewidth]{img/partialCentaur1MVMMexp3}
+	\caption{Experimental results for the partial matching TOSCA dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the shape. Average Rand Index $0.5838$ }
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.5\linewidth]{img/partialDog1MVMMexp1}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	\includegraphics[width=0.35\linewidth]{img/partialDog1MVMMexp3}
+	\caption{Experimental results for the partial matching TOSCA dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the shape. Average Rand Index $0.7744$ }
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.5\linewidth]{img/partialHorse1MVMMexp1}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	\includegraphics[width=0.35\linewidth]{img/partialHorse1MVMMexp3}
+	\caption{Experimental results for the partial matching TOSCA dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the shape. Average Rand Index $0.7931$ }
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.5\linewidth]{img/partialDavid1MVMMexp1}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	\includegraphics[width=0.35\linewidth]{img/partialDavid1MVMMexp3}
+	\caption{Experimental results for the partial matching TOSCA dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the shape. Average Rand Index $0.6566$ }
+\end{figure}
+
+\subsubsection{Shapes undergoing a single cut}
+
+Finally we test our method on  \textit{holes dataset}. This dataset contains irregular holes and multiple cuts for different shapes.
+
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.5\linewidth]{img/holesCat1MVMMexp1}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	\includegraphics[width=0.35\linewidth]{img/holesCat1MVMMexp3}
+	\caption{Experimental results for the partial matching TOSCA dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the shape. Average Rand Index $0.6568$ }
+\end{figure}
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.5\linewidth]{img/holesWolf1MVMMexp1}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	\includegraphics[width=0.35\linewidth]{img/holesWolf1MVMMexp3}
+	\caption{Experimental results for the partial matching TOSCA dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the shape. Average Rand Index $0.5505$ }
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.5\linewidth]{img/holesCentaur1MVMMexp1}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	\includegraphics[width=0.35\linewidth]{img/holesCentaur1MVMMexp3}
+	\caption{Experimental results for the partial matching TOSCA dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the shape. Average Rand Index $0.6849$ }
 \end{figure}
 %\subsection*{Bayesian Multi-view Warped Mixture Model}
 %
