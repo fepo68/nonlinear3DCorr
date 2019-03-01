@@ -24,6 +24,8 @@
 %\usepackage{cite}
 %\setcounter{tocdepth}{3}
 %\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{bayesnet}
 
 \newcommand{\tr}{\operatorname{tr}}
 \newcommand{\gD}[2]{\mathcal{N}\left(#1,#2\right)}
@@ -181,6 +183,13 @@ We define the dimensionalities of our variables as:
 	\item $\boldsymbol{\mu}_c \in \mathbb{R}^{Q\times 1}$
 \end{itemize}
 
+
+\begin{figure}
+	\centering      \input{model_wmm}
+	\caption{A graphical model representation of the multiview warped mixture model, where the shaded and unshaded
+		nodes indicate observed and latent variables,
+		respectively, and plates indicate repetition.}
+\end{figure}
 
 %\textbf{Question:} Can we relate the outputs $y_{nd}$ through multi-output GPs?
 
@@ -457,6 +466,14 @@ In this section, we test our model with KIDS dataset \cite{SHREC16}. This data c
 	\caption{Experimental results for the KIDS dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different poses. Average Rand Index $0.7179$ }
 \end{figure}
 
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.4\linewidth]{img/kid4MVMMexp1}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	\includegraphics[width=0.35\linewidth]{img/kid4MVMMexp3}
+	\caption{Experimental results for the KIDS dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different poses. Average Rand Index $0.6557$ }
+\end{figure}
 
 \subsection{Partial matching}
 
@@ -516,7 +533,7 @@ In this section, we test our model with KIDS dataset \cite{SHREC16}. This data c
 	\caption{Experimental results for the partial matching TOSCA dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the shape. Average Rand Index $0.6566$ }
 \end{figure}
 
-\subsubsection{Shapes undergoing a single cut}
+\subsubsection{Shapes with irregular holes}
 
 Finally we test our method on  \textit{holes dataset}. This dataset contains irregular holes and multiple cuts for different shapes.
 
@@ -544,6 +561,32 @@ Finally we test our method on  \textit{holes dataset}. This dataset contains irr
 	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
 	\includegraphics[width=0.35\linewidth]{img/holesCentaur1MVMMexp3}
 	\caption{Experimental results for the partial matching TOSCA dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the shape. Average Rand Index $0.6849$ }
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.45\linewidth]{img/holesDog1MVMMexp1}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	\includegraphics[width=0.35\linewidth]{img/holesDog1MVMMexp3}
+	\caption{Experimental results for the partial matching TOSCA dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the shape. Average Rand Index $0.5991$ }
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.45\linewidth]{img/holesHorse1MVMMexp1}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	\includegraphics[width=0.35\linewidth]{img/holesHorse1MVMMexp3}
+	\caption{Experimental results for the partial matching TOSCA dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the shape. Average Rand Index $0.6569$ }
+\end{figure}
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.45\linewidth]{img/holesDavid1MVMMexp1}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	\includegraphics[width=0.35\linewidth]{img/holesDavid1MVMMexp3}
+	\caption{Experimental results for the partial matching TOSCA dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the shape. Average Rand Index $0.6107$ }
 \end{figure}
 %\subsection*{Bayesian Multi-view Warped Mixture Model}
 %
