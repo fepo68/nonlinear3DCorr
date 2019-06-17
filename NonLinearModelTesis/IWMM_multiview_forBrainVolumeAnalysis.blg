@@ -1,0 +1,32 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: IWMM_multiview_forBrainVolumeAnalysis.aux
+The style file: plain.bst
+Database file #1: bibRevTesisDoc.bib
+I was expecting a `,' or a `}'---line 606 of file bibRevTesisDoc.bib
+ : url = author 
+ :              = "Michael Leyton"
+I'm skipping whatever remains of this entry
+Repeated entry---line 869 of file bibRevTesisDoc.bib
+ : @inproceedings{Aiger08
+ :                       ,
+I'm skipping whatever remains of this entry
+You're missing a field part---line 1021 of file bibRevTesisDoc.bib
+ :    eid = 
+ :          ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1150 of file bibRevTesisDoc.bib
+ :  author = "Z. L\"
+ :                  ahner and E. Rodola and M. M. Bronstein and D. Cremers and O. Burghard and L. Cosmo and A. Dieckmann and R. Klein and Y. Sahillioglu",
+I'm skipping whatever remains of this entry
+Database file #2: medImagebib.bib
+Database file #3: biblio.bib
+You're missing a field name---line 82 of file biblio.bib
+ :  
+ :  %url = {http://dl.acm.org/citation.cfm?id=1965841.1965855},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+A bad cross reference---entry "Klami12"
+refers to entry "DBLP:conf/acml/2012", which doesn't exist
+Warning--I didn't find a database entry for "Klami13_a"
+Warning--I didn't find a database entry for "Djuric12"
+Warning--I didn't find a database entry for "DBLP:conf/acml/2012"
+(There were 6 error messages)

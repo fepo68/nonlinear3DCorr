@@ -2,6 +2,7 @@
 \usepackage{geometry}
 \geometry{a4paper, margin=1in}
 \usepackage{amssymb}
+\usepackage{bm}
 \usepackage{multirow}                                                      % you want to use the \thanks command
 %\usepackage{multicolumn}
 \usepackage{amsmath}
@@ -304,6 +305,12 @@ p\left(\obspv|\setX_c, \Scluster,v,\mathbf{u},r\right) = \pi^{-\frac{N_{vc\setmi
 \end{align*}
 
 
+\subsection{Regularized WMM}
+
+Since we want to constrain the projection vector $\bf{w}^v$, then we add a regularizer term to be minimized as
+
+
+
 \section{Results}
 
 \subsection{Clustering performance on real datasets}
@@ -588,6 +595,37 @@ Finally we test our method on  \textit{holes dataset}. This dataset contains irr
 	\includegraphics[width=0.35\linewidth]{img/holesDavid1MVMMexp3}
 	\caption{Experimental results for the partial matching TOSCA dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the shape. Average Rand Index $0.6107$ }
 \end{figure}
+
+\section{Brain structure dataset}
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.45\linewidth]{img/ventricle1MVMMexp1}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	\includegraphics[width=0.35\linewidth]{img/ventricle1MVMMexp3}
+	\caption{Experimental results for the brain structures dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the ventricle. Average Rand Index $0.6071$ }
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.45\linewidth]{img/thalamus1MVMMexp1}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	\includegraphics[width=0.35\linewidth]{img/thalamus1MVMMexp3}
+	\caption{Experimental results for the brain structures dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the thalamus. Average Rand Index $0.6467$ }
+\end{figure}
+
+
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.45\linewidth]{img/putamen1MVMMexp1}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	\includegraphics[width=0.35\linewidth]{img/putamen1MVMMexp3}
+	\caption{Experimental results for the brain structures dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the putamen. Average Rand Index $0.6467$ }
+\end{figure}
+
+
 %\subsection*{Bayesian Multi-view Warped Mixture Model}
 %
 %Since we have a multi-view data set defined as $\mathcal{Y}=\left\{\mathbf{Y}^{v}\right\}_{v=1}^{V}$, where each view is set as $\mathbf{Y}^{v}\in \mathbb{R}^{N_v\times D_v}$, the joint likelihood is given by 
