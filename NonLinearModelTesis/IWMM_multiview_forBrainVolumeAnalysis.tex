@@ -683,9 +683,20 @@ Finally, we test our model on a couple of in-utero MRI scans of a fetus acquired
 	
 	\includegraphics[width=0.45\linewidth]{img/brainBaby}
 	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
-%	\includegraphics[width=0.35\linewidth]{img/putamen1MVMMexp3}
+	\includegraphics[width=0.45\linewidth]{img/babyMVMMexp3}
 	\caption{Experimental results for the brain Neurodevelopmental dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the brain volume. Average Rand Index $0.6948$ }
 	\label{fig:brainBaby}
+\end{figure}
+
+Besides, figure \ref{fig:brainBabyM} shows an example of the matching process using the established correspondences. The results show that meaningful relations are established as part of the unsupervised matching on which the latent space is exploited to find groupwise correspondences.
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.7\linewidth]{img/brainBabyMatch}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	%	\includegraphics[width=0.35\linewidth]{img/putamen1MVMMexp3}
+	\caption{Matching result for the brain Neurodevelopmental dataset.  The figure shows the established correspondences, starting from best to weak matches (blue to nude in the colormap).}
+	\label{fig:brainBabyM}
 \end{figure}
 %\subsection*{Bayesian Multi-view Warped Mixture Model}
 %

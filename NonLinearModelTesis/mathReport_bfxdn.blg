@@ -11,4 +11,8 @@ You're missing a field part---line 1021 of file bibRevTesisDoc.bib
  :    eid = 
  :          ,
 I'm skipping whatever remains of this entry
-(There were 2 error messages)
+I was expecting a `,' or a `}'---line 1150 of file bibRevTesisDoc.bib
+ :  author = "Z. L\"
+ :                  ahner and E. Rodola and M. M. Bronstein and D. Cremers and O. Burghard and L. Cosmo and A. Dieckmann and R. Klein and Y. Sahillioglu",
+I'm skipping whatever remains of this entry
+(There were 3 error messages)
