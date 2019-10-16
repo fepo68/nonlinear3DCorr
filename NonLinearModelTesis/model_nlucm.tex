@@ -1,0 +1,55 @@
+% model_pca.tex
+%
+% Copyright (C) 2012 Jaakko Luttinen
+%
+% The MIT License
+%
+% See LICENSE file for more details.
+
+% PCA model
+
+%\beginpgfgraphicnamed{model-pca}
+\begin{tikzpicture}
+
+  % Define nodes
+  \node[obs]                               (y) {$\mathbf{y}$};
+  \node[latent, left=1cm of y]  (x) {$\mathbf{x}$};
+  \node[latent, left=1cm of x]  (z) {$\mathbf{z}$};
+  \node[latent, left=1cm of z]            (l) {$\bm{\lambda}$};
+  \node[latent, left=1cm of l]            (e) {$\eta$};
+  \node[latent, above=1cm of y]            (f) {$\mathbf{f}_v$};
+  \node[latent, left=1cm of f]            (k) {$\mathbf{K}_v$};
+  \node[latent, below=1.5cm of x]         (mu) {$\bm{\mu}$};
+  \node[latent, left=0.5cm of mu]         (R) {$\mathbf{R}$};
+  \node[latent, left=1cm of R,yshift=0.4cm]         (S) {$\mathbf{S}$};
+  \node[latent, left=1cm of R,yshift=-0.4cm]         (nu) {${\nu}$};
+   \node[latent, right=1cm of mu,yshift=0.4cm]         (r) {${r}$};
+  \node[latent, right=1cm of mu,yshift=-0.4cm]         (u) {$\mathbf{u}$};
+  
+
+  % Connect the nodes
+  \edge {e}{l}
+  \edge {l}{z}; %
+  \edge {z}{x}
+  \edge {x}{y}
+  \edge {k}{f}
+  \edge {R,mu}{x}
+  \edge {S,nu}{R}
+  \edge {r,u}{mu}
+  \edge {R}{mu}
+  \edge {f}{y}
+
+  % Plates
+  \plate {zyx} {(z)(x)(y)} {$N_v$} ;
+  \plate {f}{(f),xshift=0.05cm}{$D_v$};
+  \plate {R mu}{(R)(mu)}{$\infty$};
+  
+  \plate {f} {(f)(z)(x)(y)(zyx.north west)(zyx.south west),xshift=-0.1cm,xshift=0.1cm} {$V$} ;
+
+\end{tikzpicture}
+%\endpgfgraphicnamed
+
+%%% Local Variables: 
+%%% mode: tex-pdf
+%%% TeX-master: "example"
+%%% End: 

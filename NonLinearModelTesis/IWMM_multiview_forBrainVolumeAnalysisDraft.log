@@ -1,0 +1,1309 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.3.26)  16 OCT 2019 01:35
+entering extended mode
+**./IWMM_multiview_forBrainVolumeAnalysisDraft.tex
+(IWMM_multiview_forBrainVolumeAnalysisDraft.tex
+LaTeX2e <2018-12-01>
+("D:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls"
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+("D:\Program Files\MiKTeX 2.9\tex/latex/base\size10.clo"
+File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("D:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.sty"
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
+("D:\Program Files\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("D:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ifpdf.sty"
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+("D:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ifvtex.sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("D:\Program Files\MiKTeX 2.9\tex/generic/ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+
+("D:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.cfg"))
+("D:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("D:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks16
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("D:\Program Files\MiKTeX 2.9\tex/latex/tools\bm.sty"
+Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
+)
+("D:\Program Files\MiKTeX 2.9\tex/latex/multirow\multirow.sty"
+Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
+\multirow@colwidth=\skip43
+\multirow@cntb=\count91
+\multirow@dima=\skip44
+\bigstrutjot=\dimen111
+)
+("D:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip45
+
+For additional information on amsmath, use the `?' option.
+("D:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("D:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen112
+))
+("D:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+LaTeX Info: Redefining \boldsymbol on input line 28.
+\pmbraise@=\dimen113
+)
+("D:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count92
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count93
+\leftroot@=\count94
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count95
+\DOTSCASE@=\count96
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen114
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count97
+\c@MaxMatrixCols=\count98
+\dotsspace@=\muskip10
+\c@parentequation=\count99
+\dspbrk@lvl=\count100
+\tag@help=\toks18
+\row@=\count101
+\column@=\count102
+\maxfields@=\count103
+\andhelp@=\toks19
+\eqnshift@=\dimen115
+\alignsep@=\dimen116
+\tagshift@=\dimen117
+\tagwidth@=\dimen118
+\totwidth@=\dimen119
+\lineht@=\dimen120
+\@envbody=\toks20
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+)
+("D:\Program Files\MiKTeX 2.9\tex/latex/adjustbox\adjustbox.sty"
+Package: adjustbox 2019/01/04 v1.2 Adjusting TeX boxes (trim, clip, ...)
+
+("D:\Program Files\MiKTeX 2.9\tex/latex/xkeyval\xkeyval.sty"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/xkeyval\xkeyval.tex"
+("D:\Program Files\MiKTeX 2.9\tex/generic/xkeyval\xkvutils.tex"
+\XKV@toks=\toks22
+\XKV@tempa@toks=\toks23
+)
+\XKV@depth=\count104
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+("D:\Program Files\MiKTeX 2.9\tex/latex/adjustbox\adjcalc.sty"
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+("D:\Program Files\MiKTeX 2.9\tex/latex/adjustbox\trimclip.sty"
+Package: trimclip 2018/04/08 v1.1 Trim and clip general TeX material
+
+("D:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("D:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("D:\Program Files\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("D:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("D:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen121
+\Gin@req@width=\dimen122
+)
+("D:\Program Files\MiKTeX 2.9\tex/latex/collectbox\collectbox.sty"
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box29
+)
+\tc@llx=\dimen123
+\tc@lly=\dimen124
+\tc@urx=\dimen125
+\tc@ury=\dimen126
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+("D:\Program Files\MiKTeX 2.9\tex/latex/adjustbox\tc-pdftex.def"
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen127
+\adjbox@Height=\dimen128
+\adjbox@Depth=\dimen129
+\adjbox@Totalheight=\dimen130
+\adjbox@pwidth=\dimen131
+\adjbox@pheight=\dimen132
+\adjbox@pdepth=\dimen133
+\adjbox@ptotalheight=\dimen134
+
+("D:\Program Files\MiKTeX 2.9\tex/latex/ifoddpage\ifoddpage.sty"
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count105
+)
+("D:\Program Files\MiKTeX 2.9\tex/latex/varwidth\varwidth.sty"
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box30
+\sift@deathcycles=\count106
+\@vwid@loff=\dimen135
+\@vwid@roff=\dimen136
+))
+("D:\Program Files\MiKTeX 2.9\tex/latex/subfigure\subfigure.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip48
+\subfigcapskip=\skip49
+\subfigcaptopadj=\dimen137
+\subfigbottomskip=\skip50
+\subfigcapmargin=\dimen138
+\subfiglabelskip=\skip51
+\c@subfigure=\count107
+\c@lofdepth=\count108
+\c@subtable=\count109
+\c@lotdepth=\count110
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+("D:\Program Files\MiKTeX 2.9\tex/latex/subfigure\subfigure.cfg")
+\subfig@top=\skip52
+\subfig@bottom=\skip53
+)
+("D:\Program Files\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("D:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+("D:\Program Files\MiKTeX 2.9\tex/latex/pgf/frontendlayer\tikz.sty"
+("D:\Program Files\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgf.sty"
+("D:\Program Files\MiKTeX 2.9\tex/latex/pgf/utilities\pgfrcs.sty"
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common.tex"
+\pgfutil@everybye=\toks24
+\pgfutil@tempdima=\dimen139
+\pgfutil@tempdimb=\dimen140
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common-lists.te
+x")) ("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-latex.def"
+\pgfutil@abb=\box31
+("D:\Program Files\MiKTeX 2.9\tex/latex/ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfrcs.code.tex"
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf\pgf.revision.tex")
+Package: pgfrcs 2019/02/02 v3.1.1 (3.1.1)
+))
+Package: pgf 2019/02/02 v3.1.1 (3.1.1)
+
+("D:\Program Files\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgfcore.sty"
+("D:\Program Files\MiKTeX 2.9\tex/latex/pgf/systemlayer\pgfsys.sty"
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys.code.tex"
+Package: pgfsys 2019/02/02 v3.1.1 (3.1.1)
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeys.code.tex"
+\pgfkeys@pathtoks=\toks25
+\pgfkeys@temptoks=\toks26
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeysfiltered.code.te
+x"
+\pgfkeys@tmptoks=\toks27
+))
+\pgf@x=\dimen141
+\pgf@y=\dimen142
+\pgf@xa=\dimen143
+\pgf@ya=\dimen144
+\pgf@xb=\dimen145
+\pgf@yb=\dimen146
+\pgf@xc=\dimen147
+\pgf@yc=\dimen148
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count111
+\c@pgf@countb=\count112
+\c@pgf@countc=\count113
+\c@pgf@countd=\count114
+\t@pgf@toka=\toks28
+\t@pgf@tokb=\toks29
+\t@pgf@tokc=\toks30
+\pgf@sys@id@count=\count115
+ ("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgf.cfg"
+File: pgf.cfg 2019/02/02 v3.1.1 (3.1.1)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys-pdftex.def"
+File: pgfsys-pdftex.def 2019/02/02 v3.1.1 (3.1.1)
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
+"
+File: pgfsys-common-pdf.def 2019/02/02 v3.1.1 (3.1.1)
+)))
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.t
+ex"
+File: pgfsyssoftpath.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfsyssoftpath@smallbuffer@items=\count116
+\pgfsyssoftpath@bigbuffer@items=\count117
+)
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsysprotocol.code.t
+ex"
+File: pgfsysprotocol.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)) ("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcore.code.tex"
+Package: pgfcore 2019/02/02 v3.1.1 (3.1.1)
+ ("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex"
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathcalc.code.tex"
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathutil.code.tex")
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathparser.code.tex"
+\pgfmath@dimen=\dimen149
+\pgfmath@count=\count118
+\pgfmath@box=\box32
+\pgfmath@toks=\toks31
+\pgfmath@stack@operand=\toks32
+\pgfmath@stack@operation=\toks33
+)
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.code.tex"
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.basic.code.
+tex")
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.trigonometr
+ic.code.tex")
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.random.code
+.tex")
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.comparison.
+code.tex")
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.base.code.t
+ex")
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.round.code.
+tex")
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.misc.code.t
+ex")
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.integerarit
+hmetics.code.tex")))
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count119
+))
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
+"
+File: pgfcorepoints.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@picminx=\dimen150
+\pgf@picmaxx=\dimen151
+\pgf@picminy=\dimen152
+\pgf@picmaxy=\dimen153
+\pgf@pathminx=\dimen154
+\pgf@pathmaxx=\dimen155
+\pgf@pathminy=\dimen156
+\pgf@pathmaxy=\dimen157
+\pgf@xx=\dimen158
+\pgf@xy=\dimen159
+\pgf@yx=\dimen160
+\pgf@yy=\dimen161
+\pgf@zx=\dimen162
+\pgf@zy=\dimen163
+)
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathconstruct.c
+ode.tex"
+File: pgfcorepathconstruct.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@path@lastx=\dimen164
+\pgf@path@lasty=\dimen165
+)
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathusage.code.
+tex"
+File: pgfcorepathusage.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@shorten@end@additional=\dimen166
+\pgf@shorten@start@additional=\dimen167
+)
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
+"
+File: pgfcorescopes.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfpic=\box33
+\pgf@hbox=\box34
+\pgf@layerbox@main=\box35
+\pgf@picture@serial@count=\count120
+)
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoregraphicstate.co
+de.tex"
+File: pgfcoregraphicstate.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgflinewidth=\dimen168
+)
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoretransformations
+.code.tex"
+File: pgfcoretransformations.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@pt@x=\dimen169
+\pgf@pt@y=\dimen170
+\pgf@pt@temp=\dimen171
+)
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorequick.code.tex"
+File: pgfcorequick.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreobjects.code.te
+x"
+File: pgfcoreobjects.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathprocessing.
+code.tex"
+File: pgfcorepathprocessing.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
+"
+File: pgfcorearrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfarrowsep=\dimen172
+)
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex"
+File: pgfcoreshade.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@max=\dimen173
+\pgf@sys@shading@range@num=\count121
+) ("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreimage.code.te
+x"
+File: pgfcoreimage.code.tex 2019/02/02 v3.1.1 (3.1.1)
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreexternal.code.t
+ex"
+File: pgfcoreexternal.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfexternal@startupbox=\box36
+))
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
+"
+File: pgfcorelayers.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoretransparency.co
+de.tex"
+File: pgfcoretransparency.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepatterns.code.t
+ex"
+File: pgfcorepatterns.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex"
+File: pgfcorerdf.code.tex 2019/02/02 v3.1.1 (3.1.1)
+))) ("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduleshapes.code.
+tex"
+File: pgfmoduleshapes.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfnodeparttextbox=\box37
+) ("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduleplot.code.tex"
+File: pgfmoduleplot.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("D:\Program Files\MiKTeX 2.9\tex/latex/pgf/compatibility\pgfcomp-version-0-65.
+sty"
+Package: pgfcomp-version-0-65 2019/02/02 v3.1.1 (3.1.1)
+\pgf@nodesepstart=\dimen174
+\pgf@nodesepend=\dimen175
+)
+("D:\Program Files\MiKTeX 2.9\tex/latex/pgf/compatibility\pgfcomp-version-1-18.
+sty"
+Package: pgfcomp-version-1-18 2019/02/02 v3.1.1 (3.1.1)
+)) ("D:\Program Files\MiKTeX 2.9\tex/latex/pgf/utilities\pgffor.sty"
+("D:\Program Files\MiKTeX 2.9\tex/latex/pgf/utilities\pgfkeys.sty"
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeys.code.tex"))
+("D:\Program Files\MiKTeX 2.9\tex/latex/pgf/math\pgfmath.sty"
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex"))
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgffor.code.tex"
+Package: pgffor 2019/02/02 v3.1.1 (3.1.1)
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex")
+\pgffor@iter=\dimen176
+\pgffor@skip=\dimen177
+\pgffor@stack=\toks34
+\pgffor@toks=\toks35
+))
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex"
+Package: tikz 2019/02/02 v3.1.1 (3.1.1)
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryplothandlers.
+code.tex"
+File: pgflibraryplothandlers.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@plot@mark@count=\count122
+\pgfplotmarksize=\dimen178
+)
+\tikz@lastx=\dimen179
+\tikz@lasty=\dimen180
+\tikz@lastxsaved=\dimen181
+\tikz@lastysaved=\dimen182
+\tikzleveldistance=\dimen183
+\tikzsiblingdistance=\dimen184
+\tikz@figbox=\box38
+\tikz@figbox@bg=\box39
+\tikz@tempbox=\box40
+\tikz@tempbox@bg=\box41
+\tikztreelevel=\count123
+\tikznumberofchildren=\count124
+\tikznumberofcurrentchild=\count125
+\tikz@fig@count=\count126
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/modules\pgfmodulematrix.code.tex"
+File: pgfmodulematrix.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfmatrixcurrentrow=\count127
+\pgfmatrixcurrentcolumn=\count128
+\pgf@matrix@numberofcolumns=\count129
+)
+\tikz@expandcount=\count130
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+librarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2019/02/02 v3.1.1 (3.1.1)
+))) (tikzlibrarybayesnet.code.tex
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+libraryshapes.code.tex"
+File: tikzlibraryshapes.code.tex 2019/02/02 v3.1.1 (3.1.1)
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+libraryshapes.geometric.code.tex"
+File: tikzlibraryshapes.geometric.code.tex 2019/02/02 v3.1.1 (3.1.1)
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries/shapes\pgflibraryshapes
+.geometric.code.tex"
+File: pgflibraryshapes.geometric.code.tex 2019/02/02 v3.1.1 (3.1.1)
+))
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+libraryshapes.misc.code.tex"
+File: tikzlibraryshapes.misc.code.tex 2019/02/02 v3.1.1 (3.1.1)
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries/shapes\pgflibraryshapes
+.misc.code.tex"
+File: pgflibraryshapes.misc.code.tex 2019/02/02 v3.1.1 (3.1.1)
+))
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+libraryshapes.symbols.code.tex"
+File: tikzlibraryshapes.symbols.code.tex 2019/02/02 v3.1.1 (3.1.1)
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries/shapes\pgflibraryshapes
+.symbols.code.tex"
+File: pgflibraryshapes.symbols.code.tex 2019/02/02 v3.1.1 (3.1.1)
+))
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+libraryshapes.arrows.code.tex"
+File: tikzlibraryshapes.arrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries/shapes\pgflibraryshapes
+.arrows.code.tex"
+File: pgflibraryshapes.arrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
+))
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+libraryshapes.callouts.code.tex"
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries/shapes\pgflibraryshapes
+.callouts.code.tex"))
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+libraryshapes.multipart.code.tex"
+File: tikzlibraryshapes.multipart.code.tex 2019/02/02 v3.1.1 (3.1.1)
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries/shapes\pgflibraryshapes
+.multipart.code.tex"
+File: pgflibraryshapes.multipart.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfnodepartlowerbox=\box42
+\pgfnodeparttwobox=\box43
+\pgfnodepartthreebox=\box44
+\pgfnodepartfourbox=\box45
+\pgfnodeparttwentybox=\box46
+\pgfnodepartnineteenbox=\box47
+\pgfnodeparteighteenbox=\box48
+\pgfnodepartseventeenbox=\box49
+\pgfnodepartsixteenbox=\box50
+\pgfnodepartfifteenbox=\box51
+\pgfnodepartfourteenbox=\box52
+\pgfnodepartthirteenbox=\box53
+\pgfnodeparttwelvebox=\box54
+\pgfnodepartelevenbox=\box55
+\pgfnodeparttenbox=\box56
+\pgfnodepartninebox=\box57
+\pgfnodeparteightbox=\box58
+\pgfnodepartsevenbox=\box59
+\pgfnodepartsixbox=\box60
+\pgfnodepartfivebox=\box61
+)))
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+libraryfit.code.tex"
+File: tikzlibraryfit.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+librarychains.code.tex"
+File: tikzlibrarychains.code.tex 2019/02/02 v3.1.1 (3.1.1)
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+librarypositioning.code.tex"
+File: tikzlibrarypositioning.code.tex 2019/02/02 v3.1.1 (3.1.1)
+))
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+libraryarrows.code.tex"
+File: tikzlibraryarrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryarrows.code.t
+ex"
+File: pgflibraryarrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\arrowsize=\dimen185
+))) (IWMM_multiview_forBrainVolumeAnalysisDraft.aux)
+\openout1 = `IWMM_multiview_forBrainVolumeAnalysisDraft.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.9679pt
+* \textheight=700.50687pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+("D:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count131
+\scratchdimen=\dimen186
+\scratchbox=\box62
+\nofMPsegments=\count132
+\nofMParguments=\count133
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count134
+\MPscratchDim=\dimen187
+\MPnumerator=\count135
+\makeMPintoPDFobject=\count136
+\everyMPtoPDFconversion=\toks37
+) ("D:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("D:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("D:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("D:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+))))
+("D:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+ABD: EveryShipout initializing macros
+LaTeX Font Info:    Try loading font information for U+msa on input line 102.
+
+("D:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 102.
+
+("D:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+LaTeX Warning: No \author given.
+
+
+LaTeX Warning: Citation `Klami13_a' on page 1 undefined on input line 130.
+
+[1
+
+{C:/Users/fepo6/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 210.
+
+
+("D:\Program Files\MiKTeX 2.9\tex/latex/base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 210.
+ (model_wmm.tex
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+)
+[2] [3]
+Overfull \hbox (3.88364pt too wide) in paragraph at lines 356--371
+ [][] 
+ []
+
+
+
+pdfTeX warning: pdflatex.exe (file ./img/mvwmmPW2arms100N.pdf): PDF inclusion: 
+found PDF version <1.7>, but at most version <1.5> allowed
+<img/mvwmmPW2arms100N.pdf, id=37, 935.47632pt x 234.06145pt>
+File: img/mvwmmPW2arms100N.pdf Graphic file (type pdf)
+<use img/mvwmmPW2arms100N.pdf>
+Package pdftex.def Info: img/mvwmmPW2arms100N.pdf  used on input line 379.
+(pdftex.def)             Requested size: 407.66833pt x 101.99803pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/mvwmmspiral.pdf): PDF inclusion: found
+ PDF version <1.7>, but at most version <1.5> allowed
+<img/mvwmmspiral.pdf, id=38, 926.45758pt x 228.97946pt>
+File: img/mvwmmspiral.pdf Graphic file (type pdf)
+<use img/mvwmmspiral.pdf>
+Package pdftex.def Info: img/mvwmmspiral.pdf  used on input line 380.
+(pdftex.def)             Requested size: 407.66833pt x 100.75826pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/mvwmmcircles2.pdf): PDF inclusion: fou
+nd PDF version <1.7>, but at most version <1.5> allowed
+<img/mvwmmcircles2.pdf, id=39, 725.83893pt x 235.40749pt>
+File: img/mvwmmcircles2.pdf Graphic file (type pdf)
+<use img/mvwmmcircles2.pdf>
+Package pdftex.def Info: img/mvwmmcircles2.pdf  used on input line 381.
+(pdftex.def)             Requested size: 407.66833pt x 132.21881pt.
+
+LaTeX Warning: Citation `Djuric12' on page 4 undefined on input line 388.
+
+[4] [5 <./img/mvwmmPW2arms100N.pdf> <./img/mvwmmspiral.pdf> <./img/mvwmmcircles
+2.pdf>]
+<img/gorillaAMVMMexp1.png, id=209, 233.37187pt x 228.855pt>
+File: img/gorillaAMVMMexp1.png Graphic file (type png)
+<use img/gorillaAMVMMexp1.png>
+Package pdftex.def Info: img/gorillaAMVMMexp1.png  used on input line 412.
+(pdftex.def)             Requested size: 194.77287pt x 191.01117pt.
+<img/gorillaAMVMMexp2.png, id=210, 197.23688pt x 195.73125pt>
+File: img/gorillaAMVMMexp2.png Graphic file (type png)
+<use img/gorillaAMVMMexp2.png>
+Package pdftex.def Info: img/gorillaAMVMMexp2.png  used on input line 413.
+(pdftex.def)             Requested size: 181.18439pt x 179.80016pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/GorillasMVWMM100Nexp2.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<img/GorillasMVWMM100Nexp2.pdf, id=211, 166.30511pt x 126.68932pt>
+File: img/GorillasMVWMM100Nexp2.pdf Graphic file (type pdf)
+<use img/GorillasMVWMM100Nexp2.pdf>
+Package pdftex.def Info: img/GorillasMVWMM100Nexp2.pdf  used on input line 414.
+
+(pdftex.def)             Requested size: 203.83417pt x 155.28564pt.
+<img/dogMVWMM100Nexp2.png, id=212, 212.29312pt x 231.86626pt>
+File: img/dogMVWMM100Nexp2.png Graphic file (type png)
+<use img/dogMVWMM100Nexp2.png>
+Package pdftex.def Info: img/dogMVWMM100Nexp2.png  used on input line 421.
+(pdftex.def)             Requested size: 194.77287pt x 212.7393pt.
+<img/dogMVWMM100Nexp2b.png, id=213, 127.22531pt x 177.66376pt>
+File: img/dogMVWMM100Nexp2b.png Graphic file (type png)
+<use img/dogMVWMM100Nexp2b.png>
+Package pdftex.def Info: img/dogMVWMM100Nexp2b.png  used on input line 422.
+(pdftex.def)             Requested size: 154.00742pt x 215.0741pt.
+<img/lionlessMVMMexp1.png, id=214, 277.035pt x 153.57375pt>
+File: img/lionlessMVMMexp1.png Graphic file (type png)
+<use img/lionlessMVMMexp1.png>
+Package pdftex.def Info: img/lionlessMVMMexp1.png  used on input line 430.
+(pdftex.def)             Requested size: 194.77287pt x 107.9719pt.
+<img/lionlessMVMMexp2.png, id=215, 283.81032pt x 164.11313pt>
+File: img/lionlessMVMMexp2.png Graphic file (type png)
+<use img/lionlessMVMMexp2.png>
+Package pdftex.def Info: img/lionlessMVMMexp2.png  used on input line 431.
+(pdftex.def)             Requested size: 185.71849pt x 107.39597pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/lionlessMVMMexp3.pdf): PDF inclusion: 
+found PDF version <1.7>, but at most version <1.5> allowed
+<img/lionlessMVMMexp3.pdf, id=216, 153.75311pt x 123.55159pt>
+File: img/lionlessMVMMexp3.pdf Graphic file (type pdf)
+<use img/lionlessMVMMexp3.pdf>
+Package pdftex.def Info: img/lionlessMVMMexp3.pdf  used on input line 432.
+(pdftex.def)             Requested size: 203.83417pt x 163.79742pt.
+<img/centaurMVMMexp1.png, id=217, 293.59688pt x 232.61906pt>
+File: img/centaurMVMMexp1.png Graphic file (type png)
+<use img/centaurMVMMexp1.png>
+Package pdftex.def Info: img/centaurMVMMexp1.png  used on input line 439.
+(pdftex.def)             Requested size: 226.48395pt x 179.44377pt.
+File: img/lionlessMVMMexp3.pdf Graphic file (type pdf)
+<use img/lionlessMVMMexp3.pdf>
+Package pdftex.def Info: img/lionlessMVMMexp3.pdf  used on input line 441.
+(pdftex.def)             Requested size: 181.18439pt x 145.5954pt.
+<img/catMVMMexp1.png, id=218, 282.30469pt x 94.85437pt>
+File: img/catMVMMexp1.png Graphic file (type png)
+<use img/catMVMMexp1.png>
+Package pdftex.def Info: img/catMVMMexp1.png  used on input line 448.
+(pdftex.def)             Requested size: 271.7835pt x 91.32545pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/catMVMMexp3.pdf): PDF inclusion: found
+ PDF version <1.7>, but at most version <1.5> allowed
+<img/catMVMMexp3.pdf, id=219, 152.57pt x 126.97438pt>
+File: img/catMVMMexp3.pdf Graphic file (type pdf)
+<use img/catMVMMexp3.pdf>
+Package pdftex.def Info: img/catMVMMexp3.pdf  used on input line 450.
+(pdftex.def)             Requested size: 158.54152pt x 131.94948pt.
+<img/wolfMVMMexp1.png, id=220, 289.83281pt x 137.01187pt>
+File: img/wolfMVMMexp1.png Graphic file (type png)
+<use img/wolfMVMMexp1.png>
+Package pdftex.def Info: img/wolfMVMMexp1.png  used on input line 457.
+(pdftex.def)             Requested size: 271.7835pt x 128.48802pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/wolfMVMMexp3.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+<img/wolfMVMMexp3.pdf, id=221, 153.32281pt x 123.96312pt>
+File: img/wolfMVMMexp3.pdf Graphic file (type pdf)
+<use img/wolfMVMMexp3.pdf>
+Package pdftex.def Info: img/wolfMVMMexp3.pdf  used on input line 459.
+(pdftex.def)             Requested size: 158.54152pt x 128.19035pt.
+<img/horseMVMMexp1.png, id=222, 284.56313pt x 243.91125pt>
+File: img/horseMVMMexp1.png Graphic file (type png)
+<use img/horseMVMMexp1.png>
+Package pdftex.def Info: img/horseMVMMexp1.png  used on input line 466.
+(pdftex.def)             Requested size: 249.13371pt x 213.55206pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/horseMVMMexp3.pdf): PDF inclusion: fou
+nd PDF version <1.7>, but at most version <1.5> allowed
+<img/horseMVMMexp3.pdf, id=223, 152.57pt x 123.96312pt>
+File: img/horseMVMMexp3.pdf Graphic file (type pdf)
+<use img/horseMVMMexp3.pdf>
+Package pdftex.def Info: img/horseMVMMexp3.pdf  used on input line 468.
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+<img/davidMVMMexp1.png, id=224, 325.215pt x 212.29312pt>
+File: img/davidMVMMexp1.png Graphic file (type png)
+<use img/davidMVMMexp1.png>
+Package pdftex.def Info: img/davidMVMMexp1.png  used on input line 475.
+(pdftex.def)             Requested size: 249.13371pt x 162.6337pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/davidMVMMexp3.pdf): PDF inclusion: fou
+nd PDF version <1.7>, but at most version <1.5> allowed
+<img/davidMVMMexp3.pdf, id=225, 152.57pt x 123.96312pt>
+File: img/davidMVMMexp3.pdf Graphic file (type pdf)
+<use img/davidMVMMexp3.pdf>
+Package pdftex.def Info: img/davidMVMMexp3.pdf  used on input line 477.
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+[6 <./img/gorillaAMVMMexp1.png (PNG copy)> <./img/gorillaAMVMMexp2.png (PNG cop
+y)> <./img/GorillasMVWMM100Nexp2.pdf> <./img/dogMVWMM100Nexp2.png (PNG copy)> <
+./img/dogMVWMM100Nexp2b.png (PNG copy)>]
+<img/kidMVMMexp1.png, id=273, 176.91093pt x 224.33812pt>
+File: img/kidMVMMexp1.png Graphic file (type png)
+<use img/kidMVMMexp1.png>
+Package pdftex.def Info: img/kidMVMMexp1.png  used on input line 488.
+(pdftex.def)             Requested size: 135.89174pt x 172.32326pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/kidMVMMexp3.pdf): PDF inclusion: found
+ PDF version <1.7>, but at most version <1.5> allowed
+<img/kidMVMMexp3.pdf, id=274, 152.57pt x 123.96312pt>
+File: img/kidMVMMexp3.pdf Graphic file (type pdf)
+<use img/kidMVMMexp3.pdf>
+Package pdftex.def Info: img/kidMVMMexp3.pdf  used on input line 490.
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+<img/kid2MVMMexp1.png, id=275, 311.66437pt x 158.09062pt>
+File: img/kid2MVMMexp1.png Graphic file (type png)
+<use img/kid2MVMMexp1.png>
+Package pdftex.def Info: img/kid2MVMMexp1.png  used on input line 497.
+(pdftex.def)             Requested size: 226.48395pt x 114.88412pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/kid2MVMMexp3.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+<img/kid2MVMMexp3.pdf, id=276, 152.57pt x 123.96312pt>
+File: img/kid2MVMMexp3.pdf Graphic file (type pdf)
+<use img/kid2MVMMexp3.pdf>
+Package pdftex.def Info: img/kid2MVMMexp3.pdf  used on input line 499.
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+<img/kid3MVMMexp1.png, id=277, 281.55188pt x 252.945pt>
+File: img/kid3MVMMexp1.png Graphic file (type png)
+<use img/kid3MVMMexp1.png>
+Package pdftex.def Info: img/kid3MVMMexp1.png  used on input line 506.
+(pdftex.def)             Requested size: 181.18439pt x 162.77582pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/kid3MVMMexp3.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+<img/kid3MVMMexp3.pdf, id=278, 152.57pt x 123.96312pt>
+File: img/kid3MVMMexp3.pdf Graphic file (type pdf)
+<use img/kid3MVMMexp3.pdf>
+Package pdftex.def Info: img/kid3MVMMexp3.pdf  used on input line 508.
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+<img/kid4MVMMexp1.png, id=279, 309.40594pt x 220.57407pt>
+File: img/kid4MVMMexp1.png Graphic file (type png)
+<use img/kid4MVMMexp1.png>
+Package pdftex.def Info: img/kid4MVMMexp1.png  used on input line 515.
+(pdftex.def)             Requested size: 181.18439pt x 129.16824pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/kid4MVMMexp3.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+<img/kid4MVMMexp3.pdf, id=280, 149.55875pt x 123.96312pt>
+File: img/kid4MVMMexp3.pdf Graphic file (type pdf)
+<use img/kid4MVMMexp3.pdf>
+Package pdftex.def Info: img/kid4MVMMexp3.pdf  used on input line 517.
+(pdftex.def)             Requested size: 158.54152pt x 131.4173pt.
+<img/partialCat1MVMMexp1.png, id=281, 290.58563pt x 168.63pt>
+File: img/partialCat1MVMMexp1.png Graphic file (type png)
+<use img/partialCat1MVMMexp1.png>
+Package pdftex.def Info: img/partialCat1MVMMexp1.png  used on input line 527.
+(pdftex.def)             Requested size: 181.18439pt x 105.14389pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/partialCat1MVMMexp3.pdf): PDF inclusio
+n: found PDF version <1.7>, but at most version <1.5> allowed
+<img/partialCat1MVMMexp3.pdf, id=282, 152.57pt x 126.22156pt>
+File: img/partialCat1MVMMexp3.pdf Graphic file (type pdf)
+<use img/partialCat1MVMMexp3.pdf>
+Package pdftex.def Info: img/partialCat1MVMMexp3.pdf  used on input line 529.
+(pdftex.def)             Requested size: 158.54152pt x 131.16716pt.
+<img/partialWolf1MVMMexp1.png, id=283, 238.64156pt x 198.7425pt>
+File: img/partialWolf1MVMMexp1.png Graphic file (type png)
+<use img/partialWolf1MVMMexp1.png>
+Package pdftex.def Info: img/partialWolf1MVMMexp1.png  used on input line 536.
+(pdftex.def)             Requested size: 181.18439pt x 150.89119pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/partialWolf1MVMMexp3.pdf): PDF inclusi
+on: found PDF version <1.7>, but at most version <1.5> allowed
+<img/partialWolf1MVMMexp3.pdf, id=284, 152.57pt x 123.96312pt>
+File: img/partialWolf1MVMMexp3.pdf Graphic file (type pdf)
+<use img/partialWolf1MVMMexp3.pdf>
+Package pdftex.def Info: img/partialWolf1MVMMexp3.pdf  used on input line 538.
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+<img/partialCentaur1MVMMexp1.png, id=285, 258.9675pt x 199.49532pt>
+File: img/partialCentaur1MVMMexp1.png Graphic file (type png)
+<use img/partialCentaur1MVMMexp1.png>
+Package pdftex.def Info: img/partialCentaur1MVMMexp1.png  used on input line 54
+6.
+(pdftex.def)             Requested size: 181.18439pt x 139.58183pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/partialCentaur1MVMMexp3.pdf): PDF incl
+usion: found PDF version <1.7>, but at most version <1.5> allowed
+<img/partialCentaur1MVMMexp3.pdf, id=286, 152.57pt x 123.96312pt>
+File: img/partialCentaur1MVMMexp3.pdf Graphic file (type pdf)
+<use img/partialCentaur1MVMMexp3.pdf>
+Package pdftex.def Info: img/partialCentaur1MVMMexp3.pdf  used on input line 54
+8.
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+<img/partialDog1MVMMexp1.png, id=287, 293.59688pt x 159.59625pt>
+File: img/partialDog1MVMMexp1.png Graphic file (type png)
+<use img/partialDog1MVMMexp1.png>
+Package pdftex.def Info: img/partialDog1MVMMexp1.png  used on input line 555.
+(pdftex.def)             Requested size: 226.48395pt x 123.11351pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/partialDog1MVMMexp3.pdf): PDF inclusio
+n: found PDF version <1.7>, but at most version <1.5> allowed
+<img/partialDog1MVMMexp3.pdf, id=288, 152.57pt x 123.96312pt>
+File: img/partialDog1MVMMexp3.pdf Graphic file (type pdf)
+<use img/partialDog1MVMMexp3.pdf>
+Package pdftex.def Info: img/partialDog1MVMMexp3.pdf  used on input line 557.
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+<img/partialHorse1MVMMexp1.png, id=289, 266.49562pt x 197.23688pt>
+File: img/partialHorse1MVMMexp1.png Graphic file (type png)
+<use img/partialHorse1MVMMexp1.png>
+Package pdftex.def Info: img/partialHorse1MVMMexp1.png  used on input line 564.
+
+(pdftex.def)             Requested size: 226.48395pt x 167.62804pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/partialHorse1MVMMexp3.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<img/partialHorse1MVMMexp3.pdf, id=290, 154.82843pt x 123.96312pt>
+File: img/partialHorse1MVMMexp3.pdf Graphic file (type pdf)
+<use img/partialHorse1MVMMexp3.pdf>
+Package pdftex.def Info: img/partialHorse1MVMMexp3.pdf  used on input line 566.
+
+(pdftex.def)             Requested size: 158.54152pt x 126.94763pt.
+<img/partialDavid1MVMMexp1.png, id=291, 326.72063pt x 205.5178pt>
+File: img/partialDavid1MVMMexp1.png Graphic file (type png)
+<use img/partialDavid1MVMMexp1.png>
+Package pdftex.def Info: img/partialDavid1MVMMexp1.png  used on input line 573.
+
+(pdftex.def)             Requested size: 226.48395pt x 142.46599pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/partialDavid1MVMMexp3.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<img/partialDavid1MVMMexp3.pdf, id=292, 152.57pt x 123.96312pt>
+File: img/partialDavid1MVMMexp3.pdf Graphic file (type pdf)
+<use img/partialDavid1MVMMexp3.pdf>
+Package pdftex.def Info: img/partialDavid1MVMMexp3.pdf  used on input line 575.
+
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+<img/holesCat1MVMMexp1.png, id=293, 283.0575pt x 190.46156pt>
+File: img/holesCat1MVMMexp1.png Graphic file (type png)
+<use img/holesCat1MVMMexp1.png>
+Package pdftex.def Info: img/holesCat1MVMMexp1.png  used on input line 586.
+(pdftex.def)             Requested size: 226.48395pt x 152.3985pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/holesCat1MVMMexp3.pdf): PDF inclusion:
+ found PDF version <1.7>, but at most version <1.5> allowed
+<img/holesCat1MVMMexp3.pdf, id=294, 154.07562pt x 123.96312pt>
+File: img/holesCat1MVMMexp3.pdf Graphic file (type pdf)
+<use img/holesCat1MVMMexp3.pdf>
+Package pdftex.def Info: img/holesCat1MVMMexp3.pdf  used on input line 588.
+(pdftex.def)             Requested size: 158.54152pt x 127.56616pt.
+[7 <./img/lionlessMVMMexp1.png (PNG copy)> <./img/lionlessMVMMexp2.png (PNG cop
+y)> <./img/lionlessMVMMexp3.pdf> <./img/centaurMVMMexp1.png (PNG copy)>]
+[8 <./img/catMVMMexp1.png (PNG copy)> <./img/catMVMMexp3.pdf> <./img/wolfMVMMex
+p1.png (PNG copy)> <./img/wolfMVMMexp3.pdf> <./img/horseMVMMexp1.png (PNG copy)
+> <./img/horseMVMMexp3.pdf>]
+<img/holesWolf1MVMMexp1.png, id=415, 275.52937pt x 198.7425pt>
+File: img/holesWolf1MVMMexp1.png Graphic file (type png)
+<use img/holesWolf1MVMMexp1.png>
+Package pdftex.def Info: img/holesWolf1MVMMexp1.png  used on input line 594.
+(pdftex.def)             Requested size: 226.48395pt x 163.3702pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/holesWolf1MVMMexp3.pdf): PDF inclusion
+: found PDF version <1.7>, but at most version <1.5> allowed
+<img/holesWolf1MVMMexp3.pdf, id=416, 155.58125pt x 123.96312pt>
+File: img/holesWolf1MVMMexp3.pdf Graphic file (type pdf)
+<use img/holesWolf1MVMMexp3.pdf>
+Package pdftex.def Info: img/holesWolf1MVMMexp3.pdf  used on input line 596.
+(pdftex.def)             Requested size: 158.54152pt x 126.32343pt.
+<img/holesCentaur1MVMMexp1.png, id=417, 255.20343pt x 189.70876pt>
+File: img/holesCentaur1MVMMexp1.png Graphic file (type png)
+<use img/holesCentaur1MVMMexp1.png>
+Package pdftex.def Info: img/holesCentaur1MVMMexp1.png  used on input line 603.
+
+(pdftex.def)             Requested size: 226.48395pt x 168.36841pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/holesCentaur1MVMMexp3.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<img/holesCentaur1MVMMexp3.pdf, id=418, 152.57pt x 123.96312pt>
+File: img/holesCentaur1MVMMexp3.pdf Graphic file (type pdf)
+<use img/holesCentaur1MVMMexp3.pdf>
+Package pdftex.def Info: img/holesCentaur1MVMMexp3.pdf  used on input line 605.
+
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+<img/holesDog1MVMMexp1.png, id=419, 282.30469pt x 250.68657pt>
+File: img/holesDog1MVMMexp1.png Graphic file (type png)
+<use img/holesDog1MVMMexp1.png>
+Package pdftex.def Info: img/holesDog1MVMMexp1.png  used on input line 612.
+(pdftex.def)             Requested size: 203.83417pt x 181.00674pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/holesDog1MVMMexp3.pdf): PDF inclusion:
+ found PDF version <1.7>, but at most version <1.5> allowed
+<img/holesDog1MVMMexp3.pdf, id=420, 154.07562pt x 123.96312pt>
+File: img/holesDog1MVMMexp3.pdf Graphic file (type pdf)
+<use img/holesDog1MVMMexp3.pdf>
+Package pdftex.def Info: img/holesDog1MVMMexp3.pdf  used on input line 614.
+(pdftex.def)             Requested size: 158.54152pt x 127.56616pt.
+<img/holesHorse1MVMMexp1.png, id=421, 252.19218pt x 193.47281pt>
+File: img/holesHorse1MVMMexp1.png Graphic file (type png)
+<use img/holesHorse1MVMMexp1.png>
+Package pdftex.def Info: img/holesHorse1MVMMexp1.png  used on input line 621.
+(pdftex.def)             Requested size: 203.83417pt x 156.37556pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/holesHorse1MVMMexp3.pdf): PDF inclusio
+n: found PDF version <1.7>, but at most version <1.5> allowed
+<img/holesHorse1MVMMexp3.pdf, id=422, 152.57pt x 123.96312pt>
+File: img/holesHorse1MVMMexp3.pdf Graphic file (type pdf)
+<use img/holesHorse1MVMMexp3.pdf>
+Package pdftex.def Info: img/holesHorse1MVMMexp3.pdf  used on input line 623.
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+<img/holesDavid1MVMMexp1.png, id=423, 261.97874pt x 236.38312pt>
+File: img/holesDavid1MVMMexp1.png Graphic file (type png)
+<use img/holesDavid1MVMMexp1.png>
+Package pdftex.def Info: img/holesDavid1MVMMexp1.png  used on input line 629.
+(pdftex.def)             Requested size: 203.83417pt x 183.92361pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/holesDavid1MVMMexp3.pdf): PDF inclusio
+n: found PDF version <1.7>, but at most version <1.5> allowed
+<img/holesDavid1MVMMexp3.pdf, id=424, 152.57pt x 123.96312pt>
+File: img/holesDavid1MVMMexp3.pdf Graphic file (type pdf)
+<use img/holesDavid1MVMMexp3.pdf>
+Package pdftex.def Info: img/holesDavid1MVMMexp3.pdf  used on input line 631.
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+[9 <./img/davidMVMMexp1.png (PNG copy)> <./img/davidMVMMexp3.pdf> <./img/kidMVM
+Mexp1.png (PNG copy)> <./img/kidMVMMexp3.pdf> <./img/kid2MVMMexp1.png (PNG copy
+)> <./img/kid2MVMMexp3.pdf>] [10 <./img/kid3MVMMexp1.png (PNG copy)> <./img/kid
+3MVMMexp3.pdf> <./img/kid4MVMMexp1.png (PNG copy)> <./img/kid4MVMMexp3.pdf> <./
+img/partialCat1MVMMexp1.png (PNG copy)> <./img/partialCat1MVMMexp3.pdf>]
+<img/ventricle1MVMMexp1.png, id=563, 229.60782pt x 219.06844pt>
+File: img/ventricle1MVMMexp1.png Graphic file (type png)
+<use img/ventricle1MVMMexp1.png>
+Package pdftex.def Info: img/ventricle1MVMMexp1.png  used on input line 648.
+(pdftex.def)             Requested size: 203.83417pt x 194.48892pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/ventricle1MVMMexp3.pdf): PDF inclusion
+: found PDF version <1.7>, but at most version <1.5> allowed
+<img/ventricle1MVMMexp3.pdf, id=564, 153.32281pt x 123.96312pt>
+File: img/ventricle1MVMMexp3.pdf Graphic file (type pdf)
+<use img/ventricle1MVMMexp3.pdf>
+Package pdftex.def Info: img/ventricle1MVMMexp3.pdf  used on input line 650.
+(pdftex.def)             Requested size: 158.54152pt x 128.19035pt.
+<img/thalamus1MVMMexp1.png, id=565, 325.96782pt x 118.19156pt>
+File: img/thalamus1MVMMexp1.png Graphic file (type png)
+<use img/thalamus1MVMMexp1.png>
+Package pdftex.def Info: img/thalamus1MVMMexp1.png  used on input line 658.
+(pdftex.def)             Requested size: 203.83417pt x 73.90921pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/thalamus1MVMMexp3.pdf): PDF inclusion:
+ found PDF version <1.7>, but at most version <1.5> allowed
+<img/thalamus1MVMMexp3.pdf, id=566, 152.57pt x 123.96312pt>
+File: img/thalamus1MVMMexp3.pdf Graphic file (type pdf)
+<use img/thalamus1MVMMexp3.pdf>
+Package pdftex.def Info: img/thalamus1MVMMexp3.pdf  used on input line 660.
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+<img/putamen1MVMMexp1.png, id=567, 309.40594pt x 201.00093pt>
+File: img/putamen1MVMMexp1.png Graphic file (type png)
+<use img/putamen1MVMMexp1.png>
+Package pdftex.def Info: img/putamen1MVMMexp1.png  used on input line 669.
+(pdftex.def)             Requested size: 203.83417pt x 132.42178pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/putamen1MVMMexp3.pdf): PDF inclusion: 
+found PDF version <1.7>, but at most version <1.5> allowed
+<img/putamen1MVMMexp3.pdf, id=568, 152.57pt x 123.96312pt>
+File: img/putamen1MVMMexp3.pdf Graphic file (type pdf)
+<use img/putamen1MVMMexp3.pdf>
+Package pdftex.def Info: img/putamen1MVMMexp3.pdf  used on input line 671.
+(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
+[11 <./img/partialWolf1MVMMexp1.png (PNG copy)> <./img/partialWolf1MVMMexp3.pdf
+> <./img/partialCentaur1MVMMexp1.png (PNG copy)> <./img/partialCentaur1MVMMexp3
+.pdf> <./img/partialDog1MVMMexp1.png (PNG copy)> <./img/partialDog1MVMMexp3.pdf
+>] [12 <./img/partialHorse1MVMMexp1.png (PNG copy)> <./img/partialHorse1MVMMexp
+3.pdf> <./img/partialDavid1MVMMexp1.png (PNG copy)> <./img/partialDavid1MVMMexp
+3.pdf> <./img/holesCat1MVMMexp1.png (PNG copy)> <./img/holesCat1MVMMexp3.pdf>]
+
+LaTeX Warning: Text page 13 contains only floats.
+
+[13 <./img/holesWolf1MVMMexp1.png (PNG copy)> <./img/holesWolf1MVMMexp3.pdf> <.
+/img/holesCentaur1MVMMexp1.png (PNG copy)> <./img/holesCentaur1MVMMexp3.pdf> <.
+/img/holesDog1MVMMexp1.png (PNG copy)> <./img/holesDog1MVMMexp3.pdf>]
+
+pdfTeX warning: pdflatex.exe (file ./img/brainBabyZ.pdf): PDF inclusion: found 
+PDF version <1.7>, but at most version <1.5> allowed
+<img/brainBabyZ.pdf, id=777, 284.525pt x 263.06683pt>
+File: img/brainBabyZ.pdf Graphic file (type pdf)
+<use img/brainBabyZ.pdf>
+Package pdftex.def Info: img/brainBabyZ.pdf  used on input line 684.
+(pdftex.def)             Requested size: 203.83417pt x 188.46466pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/babyMVMMexp3v.pdf): PDF inclusion: fou
+nd PDF version <1.7>, but at most version <1.5> allowed
+<img/babyMVMMexp3v.pdf, id=778, 415.30156pt x 224.94038pt>
+File: img/babyMVMMexp3v.pdf Graphic file (type pdf)
+<use img/babyMVMMexp3v.pdf>
+Package pdftex.def Info: img/babyMVMMexp3v.pdf  used on input line 686.
+(pdftex.def)             Requested size: 181.18439pt x 98.13315pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/brainBabyMatch2v.pdf): PDF inclusion: 
+found PDF version <1.7>, but at most version <1.5> allowed
+<img/brainBabyMatch2v.pdf, id=779, 333.245pt x 248.93pt>
+File: img/brainBabyMatch2v.pdf Graphic file (type pdf)
+<use img/brainBabyMatch2v.pdf>
+Package pdftex.def Info: img/brainBabyMatch2v.pdf  used on input line 696.
+(pdftex.def)             Requested size: 362.37569pt x 270.70918pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/babybumpMVMMexp3v.pdf): PDF inclusion:
+ found PDF version <1.7>, but at most version <1.5> allowed
+<img/babybumpMVMMexp3v.pdf, id=780, 336.25626pt x 267.7503pt>
+File: img/babybumpMVMMexp3v.pdf Graphic file (type pdf)
+<use img/babybumpMVMMexp3v.pdf>
+Package pdftex.def Info: img/babybumpMVMMexp3v.pdf  used on input line 708.
+(pdftex.def)             Requested size: 203.83417pt x 162.30606pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/babybumpMVMMexp3vv.pdf): PDF inclusion
+: found PDF version <1.7>, but at most version <1.5> allowed
+<img/babybumpMVMMexp3vv.pdf, id=781, 168.37906pt x 136.76094pt>
+File: img/babybumpMVMMexp3vv.pdf Graphic file (type pdf)
+<use img/babybumpMVMMexp3vv.pdf>
+Package pdftex.def Info: img/babybumpMVMMexp3vv.pdf  used on input line 710.
+(pdftex.def)             Requested size: 181.18439pt x 147.16328pt.
+(IWMM_multiview_forBrainVolumeAnalysisDraft.bbl [14 <./img/holesHorse1MVMMexp1.
+png (PNG copy)> <./img/holesHorse1MVMMexp3.pdf> <./img/holesDavid1MVMMexp1.png 
+(PNG copy)> <./img/holesDavid1MVMMexp3.pdf>] [15 <./img/ventricle1MVMMexp1.png 
+(PNG copy)> <./img/ventricle1MVMMexp3.pdf> <./img/thalamus1MVMMexp1.png (PNG co
+py)> <./img/thalamus1MVMMexp3.pdf> <./img/putamen1MVMMexp1.png (PNG copy)> <./i
+mg/putamen1MVMMexp3.pdf>] [16 <./img/brainBabyZ.pdf> <./img/babyMVMMexp3v.pdf> 
+<./img/brainBabyMatch2v.pdf>] [17 <./img/babybumpMVMMexp3v.pdf> <./img/babybump
+MVMMexp3vv.pdf>]) [18] (IWMM_multiview_forBrainVolumeAnalysisDraft.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 17336 strings out of 492945
+ 360446 string characters out of 3135513
+ 438478 words of memory out of 3000000
+ 20785 multiletter control sequences out of 15000+200000
+ 17367 words of font info for 64 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,16n,78p,1131b,916s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cmextra/cmex7.pfb><D:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmmi5.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmmi6.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mmi7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
+<D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><D:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmr5.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr6.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8
+.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><D:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmti10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/symbols/msbm10.pfb>
+Output written on IWMM_multiview_forBrainVolumeAnalysisDraft.pdf (18 pages, 790
+2678 bytes).
+PDF statistics:
+ 1112 PDF objects out of 1200 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 328 words of extra memory for PDF output out of 10000 (max. 10000000)
+
