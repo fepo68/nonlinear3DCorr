@@ -26,50 +26,73 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A graphical model representation of the multiview warped mixture model, where the shaded and unshaded nodes indicate observed and latent variables, respectively, and plates indicate repetition.}}{3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Latent Multi-view Warped Mixture Model}{3}\protected@file@percent }
 \citation{IwaDuvGha2012warped}
-\citation{Iwata16}
-\citation{Iwata16}
-\citation{Djuric12}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Inference}{4}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3}Results}{4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Clustering performance on real datasets}{4}\protected@file@percent }
+\citation{Iwata16}
+\citation{Iwata16}
+\citation{Djuric12}
+\citation{Bronstein10}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Average Rand index for evaluating clustering performance.}}{5}\protected@file@percent }
 \newlabel{tab:comparison1}{{1}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Experimental results for the Pinwheel, spiral and circles dataset. Current mixture parameters, along with the latent positions (left). Original data and predicted assignments (right). }}{5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Comparison with linear approaches}{5}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Adjusted Rand index of the proposed method against the state-of-the-art methods for unsupervised clustering.}}{5}\protected@file@percent }
-\newlabel{tab:comparison}{{2}{5}}
-\citation{Bronstein10}
+\newlabel{tab:comparison2}{{2}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Neurodegenerative brain dataset}{5}\protected@file@percent }
+\citation{SHREC16}
+\newlabel{fig:MLsynthMVWMMa}{{2(a)}{6}}
+\newlabel{sub@fig:MLsynthMVWMMa}{{(a)}{6}}
+\newlabel{fig:MLsynthMVWMMb}{{2(b)}{6}}
+\newlabel{sub@fig:MLsynthMVWMMb}{{(b)}{6}}
+\newlabel{fig:MLsynthMVWMMc}{{2(c)}{6}}
+\newlabel{sub@fig:MLsynthMVWMMc}{{(c)}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Experimental results for the Pinwheel, 2-curve and circles dataset. Left column: Observed input data (white markers), and cluster densities inferred by the model (colors). Right column: Latent and Gaussian components from a single sample from the posterior. Each marker plotted in the latent space ($K = 2$) corresponds to an input data in the observed space. }}{6}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Pinwheel}}}{6}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {2-curve}}}{6}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {2-circle}}}{6}\protected@file@percent }
+\newlabel{fig:MLsynthMVWMM}{{2}{6}}
 \citation{NeuroBaby18}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Neurodegenerative brain dataset}{6}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Experimental results for the brain structures dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the ventricle. Average Rand Index $0.6071$ }}{6}\protected@file@percent }
-\newlabel{fig:brainV}{{3}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Experimental results for the brain structures dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the thalamus. Average Rand Index $0.6467$ }}{6}\protected@file@percent }
-\newlabel{fig:brainT}{{4}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Experimental results for the brain structures dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the ventricle. Average Rand Index $0.6071$. Same colors in related regions are considered candidate matches. Gray and white markers relate a specific view (left and right object), so similar markers are candidate matches in the latent space. }}{7}\protected@file@percent }
+\newlabel{fig:brainV}{{3}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Experimental results for the brain structures dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the thalamus. Average Rand Index $0.6467$. Same colors in related regions are considered candidate matches. Gray and white markers relate a specific view (left and right object), so similar markers are candidate matches in the latent space. }}{7}\protected@file@percent }
+\newlabel{fig:brainT}{{4}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Neurodevelopmental dataset: In-utero brain model}{7}\protected@file@percent }
 \bibstyle{plain}
 \bibdata{bibRevTesisDoc,medImagebib,biblio}
 \bibcite{Aiger08}{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Experimental results for the brain structures dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the putamen. Average Rand Index $0.6467$. Same colors in related regions are considered candidate matches. Gray and white markers relate a specific view (left and right object), so similar markers are candidate matches in the latent space. }}{8}\protected@file@percent }
+\newlabel{fig:brainP}{{5}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Performance of the proposed correspondence method on the Neurodegenerative dataset. The performances were evaluated using the Princeton benchmark. Each curve is averaged over all brain sequences in all classes (i.e., brain structure analysis). We again plot a cumulative curve showing the percentage of matches that are at most geodesically distant from the ground-truth correspondence on the reference shape.}}{8}\protected@file@percent }
+\newlabel{fig:ch4:geoerrBrain}{{6}{8}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1}Brain analysis with synthetic deformations}{8}\protected@file@percent }
 \bibcite{Bronstein11}{2}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Experimental results for the brain Neurodevelopmental dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the brain volume. Average Rand Index $0.6948$. Same colors in related regions are considered candidate matches. Gray and white markers relate a specific view (left and right object), so similar markers are candidate matches in the latent space. }}{9}\protected@file@percent }
+\newlabel{fig:brainBaby}{{7}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Matching result for the brain Neurodevelopmental dataset. The figure shows the established correspondences, starting from good to bad matches (yellow to dark blue in the colormap). For instance, matching number 5 exhibits a good correspondence estimate on which the neurodevelopmental corresponds to a plausible match (right temporal lobe). Also, matching number 1 shows a weak estimate on which the brain regions are related wrongly (right occipital lobe in the 25 weeks brain to the left frontal lobe in the 31 weeks brain). }}{9}\protected@file@percent }
+\newlabel{fig:brainBabyM}{{8}{9}}
 \bibcite{Bronstein10}{3}
 \bibcite{Brunton14}{4}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Experimental results for the brain structures dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the putamen. Average Rand Index $0.6467$ }}{7}\protected@file@percent }
-\newlabel{fig:brainP}{{5}{7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Neurodevelopmental dataset: In-utero brain model}{7}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Experimental results for the brain Neurodevelopmental dataset. Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the brain volume. Average Rand Index $0.6948$ }}{7}\protected@file@percent }
-\newlabel{fig:brainBaby}{{6}{7}}
 \bibcite{CortesS15}{5}
 \bibcite{Cosa13}{6}
 \bibcite{durrleman2014}{7}
 \bibcite{Derek10}{8}
 \bibcite{Iwata16}{9}
+\newlabel{fig:brainBabybumpsb}{{9(a)}{10}}
+\newlabel{sub@fig:brainBabybumpsb}{{(a)}{10}}
+\newlabel{fig:brainBabybumpsa}{{9(b)}{10}}
+\newlabel{sub@fig:brainBabybumpsa}{{(b)}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Matching result for the Neurodevelopmental dataset. The figure shows shape variations between a 25-weeks brain and a deformed version on which we manually added bumps to the brain shape. Same colors in related regions are considered candidate matches. The motivation for this experiment was to capture minor shape variations derived from the low curvatures that brain bumps add to a give shape structure (i.e., curvature for two spheres in figure 9(b)\hbox {}).}}{10}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Single bump}}}{10}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Two bumps}}}{10}\protected@file@percent }
+\newlabel{fig:brainBabybumps}{{9}{10}}
 \bibcite{Klami12}{10}
-\bibcite{Lawrence03}{11}
-\bibcite{LiangSW15}{12}
-\bibcite{LinCW14}{13}
-\bibcite{Sidorov11}{14}
-\bibcite{Thompson03}{15}
-\bibcite{IwaDuvGha2012warped}{16}
-\bibcite{vankaick11}{17}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Matching result for the brain Neurodevelopmental dataset. The figure shows the established correspondences, starting from best to weak matches (blue to nude in the colormap).}}{8}\protected@file@percent }
-\newlabel{fig:brainBabyM}{{7}{8}}
-\bibcite{NeuroBaby18}{18}
-\bibcite{Yang13}{19}
+\bibcite{SHREC16}{11}
+\bibcite{Lawrence03}{12}
+\bibcite{LiangSW15}{13}
+\bibcite{LinCW14}{14}
+\bibcite{Sidorov11}{15}
+\bibcite{Thompson03}{16}
+\bibcite{IwaDuvGha2012warped}{17}
+\bibcite{vankaick11}{18}
+\bibcite{NeuroBaby18}{19}
+\bibcite{Yang13}{20}

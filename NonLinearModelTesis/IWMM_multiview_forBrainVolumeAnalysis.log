@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.3.26)  25 JUN 2019 23:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.3.26)  20 NOV 2019 08:57
 entering extended mode
 **./IWMM_multiview_forBrainVolumeAnalysis.tex
 (IWMM_multiview_forBrainVolumeAnalysis.tex
@@ -761,121 +761,183 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 )
 [2] [3]
-Overfull \hbox (3.88364pt too wide) in paragraph at lines 356--371
- [][] 
- []
+
+LaTeX Warning: Reference `app:ch4:MLdb' on page 4 undefined on input line 349.
 
 
 
-pdfTeX warning: pdflatex.exe (file ./img/mvwmmPW2arms100N.pdf): PDF inclusion: 
-found PDF version <1.7>, but at most version <1.5> allowed
-<img/mvwmmPW2arms100N.pdf, id=37, 935.47632pt x 234.06145pt>
-File: img/mvwmmPW2arms100N.pdf Graphic file (type pdf)
-<use img/mvwmmPW2arms100N.pdf>
-Package pdftex.def Info: img/mvwmmPW2arms100N.pdf  used on input line 379.
-(pdftex.def)             Requested size: 407.66833pt x 101.99803pt.
+pdfTeX warning: pdflatex.exe (file ./img/mvwmmpinwheelO.pdf): PDF inclusion: fo
+und PDF version <1.7>, but at most version <1.5> allowed
+<img/mvwmmpinwheelO.pdf, id=37, 154.82843pt x 126.97438pt>
+File: img/mvwmmpinwheelO.pdf Graphic file (type pdf)
+<use img/mvwmmpinwheelO.pdf>
+Package pdftex.def Info: img/mvwmmpinwheelO.pdf  used on input line 377.
+(pdftex.def)             Requested size: 181.18439pt x 148.60204pt.
 
 
-pdfTeX warning: pdflatex.exe (file ./img/mvwmmspiral.pdf): PDF inclusion: found
- PDF version <1.7>, but at most version <1.5> allowed
-<img/mvwmmspiral.pdf, id=38, 926.45758pt x 228.97946pt>
-File: img/mvwmmspiral.pdf Graphic file (type pdf)
-<use img/mvwmmspiral.pdf>
-Package pdftex.def Info: img/mvwmmspiral.pdf  used on input line 380.
-(pdftex.def)             Requested size: 407.66833pt x 100.75826pt.
+pdfTeX warning: pdflatex.exe (file ./img/mvwmmpinwheelL.pdf): PDF inclusion: fo
+und PDF version <1.7>, but at most version <1.5> allowed
+<img/mvwmmpinwheelL.pdf, id=38, 152.57pt x 123.96312pt>
+File: img/mvwmmpinwheelL.pdf Graphic file (type pdf)
+<use img/mvwmmpinwheelL.pdf>
+Package pdftex.def Info: img/mvwmmpinwheelL.pdf  used on input line 377.
+(pdftex.def)             Requested size: 181.18439pt x 147.21907pt.
 
 
-pdfTeX warning: pdflatex.exe (file ./img/mvwmmcircles2.pdf): PDF inclusion: fou
-nd PDF version <1.7>, but at most version <1.5> allowed
-<img/mvwmmcircles2.pdf, id=39, 725.83893pt x 235.40749pt>
-File: img/mvwmmcircles2.pdf Graphic file (type pdf)
-<use img/mvwmmcircles2.pdf>
-Package pdftex.def Info: img/mvwmmcircles2.pdf  used on input line 381.
-(pdftex.def)             Requested size: 407.66833pt x 132.21881pt.
+pdfTeX warning: pdflatex.exe (file ./img/mvwmmspiralO.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+<img/mvwmmspiralO.pdf, id=39, 154.82843pt x 126.97438pt>
+File: img/mvwmmspiralO.pdf Graphic file (type pdf)
+<use img/mvwmmspiralO.pdf>
+Package pdftex.def Info: img/mvwmmspiralO.pdf  used on input line 378.
+(pdftex.def)             Requested size: 181.18439pt x 148.60204pt.
 
-LaTeX Warning: Citation `Djuric12' on page 4 undefined on input line 388.
 
-[4] [5 <./img/mvwmmPW2arms100N.pdf> <./img/mvwmmspiral.pdf> <./img/mvwmmcircles
-2.pdf>]
-<img/ventricle1MVMMexp1.png, id=209, 229.60782pt x 219.06844pt>
+pdfTeX warning: pdflatex.exe (file ./img/mvwmmspiralL.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+<img/mvwmmspiralL.pdf, id=40, 150.31157pt x 126.22156pt>
+File: img/mvwmmspiralL.pdf Graphic file (type pdf)
+<use img/mvwmmspiralL.pdf>
+Package pdftex.def Info: img/mvwmmspiralL.pdf  used on input line 378.
+(pdftex.def)             Requested size: 181.18439pt x 152.16037pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/mvwmmcircleO.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+<img/mvwmmcircleO.pdf, id=41, 154.82843pt x 126.97438pt>
+File: img/mvwmmcircleO.pdf Graphic file (type pdf)
+<use img/mvwmmcircleO.pdf>
+Package pdftex.def Info: img/mvwmmcircleO.pdf  used on input line 379.
+(pdftex.def)             Requested size: 181.18439pt x 148.60204pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/mvwmmcircleL.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+<img/mvwmmcircleL.pdf, id=42, 152.57pt x 123.96312pt>
+File: img/mvwmmcircleL.pdf Graphic file (type pdf)
+<use img/mvwmmcircleL.pdf>
+Package pdftex.def Info: img/mvwmmcircleL.pdf  used on input line 379.
+(pdftex.def)             Requested size: 181.18439pt x 147.21907pt.
+[4]
+
+LaTeX Warning: Citation `Djuric12' on page 5 undefined on input line 388.
+
+
+LaTeX Warning: Reference `sec:ch4:mvtemp' on page 5 undefined on input line 640
+.
+
+
+LaTeX Warning: Reference `sec:ch4:mvtemp' on page 5 undefined on input line 647
+.
+
+[5]
+<img/ventricle1MVMMexp1.png, id=51, 229.60782pt x 219.06844pt>
 File: img/ventricle1MVMMexp1.png Graphic file (type png)
 <use img/ventricle1MVMMexp1.png>
-Package pdftex.def Info: img/ventricle1MVMMexp1.png  used on input line 648.
-(pdftex.def)             Requested size: 203.83417pt x 194.48892pt.
+Package pdftex.def Info: img/ventricle1MVMMexp1.png  used on input line 652.
+(pdftex.def)             Requested size: 226.48395pt x 216.09955pt.
 
 
-pdfTeX warning: pdflatex.exe (file ./img/ventricle1MVMMexp3.pdf): PDF inclusion
-: found PDF version <1.7>, but at most version <1.5> allowed
-<img/ventricle1MVMMexp3.pdf, id=210, 153.32281pt x 123.96312pt>
-File: img/ventricle1MVMMexp3.pdf Graphic file (type pdf)
-<use img/ventricle1MVMMexp3.pdf>
-Package pdftex.def Info: img/ventricle1MVMMexp3.pdf  used on input line 650.
-(pdftex.def)             Requested size: 158.54152pt x 128.19035pt.
-<img/thalamus1MVMMexp1.png, id=211, 325.96782pt x 118.19156pt>
+pdfTeX warning: pdflatex.exe (file ./img/ventricle1MVMMexp3v.pdf): PDF inclusio
+n: found PDF version <1.7>, but at most version <1.5> allowed
+<img/ventricle1MVMMexp3v.pdf, id=52, 166.87344pt x 133.7497pt>
+File: img/ventricle1MVMMexp3v.pdf Graphic file (type pdf)
+<use img/ventricle1MVMMexp3v.pdf>
+Package pdftex.def Info: img/ventricle1MVMMexp3v.pdf  used on input line 654.
+(pdftex.def)             Requested size: 158.54152pt x 127.08188pt.
+<img/thalamus1MVMMexp1.png, id=53, 325.96782pt x 118.19156pt>
 File: img/thalamus1MVMMexp1.png Graphic file (type png)
 <use img/thalamus1MVMMexp1.png>
-Package pdftex.def Info: img/thalamus1MVMMexp1.png  used on input line 658.
+Package pdftex.def Info: img/thalamus1MVMMexp1.png  used on input line 662.
 (pdftex.def)             Requested size: 203.83417pt x 73.90921pt.
 
 
-pdfTeX warning: pdflatex.exe (file ./img/thalamus1MVMMexp3.pdf): PDF inclusion:
+pdfTeX warning: pdflatex.exe (file ./img/thalamus1MVMMexp3v.pdf): PDF inclusion
+: found PDF version <1.7>, but at most version <1.5> allowed
+<img/thalamus1MVMMexp3v.pdf, id=54, 166.87344pt x 133.7497pt>
+File: img/thalamus1MVMMexp3v.pdf Graphic file (type pdf)
+<use img/thalamus1MVMMexp3v.pdf>
+Package pdftex.def Info: img/thalamus1MVMMexp3v.pdf  used on input line 664.
+(pdftex.def)             Requested size: 158.54152pt x 127.08188pt.
+<img/putamen1MVMMexp1v.png, id=55, 240.9pt x 165.61874pt>
+File: img/putamen1MVMMexp1v.png Graphic file (type png)
+<use img/putamen1MVMMexp1v.png>
+Package pdftex.def Info: img/putamen1MVMMexp1v.png  used on input line 673.
+(pdftex.def)             Requested size: 203.83417pt x 140.13974pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/putamen1MVMMexp3v.pdf): PDF inclusion:
  found PDF version <1.7>, but at most version <1.5> allowed
-<img/thalamus1MVMMexp3.pdf, id=212, 152.57pt x 123.96312pt>
-File: img/thalamus1MVMMexp3.pdf Graphic file (type pdf)
-<use img/thalamus1MVMMexp3.pdf>
-Package pdftex.def Info: img/thalamus1MVMMexp3.pdf  used on input line 660.
-(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
-<img/putamen1MVMMexp1.png, id=213, 309.40594pt x 201.00093pt>
-File: img/putamen1MVMMexp1.png Graphic file (type png)
-<use img/putamen1MVMMexp1.png>
-Package pdftex.def Info: img/putamen1MVMMexp1.png  used on input line 669.
-(pdftex.def)             Requested size: 203.83417pt x 132.42178pt.
+<img/putamen1MVMMexp3v.pdf, id=56, 169.88469pt x 133.7497pt>
+File: img/putamen1MVMMexp3v.pdf Graphic file (type pdf)
+<use img/putamen1MVMMexp3v.pdf>
+Package pdftex.def Info: img/putamen1MVMMexp3v.pdf  used on input line 675.
+(pdftex.def)             Requested size: 158.54152pt x 124.8247pt.
+[6 <./img/mvwmmpinwheelO.pdf> <./img/mvwmmpinwheelL.pdf> <./img/mvwmmspiralO.pd
+f> <./img/mvwmmspiralL.pdf> <./img/mvwmmcircleO.pdf> <./img/mvwmmcircleL.pdf>]
+
+pdfTeX warning: pdflatex.exe (file ./img/geoErrBrain.pdf): PDF inclusion: found
+ PDF version <1.7>, but at most version <1.5> allowed
+<img/geoErrBrain.pdf, id=182, 366.36874pt x 294.85156pt>
+File: img/geoErrBrain.pdf Graphic file (type pdf)
+<use img/geoErrBrain.pdf>
+Package pdftex.def Info: img/geoErrBrain.pdf  used on input line 688.
+(pdftex.def)             Requested size: 271.7835pt x 218.74011pt.
 
 
-pdfTeX warning: pdflatex.exe (file ./img/putamen1MVMMexp3.pdf): PDF inclusion: 
+pdfTeX warning: pdflatex.exe (file ./img/brainBabyZ.pdf): PDF inclusion: found 
+PDF version <1.7>, but at most version <1.5> allowed
+<img/brainBabyZ.pdf, id=183, 284.525pt x 263.06683pt>
+File: img/brainBabyZ.pdf Graphic file (type pdf)
+<use img/brainBabyZ.pdf>
+Package pdftex.def Info: img/brainBabyZ.pdf  used on input line 701.
+(pdftex.def)             Requested size: 203.83417pt x 188.46466pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/babyMVMMexp3v.pdf): PDF inclusion: fou
+nd PDF version <1.7>, but at most version <1.5> allowed
+<img/babyMVMMexp3v.pdf, id=184, 415.30156pt x 224.94038pt>
+File: img/babyMVMMexp3v.pdf Graphic file (type pdf)
+<use img/babyMVMMexp3v.pdf>
+Package pdftex.def Info: img/babyMVMMexp3v.pdf  used on input line 703.
+(pdftex.def)             Requested size: 181.18439pt x 98.13315pt.
+[7 <./img/ventricle1MVMMexp1.png (PNG copy)> <./img/ventricle1MVMMexp3v.pdf> <.
+/img/thalamus1MVMMexp1.png (PNG copy)> <./img/thalamus1MVMMexp3v.pdf>]
+
+pdfTeX warning: pdflatex.exe (file ./img/brainBabyMatch2v.pdf): PDF inclusion: 
 found PDF version <1.7>, but at most version <1.5> allowed
-<img/putamen1MVMMexp3.pdf, id=214, 152.57pt x 123.96312pt>
-File: img/putamen1MVMMexp3.pdf Graphic file (type pdf)
-<use img/putamen1MVMMexp3.pdf>
-Package pdftex.def Info: img/putamen1MVMMexp3.pdf  used on input line 671.
-(pdftex.def)             Requested size: 158.54152pt x 128.82024pt.
-[6 <./img/ventricle1MVMMexp1.png (PNG copy)> <./img/ventricle1MVMMexp3.pdf> <./
-img/thalamus1MVMMexp1.png (PNG copy)> <./img/thalamus1MVMMexp3.pdf>]
-<img/brainBaby.png, id=263, 277.78781pt x 143.03438pt>
-File: img/brainBaby.png Graphic file (type png)
-<use img/brainBaby.png>
-Package pdftex.def Info: img/brainBaby.png  used on input line 684.
-(pdftex.def)             Requested size: 203.83417pt x 104.95547pt.
-
-
-pdfTeX warning: pdflatex.exe (file ./img/babyMVMMexp3.pdf): PDF inclusion: foun
-d PDF version <1.7>, but at most version <1.5> allowed
-<img/babyMVMMexp3.pdf, id=264, 402.50375pt x 210.62689pt>
-File: img/babyMVMMexp3.pdf Graphic file (type pdf)
-<use img/babyMVMMexp3.pdf>
-Package pdftex.def Info: img/babyMVMMexp3.pdf  used on input line 686.
-(pdftex.def)             Requested size: 203.83417pt x 106.66302pt.
-<img/brainBabyMatch.png, id=265, 899.61093pt x 468.24937pt>
-File: img/brainBabyMatch.png Graphic file (type png)
-<use img/brainBabyMatch.png>
-Package pdftex.def Info: img/brainBabyMatch.png  used on input line 695.
-(pdftex.def)             Requested size: 317.07614pt x 165.04005pt.
-(IWMM_multiview_forBrainVolumeAnalysis.bbl [7 <./img/putamen1MVMMexp1.png (PNG 
-copy)> <./img/putamen1MVMMexp3.pdf> <./img/brainBaby.png (PNG copy)> <./img/bab
-yMVMMexp3.pdf>] [8 <./img/brainBabyMatch.png (PNG copy)>]) [9]
+<img/brainBabyMatch2v.pdf, id=233, 333.245pt x 248.93pt>
+File: img/brainBabyMatch2v.pdf Graphic file (type pdf)
+<use img/brainBabyMatch2v.pdf>
+Package pdftex.def Info: img/brainBabyMatch2v.pdf  used on input line 713.
+(pdftex.def)             Requested size: 362.37569pt x 270.70918pt.
+<img/brainBaby1Bumps.png, id=234, 719.0865pt x 328.22626pt>
+File: img/brainBaby1Bumps.png Graphic file (type png)
+<use img/brainBaby1Bumps.png>
+Package pdftex.def Info: img/brainBaby1Bumps.png  used on input line 726.
+(pdftex.def)             Requested size: 362.37569pt x 165.40987pt.
+<img/brainBaby2Bumps.png, id=235, 922.647pt x 375.20175pt>
+File: img/brainBaby2Bumps.png Graphic file (type png)
+<use img/brainBaby2Bumps.png>
+Package pdftex.def Info: img/brainBaby2Bumps.png  used on input line 727.
+(pdftex.def)             Requested size: 362.37569pt x 147.36433pt.
+(IWMM_multiview_forBrainVolumeAnalysis.bbl [8 <./img/putamen1MVMMexp1v.png (PNG
+ copy)> <./img/putamen1MVMMexp3v.pdf> <./img/geoErrBrain.pdf>] [9 <./img/brainB
+abyZ.pdf> <./img/babyMVMMexp3v.pdf> <./img/brainBabyMatch2v.pdf>] [10 <./img/br
+ainBaby1Bumps.png> <./img/brainBaby2Bumps.png>]) [11]
 (IWMM_multiview_forBrainVolumeAnalysis.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 17081 strings out of 492945
- 352698 string characters out of 3135513
- 438455 words of memory out of 3000000
- 20581 multiletter control sequences out of 15000+200000
+ 17128 strings out of 492945
+ 353930 string characters out of 3135513
+ 438593 words of memory out of 3000000
+ 20622 multiletter control sequences out of 15000+200000
  17367 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,16n,78p,912b,916s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,16n,78p,1284b,916s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/Program Files/MiKTe
@@ -899,10 +961,10 @@ eX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmti10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/
 amsfonts/symbols/msbm10.pfb>
-Output written on IWMM_multiview_forBrainVolumeAnalysis.pdf (9 pages, 4195020 b
-ytes).
+Output written on IWMM_multiview_forBrainVolumeAnalysis.pdf (11 pages, 1843666 
+bytes).
 PDF statistics:
- 397 PDF objects out of 1000 (max. 8388607)
+ 429 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 103 words of extra memory for PDF output out of 10000 (max. 10000000)
 

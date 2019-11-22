@@ -59,6 +59,10 @@ Arto Klami.
 \newblock In {\em Proceedings of the 4th Asian Conference on Machine Learning,
   {ACML} 2012, Singapore, Singapore, November 4-6, 2012}, pages 205--220, 2012.
 
+\bibitem{SHREC16}
+Z.~L\.
+\newblock Shrec’16: Matching of deformable shapes with topological noise.
+
 \bibitem{Lawrence03}
 Neil Lawrence.
 \newblock Gaussian process latent variable models for visualisation of high

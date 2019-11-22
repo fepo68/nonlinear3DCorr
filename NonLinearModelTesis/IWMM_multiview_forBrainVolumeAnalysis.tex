@@ -346,62 +346,63 @@ p\left(\obspv|\setX_c, \Scluster,v,\mathbf{u},r\right) = \pi^{-\frac{N_{vc\setmi
 
 \subsection{Clustering performance on real datasets}
 
-We first test our model on common clustering ML datasets shown in table \ref{tab:comparison1}. Results show that by using nonlinear models to perform the clustering task the cluster assignment becomes more accurate (None of these
-	datasets can be appropriately clustered through linear approaches such as GMMs).
+We first test our model on common clustering ML datasets shown in table \ref{tab:comparison1} (see appendix \ref{app:ch4:MLdb} for details of the ML datasets). Results show that by using nonlinear models to perform the clustering task the cluster assignment becomes more accurate (None of these
+datasets can be appropriately clustered through linear approaches such as GMMs).
 
 \begin{table*}[ht!]
 	\centering
 	\caption{Average Rand index for evaluating clustering performance.}
 	\label{tab:comparison1}
-	\begin{tabular}{c c c c c c c}
-		\cline{2-7}
-		& \multicolumn{5}{c}{\textbf{Database}}\\
-		\hline
-		\textbf{Approach} &  	Wine & 2-curve & 3-semi & 2-circle & Pinwheel& Vowel\\
-		\hline\hline
-%		iGMM  & $0.72\pm0.06$ &&&&&\\
-%		iWMM ($Q=2$) & $0.65\pm0.05$ &&&&&\\
-%		iWMM ($Q=D$) & $0.77\pm0.03$ &&&&&\\
-		\hline
-		MV-WMM($Q=2$) & $0.68\pm0.03$  &$0.83\pm0.02$ &$0.83\pm0.01$&$0.88\pm0.02$&$0.87\pm0.02$ & $0.65\pm0.01$\\
-		MV-WMM($Q=D$) & $0.85\pm 0.02$ &$0.83\pm0.02$&$0.83\pm0.01$&$0.88\pm0.02$&$0.87\pm0.02$&$0.73\pm0.02$\\
-		\hline
-
-	\end{tabular}
+	\resizebox{\linewidth}{!}{\begin{tabular}{c c c c c c c}
+			\cline{2-7}
+			& \multicolumn{5}{c}{\textbf{Database}}\\
+			\hline
+			\textbf{Approach} &  	Wine & 2-curve & 3-semi & 2-circle & Pinwheel& Vowel\\
+			\hline\hline
+			%		iGMM  & $0.72\pm0.06$ &&&&&\\
+			%		iWMM ($Q=2$) & $0.65\pm0.05$ &&&&&\\
+			%		iWMM ($Q=D$) & $0.77\pm0.03$ &&&&&\\
+			\hline
+			MV-WMM($K=2$) & $0.68\pm0.03$  &$0.83\pm0.02$ &$0.83\pm0.01$&$0.88\pm0.02$&$0.87\pm0.02$ & $0.65\pm0.01$\\
+			MV-WMM($K=D$) & $0.85\pm 0.02$ &$0.83\pm0.02$&$0.83\pm0.01$&$0.88\pm0.02$&$0.87\pm0.02$&$0.73\pm0.02$\\
+			\hline
+			
+	\end{tabular}}
 \end{table*}
 
-%2-curve 3-semi 2-circle Pinwheel Iris Glass Wine Vowel
-%iGMM 0:52 0:79 0:83 0:81 0:78 0:60 0:72 0:76
-%iWMM(Q=2) 0:86 0:99 0:89 0:94 0:81 0:65 0:65 0:50
-%iWMM(Q=D) 0:86 0:99 0:89 0:94 0:77 0:62 0:77 0:76
+Figure \ref{fig:MLsynthMVWMM} shows an example of the clustering matching on synthetic datasets (pinwheel \ref{fig:MLsynthMVWMMa}, 2-curve \ref{fig:MLsynthMVWMMb}, and 2-circle \ref{fig:MLsynthMVWMMc}). The results show that our model separates the two non-Gaussian clusters in the observed space, representing them using two Gaussian-shaped clusters in the latent space (i.e., clustering performance on the 2-curve and 2-circle dataset). Finally, figure \ref{fig:MLsynthMVWMMa} shows that our approach can recover an analogous latent structure from more complex datasets.
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.9\linewidth]{img/mvwmmPW2arms100N}
-		\includegraphics[width=0.9\linewidth]{img/mvwmmspiral}
-				\includegraphics[width=0.9\linewidth]{img/mvwmmcircles2}
-	\caption{Experimental results for the Pinwheel, spiral and circles dataset. Current mixture parameters, along with the latent positions (left). Original data and predicted assignments (right). }
+	%	\includegraphics[width=0.9\linewidth]{img/mvwmmPW2arms100N}
+	\subfigure[Pinwheel]{\includegraphics[width=0.4\linewidth]{img/mvwmmpinwheelO} \includegraphics[width=0.4\linewidth]{img/mvwmmpinwheelL}\label{fig:MLsynthMVWMMa}}
+	\subfigure[2-curve]{	\includegraphics[width=0.4\linewidth]{img/mvwmmspiralO} \includegraphics[width=0.4\linewidth]{img/mvwmmspiralL}\label{fig:MLsynthMVWMMb}}
+	\subfigure[2-circle]{	\includegraphics[width=0.4\linewidth]{img/mvwmmcircleO} \includegraphics[width=0.4\linewidth]{img/mvwmmcircleL}\label{fig:MLsynthMVWMMc}}
+	%	\includegraphics[width=0.9\linewidth]{img/mvwmmcircles2}
+	\caption{Experimental results for the Pinwheel, 2-curve and circles dataset. Left column: Observed input data (white markers), and cluster densities inferred by the model (colors). Right column: Latent and Gaussian components from a single sample from the posterior. Each marker plotted in the latent space ($K = 2$) corresponds to an input data in the observed space. }
+	\label{fig:MLsynthMVWMM}
 \end{figure}
 
 
 \subsection{Comparison with linear approaches}
 
-Secondly, we test the performance of our approaches (both NL-UCM and MV-WMM) regarding the adjusted Rand index (we report both average and standard deviation), to quantify the similarity between the inferred clusters \cite{Iwata16} and the true labels. For comparison, we use unsupervised clustering matching (UCM) \cite{Iwata16}, k-means (KM), and convex kernelized sorting (CKS) \cite{Djuric12}. Table \ref{tab:comparison} shows that our approaches outperforms the state-of-the-art methods for unsupervised clustering for the three databases. The results also show that by mapping the observed data through  non-linear mappings, the models can handle real-world datasets with better performance than linear approaches as in the case of NL-UCM and MV-WMM (i.e., $0.17$ and $0.13$ for the MNIST dataset against $0.085$ obtained from the UCM method). 
+Secondly, we test the performance of our approaches (both NL-UCM and MV-WMM) regarding the adjusted Rand index (we report both average and standard deviation), to quantify the similarity between the inferred clusters \cite{Iwata16} and the true labels. For comparison, we use unsupervised clustering matching (UCM) \cite{Iwata16}, k-means (KM), and convex kernelized sorting (CKS) \cite{Djuric12}. Table \ref{tab:comparison2} shows that our approaches outperforms the state-of-the-art methods for unsupervised clustering for the three databases. The results also show that by mapping the observed data through  non-linear mappings, the models can handle real-world datasets with better performance than linear approaches as in the case of NL-UCM and MV-WMM (i.e., $0.17$ and $0.33$ for the MNIST dataset against $0.085$ obtained from the UCM method). 
 
 \begin{table*}[ht!]
 	\centering
 	\caption{Adjusted Rand index of the proposed method against the state-of-the-art methods for unsupervised clustering.}
-	\label{tab:comparison}
-	\begin{tabular}{c c c c c c}
-		\cline{2-6}
-		& \multicolumn{4}{c}{\textbf{Approach}}\\
-		\hline
-		Database &  	UCM & KM & KM-CKS& \textbf{NL-UCM} & \textbf{MV-WMM}\\
-		\hline\hline
-		Iris & $0.383\pm0.189$ &  $0.224 \pm 0.0910$  &  $0.254 \pm 0.154$ &$\mathbf{0.546\pm 0.080}$ & $\mathbf{0.498\pm 0.001}$\\
-		Glass & $0.160 \pm 0.020$ & $0.050 \pm 0.008$     &  $0.052 \pm 0.011$       & $\mathbf{0.378\pm 0.045}$ & $\mathbf{0.384\pm 0.003}$\\
-		MNIST & $0.085 \pm 0.016$&      $0.030 \pm 0.007$   &  $0.037 \pm 0.008$  & $\mathbf{0.167\pm 0.013}$ & $\mathbf{0.133\pm 0.004}$\\
-	\end{tabular}
+	\label{tab:comparison2}
+	\resizebox{\linewidth}{!}{\begin{tabular}{c c c c c c}
+			\cline{2-6}
+			& \multicolumn{4}{c}{\textbf{Approach}}\\
+			\hline
+			Database &  	UCM & KM & KM-CKS& \textbf{NL-UCM} & \textbf{MV-WMM}\\
+			\hline\hline
+			Iris & $0.383\pm0.189$ &  $0.224 \pm 0.091$  &  $0.254 \pm 0.154$ &${0.546\pm 0.080}$ & $\mathbf{0.553\pm 0.010}$\\
+			Glass & $0.160 \pm 0.020$ & $0.050 \pm 0.008$     &  $0.052 \pm 0.011$       & ${0.378\pm 0.045}$ & $\mathbf{0.384\pm 0.003}$\\
+			MNIST & $0.085 \pm 0.016$&      $0.030 \pm 0.007$   &  $0.037 \pm 0.008$  & ${0.167\pm 0.013}$ & $\mathbf{0.334\pm 0.011}$\\
+	\end{tabular}}
 \end{table*}
+
 
 %\subsection{Non-rigid 3D shape datasets}
 %
@@ -634,21 +635,24 @@ Secondly, we test the performance of our approaches (both NL-UCM and MV-WMM) reg
 
 \subsection{Neurodegenerative brain dataset}
 
-With the aim to model shape variability in Brain structures, we test our model on real medical image data. Here  we used the MRI \textit{DB-UTP} database from the Universidad Tecnol\'ogica de Pereira, COL. This database contains volumetric MRI data from four patients with Parkinson's disease (at earlier and advanced stage of the disease). The database was labeled by neurosurgeons from \textit{NEUROCENTRO}: The Institute of Parkinson and Epilepsy, located in Pereira-Colombia. The database contains $T1$ sequences with $1mm\times1mm\times1mm$ voxel size and slices of $512$x$512$ pixels. The atlas was derived
-from a volumetric T1-weighted MR-scans, using semi-automated image segmentation, and three-dimensional reconstruction
-techniques. The current version of this dataset consists of $1)$ the original volumetric whole brain MRI of the
+% medial temporal scale: mide la estructura (sitoarquitectura) de los hipocampos, radiopedia buscar
+
+With the aim to model shape variability among time in Brain structures (see section \ref{sec:ch4:mvtemp} for details), we test our model on real medical image data. Here  we used the MRI \textit{DB-UTP} database from the Universidad Tecnol\'ogica de Pereira, COL. This database contains volumetric MRI data from four patients with Parkinson's disease (at earlier and advanced stage of the disease). The database was labeled by neurosurgeons from \textit{NEUROCENTRO}: The Institute of Parkinson and Epilepsy, located in Pereira-Colombia. The database contains $T1$ sequences with $1mm\times1mm\times1mm$ voxel size and slices of $512$x$512$ pixels. The atlas was derived from a volumetric T1-weighted MR-scans, using semi-automated image segmentation, and three-dimensional reconstruction
+techniques. The current version of this dataset consists of: $1)$ the original volumetric whole brain MRI of the
 volunteers; $2)$ a set of detailed label maps and $3)$ the three-dimensional models of the labeled anatomical brain
 structures.
 
-To establish groupwise correspondences between brain structures,  we used SI-HKS as shape descriptors \cite{Bronstein10}. We evaluate our model by using three relevant brain structures in the Alzheimer's disease such as the ventricle, thalamus, and putamen. Figures \ref{fig:brainV}, \ref{fig:brainT} and \ref{fig:brainP} show the experimental results of the brain correspondence analysis. These experiments test our framework working on three brain structures at different times of the disease (early and advanced stage). From the results, it can be noticed that even when the brain volumetry of a given shape (i.e., see Ventricle results in figure \ref{fig:brainV}) has lost part of their mass as consequence of the neurodegenerative process, our model is capable of establishing relevant correspondences between brain structures.
+To establish groupwise correspondences between brain structures,  we used SI-HKS as shape descriptors \cite{Bronstein10}. We evaluate our model by using three relevant brain structures in the Parkinson's and Alzheimer's diseases such as the ventricle, thalamus, and putamen. Figures \ref{fig:brainV}, \ref{fig:brainT} and \ref{fig:brainP} show the experimental results of the brain correspondence analysis. These experiments test our framework working on three brain structures at different times of the disease (early and advanced stage). We set the regularization coefficient $\lambda$ to be $0.01$ in our experiments. Thus, at this value, the regularization parameter reduces overfitting, so that latent positions will maintain close within views. Therefore, shape correspondences among views will change softly (i.e., by avoid creating new shape relations abruptly). In our experiments, we found that varying the regularization parameter influences the correspondence estimate. For instance,  increasing lambda results in less overfitting (i.e., deriving in meaningful shape relations) but also greater bias, which causes that correspondences for minor brain shape variations, will be skipped (i.e., lower Rand indexes).
+
+From the results, it can be noticed that even when the brain volumetry of a given shape (i.e., see Ventricle results in figure \ref{fig:brainV}) has lost part of their mass as consequence of the neurodegenerative process, our model is capable of establishing relevant correspondences between brain structures. This result evidences the benefit of modeling shape variability among time (i.e., dynamic analysis) with multiview constraint (see section \ref{sec:ch4:mvtemp}). As a result, our model can efficiently capture neurodevelopmental changes while preserving topological changes within the same brain structure.  
 
 \begin{figure}[ht!]
 	\centering
 	
-	\includegraphics[width=0.45\linewidth]{img/ventricle1MVMMexp1}
+	\includegraphics[width=0.5\linewidth]{img/ventricle1MVMMexp1}
 	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
-	\includegraphics[width=0.35\linewidth]{img/ventricle1MVMMexp3}
-	\caption{Experimental results for the brain structures dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the ventricle. Average Rand Index $0.6071$ }
+	\includegraphics[width=0.35\linewidth]{img/ventricle1MVMMexp3v}
+	\caption{Experimental results for the brain structures dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the ventricle. Average Rand Index $0.6071$. Same colors in related regions are considered candidate matches. Gray and white markers relate a specific view (left and right object), so similar markers are candidate matches in the latent space. }
 	\label{fig:brainV}
 \end{figure}
 
@@ -657,8 +661,8 @@ To establish groupwise correspondences between brain structures,  we used SI-HKS
 	
 	\includegraphics[width=0.45\linewidth]{img/thalamus1MVMMexp1}
 	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
-	\includegraphics[width=0.35\linewidth]{img/thalamus1MVMMexp3}
-	\caption{Experimental results for the brain structures dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the thalamus. Average Rand Index $0.6467$ }
+	\includegraphics[width=0.35\linewidth]{img/thalamus1MVMMexp3v}
+	\caption{Experimental results for the brain structures dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the thalamus. Average Rand Index $0.6467$. Same colors in related regions are considered candidate matches. Gray and white markers relate a specific view (left and right object), so similar markers are candidate matches in the latent space. }
 	\label{fig:brainT}
 \end{figure}
 
@@ -666,38 +670,134 @@ To establish groupwise correspondences between brain structures,  we used SI-HKS
 \begin{figure}[ht!]
 	\centering
 	
-	\includegraphics[width=0.45\linewidth]{img/putamen1MVMMexp1}
+	\includegraphics[width=0.45\linewidth]{img/putamen1MVMMexp1v}
 	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
-	\includegraphics[width=0.35\linewidth]{img/putamen1MVMMexp3}
-	\caption{Experimental results for the brain structures dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the putamen. Average Rand Index $0.6467$ }
+	\includegraphics[width=0.35\linewidth]{img/putamen1MVMMexp3v}
+	\caption{Experimental results for the brain structures dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the putamen. Average Rand Index $0.6467$. Same colors in related regions are considered candidate matches. Gray and white markers relate a specific view (left and right object), so similar markers are candidate matches in the latent space. }
 	\label{fig:brainP}
+\end{figure}
+
+
+Finally, figure \ref{fig:ch4:geoerrBrain} shows a quantitative evaluation of our shape correspondence method in terms of the normalized geodesic error. The results show that our approach reaches the $85\%$ of the correspondences for geodesic errors lesser than $0.03$, which is a relevant indicator for shape matching approaches in the state-of-the-art. That is, we can perform an appropriate matching task for neuroimaging problems, if at least $80\%$ of the correspondences are reached for geodesic errors below $ 0.1$ \cite{SHREC16}.
+
+
+
+\begin{figure}[ht!]
+	\centering
+	
+	\includegraphics[width=0.6\linewidth]{img/geoErrBrain}
+	\caption{Performance of the proposed correspondence method on the Neurodegenerative dataset. The performances were evaluated using the Princeton benchmark. Each curve is averaged over all brain sequences in all classes (i.e., brain structure analysis). We again plot a cumulative curve showing the percentage of matches that are at most geodesically distant from the ground-truth correspondence on the reference shape.}
+	\label{fig:ch4:geoerrBrain}
 \end{figure}
 
 
 \subsection{Neurodevelopmental dataset: In-utero brain model}
 
-Finally, we test our model on a couple of in-utero MRI scans of a fetus acquired at two-time points, 25 and 31 weeks. Figure \ref{fig:brainBaby} shows groupwise correspondences between the neonatal brain volumes. The results show that matched clusters between shapes are related to slight changes as part of the neurodevelopmental outcome. Besides, different clustered regions are related to significant changes over the brain volume as part of normal development. Finally, these preliminary results can lead to a new type of scores to predict Neurodevelopmental Outcome that uses unsupervised multiview learning to establish meaningful relationships between a set of MRI scans \cite{NeuroBaby18}. 
+Finally, we test our model on a couple of in-utero MRI scans of a fetus acquired at two-time points, $25$ and $31$ weeks. Figure \ref{fig:brainBaby} shows groupwise correspondences between the neonatal brain volumes. In this experiment, we set the regularization coefficient of $\lambda$ to be $0.25$. Thus, at this value, the regularization parameter will allow creating new shape relations properly. As a result, new brain regions for the second time-point (i.e., 31 weeks) will be created as part of the neurodevelopmental. The results show that matched clusters between shapes are related to slight changes as part of the neurodevelopmental outcome. Besides, different clustered regions are related to significant changes over the brain volume as part of normal development (see zoomed areas in black plates from figure \ref{fig:brainBaby}). Preliminary results can lead to a new types of scores to predict neurodevelopmental outcome that uses unsupervised multiview learning to establish meaningful relationships between a set of MRI scans \cite{NeuroBaby18}. 
 
 \begin{figure}[ht!]
 	\centering
 	
-	\includegraphics[width=0.45\linewidth]{img/brainBaby}
+	\includegraphics[width=0.45\linewidth]{img/brainBabyZ}
 	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
-	\includegraphics[width=0.45\linewidth]{img/babyMVMMexp3}
-	\caption{Experimental results for the brain Neurodevelopmental dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the brain volume. Average Rand Index $0.6948$ }
+	\includegraphics[width=0.4\linewidth]{img/babyMVMMexp3v}
+	\caption{Experimental results for the brain Neurodevelopmental dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the brain volume. Average Rand Index $0.6948$. Same colors in related regions are considered candidate matches. Gray and white markers relate a specific view (left and right object), so similar markers are candidate matches in the latent space. }
 	\label{fig:brainBaby}
 \end{figure}
 
-Besides, figure \ref{fig:brainBabyM} shows an example of the matching process using the established correspondences. The results show that meaningful relations are established as part of the unsupervised matching on which the latent space is exploited to find groupwise correspondences. In addition, the results show that the brain regions assigned to the same group, show similar neurodevelopment (i.e. groups that are candidates to match).
+Figure \ref{fig:brainBabyM} shows an example of the matching process using the established correspondences. The results show that meaningful relations are established as part of the unsupervised matching on which the latent space is exploited to find groupwise correspondences. In addition, the results show that the brain regions assigned to the same group show similar neurodevelopment (i.e. groups that are candidates to match).
+
 \begin{figure}[ht!]
 	\centering
 	
-	\includegraphics[width=0.7\linewidth]{img/brainBabyMatch}
+	\includegraphics[width=0.8\linewidth]{img/brainBabyMatch2v}
 	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
 	%	\includegraphics[width=0.35\linewidth]{img/putamen1MVMMexp3}
-	\caption{Matching result for the brain Neurodevelopmental dataset.  The figure shows the established correspondences, starting from best to weak matches (blue to nude in the colormap).}
+	\caption{Matching result for the brain Neurodevelopmental dataset.  The figure shows the established correspondences, starting from good to bad matches (yellow to dark blue in the colormap). For instance, matching number 5 exhibits a good correspondence estimate on which the neurodevelopmental corresponds to a plausible match  (right temporal lobe). Also, matching number 1 shows a weak estimate on which the brain regions are related wrongly (right occipital lobe in the 25 weeks brain to the left frontal lobe in the 31 weeks brain). }
 	\label{fig:brainBabyM}
 \end{figure}
+
+\subsubsection{Brain analysis with synthetic deformations}
+
+In this experiment, we manually add synthetic bumps to the brain volumetry to emulate minor shape variations (i.e., spheres at the left frontal lobe and right occipital lobe in figure \ref{fig:brainBabybumpsa}). Hence, figure \ref{fig:brainBabybumps} shows two examples of synthetic deformations over the 25-weeks brain, one exhibiting a single bump and the other one with two bumps (see figures \ref{fig:brainBabybumpsb} and \ref{fig:brainBabybumpsa}). The results show that our model can capture these subtle shape variations as a consequence of morphing bumps into the brain structure (i.e., see figure \ref{fig:brainBabybumpsa} for the two bumps case). Moreover, the same curvature for the brain bumps relates to new groups that depict minor changes between brain shapes. Therefore, these shape variations could be related to small neurodevelopmental outcomes.
+
+\begin{figure}[ht!]
+	\centering
+	\subfigure[Single bump]{\includegraphics[width=0.8\linewidth]{img/brainBaby1Bumps}\label{fig:brainBabybumpsb}}
+	\subfigure[Two bumps]{\includegraphics[width=0.8\linewidth]{img/brainBaby2Bumps}\label{fig:brainBabybumpsa}}
+	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+	%	\includegraphics[width=0.35\linewidth]{img/putamen1MVMMexp3}
+	\caption{Matching result for the Neurodevelopmental dataset. The figure shows shape variations between a 25-weeks brain and a deformed version on which we manually added bumps to the brain shape. Same colors in related regions are considered candidate matches. The motivation for this experiment was to capture minor shape variations derived from the low curvatures that brain bumps add to a give shape structure (i.e., curvature for two spheres in figure \ref{fig:brainBabybumpsa}).}
+	\label{fig:brainBabybumps}
+\end{figure}
+
+%%%%%%%%%%%%%%% old
+%\subsection{Neurodegenerative brain dataset}
+%
+%With the aim to model shape variability in Brain structures, we test our model on real medical image data. Here  we used the MRI \textit{DB-UTP} database from the Universidad Tecnol\'ogica de Pereira, COL. This database contains volumetric MRI data from four patients with Parkinson's disease (at earlier and advanced stage of the disease). The database was labeled by neurosurgeons from \textit{NEUROCENTRO}: The Institute of Parkinson and Epilepsy, located in Pereira-Colombia. The database contains $T1$ sequences with $1mm\times1mm\times1mm$ voxel size and slices of $512$x$512$ pixels. The atlas was derived
+%from a volumetric T1-weighted MR-scans, using semi-automated image segmentation, and three-dimensional reconstruction
+%techniques. The current version of this dataset consists of $1)$ the original volumetric whole brain MRI of the
+%volunteers; $2)$ a set of detailed label maps and $3)$ the three-dimensional models of the labeled anatomical brain
+%structures.
+%
+%To establish groupwise correspondences between brain structures,  we used SI-HKS as shape descriptors \cite{Bronstein10}. We evaluate our model by using three relevant brain structures in the Alzheimer's disease such as the ventricle, thalamus, and putamen. Figures \ref{fig:brainV}, \ref{fig:brainT} and \ref{fig:brainP} show the experimental results of the brain correspondence analysis. These experiments test our framework working on three brain structures at different times of the disease (early and advanced stage). From the results, it can be noticed that even when the brain volumetry of a given shape (i.e., see Ventricle results in figure \ref{fig:brainV}) has lost part of their mass as consequence of the neurodegenerative process, our model is capable of establishing relevant correspondences between brain structures.
+%
+%\begin{figure}[ht!]
+%	\centering
+%	
+%	\includegraphics[width=0.45\linewidth]{img/ventricle1MVMMexp1}
+%	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+%	\includegraphics[width=0.35\linewidth]{img/ventricle1MVMMexp3}
+%	\caption{Experimental results for the brain structures dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the ventricle. Average Rand Index $0.6071$ }
+%	\label{fig:brainV}
+%\end{figure}
+%
+%\begin{figure}[ht!]
+%	\centering
+%	
+%	\includegraphics[width=0.45\linewidth]{img/thalamus1MVMMexp1}
+%	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+%	\includegraphics[width=0.35\linewidth]{img/thalamus1MVMMexp3}
+%	\caption{Experimental results for the brain structures dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the thalamus. Average Rand Index $0.6467$ }
+%	\label{fig:brainT}
+%\end{figure}
+%
+%
+%\begin{figure}[ht!]
+%	\centering
+%	
+%	\includegraphics[width=0.45\linewidth]{img/putamen1MVMMexp1}
+%	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+%	\includegraphics[width=0.35\linewidth]{img/putamen1MVMMexp3}
+%	\caption{Experimental results for the brain structures dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the putamen. Average Rand Index $0.6467$ }
+%	\label{fig:brainP}
+%\end{figure}
+%
+%
+%\subsection{Neurodevelopmental dataset: In-utero brain model}
+%
+%Finally, we test our model on a couple of in-utero MRI scans of a fetus acquired at two-time points, 25 and 31 weeks. Figure \ref{fig:brainBaby} shows groupwise correspondences between the neonatal brain volumes. The results show that matched clusters between shapes are related to slight changes as part of the neurodevelopmental outcome. Besides, different clustered regions are related to significant changes over the brain volume as part of normal development. Finally, these preliminary results can lead to a new type of scores to predict Neurodevelopmental Outcome that uses unsupervised multiview learning to establish meaningful relationships between a set of MRI scans \cite{NeuroBaby18}. 
+%
+%\begin{figure}[ht!]
+%	\centering
+%	
+%	\includegraphics[width=0.45\linewidth]{img/brainBaby}
+%	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+%	\includegraphics[width=0.45\linewidth]{img/babyMVMMexp3}
+%	\caption{Experimental results for the brain Neurodevelopmental dataset.  Current mixture parameters, along with the latent positions for two shapes exhibiting different parts of the brain volume. Average Rand Index $0.6948$ }
+%	\label{fig:brainBaby}
+%\end{figure}
+%
+%Besides, figure \ref{fig:brainBabyM} shows an example of the matching process using the established correspondences. The results show that meaningful relations are established as part of the unsupervised matching on which the latent space is exploited to find groupwise correspondences. In addition, the results show that the brain regions assigned to the same group, show similar neurodevelopment (i.e. groups that are candidates to match).
+%\begin{figure}[ht!]
+%	\centering
+%	
+%	\includegraphics[width=0.7\linewidth]{img/brainBabyMatch}
+%	%	\includegraphics[width=0.41\linewidth]{img/lionlessMVMMexp2}\\
+%	%	\includegraphics[width=0.35\linewidth]{img/putamen1MVMMexp3}
+%	\caption{Matching result for the brain Neurodevelopmental dataset.  The figure shows the established correspondences, starting from best to weak matches (blue to nude in the colormap).}
+%	\label{fig:brainBabyM}
+%\end{figure}
 %\subsection*{Bayesian Multi-view Warped Mixture Model}
 %
 %Since we have a multi-view data set defined as $\mathcal{Y}=\left\{\mathbf{Y}^{v}\right\}_{v=1}^{V}$, where each view is set as $\mathbf{Y}^{v}\in \mathbb{R}^{N_v\times D_v}$, the joint likelihood is given by 
